@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "M7UIKit"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "A another uikit M7UIKit."
 
   # This description is used to generate tags and improve search results.
@@ -90,7 +90,7 @@ DESC
   #  Not including the public_header_files will make all headers public.
   #
   spec.swift_version = "5.0"
-  spec.source_files  = "M7UIKit/**/*.{h,m,swift}"
+  spec.source_files  = "M7UIKit/**/*.{h,m,swift,xib}"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -108,7 +108,7 @@ DESC
   # spec.resources = "Resources/*.png"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
-  #  spec.resource_bundle = { 'M7UIKitResources' => "M&UIKIt/**/*.{storyboard,xcassets,strings,stringsdict}" }
+  spec.resource_bundle = { 'M7UIKitResources' => "M7UIKIt/**/*.{storyboard,xcassets,strings,stringsdict}" }
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

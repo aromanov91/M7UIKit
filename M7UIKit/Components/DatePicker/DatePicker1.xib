@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerView" customModule="M7UIKit" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DatePickerView" customModule="M7UIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="413"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vwg-1q-FWi">
+                    <rect key="frame" x="0.0" y="88" width="414" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13R-rX-KHO">
+                    <rect key="frame" x="20" y="334" width="374" height="59"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="59" id="Dnf-ju-mz9"/>
+                    </constraints>
+                    <state key="normal" title="Select"/>
+                    <connections>
+                        <action selector="SelectButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="cDW-dJ-70Z"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyd-av-U8Y">
+                    <rect key="frame" x="347" y="17" width="48" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="F35-w7-yIn"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trB-DI-KTn">
+                    <rect key="frame" x="20" y="22" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="13R-rX-KHO" secondAttribute="trailing" constant="20" id="CSs-XV-IYF"/>
+                <constraint firstItem="13R-rX-KHO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Fu3-1U-GYF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="13R-rX-KHO" secondAttribute="bottom" constant="20" id="YmS-7N-4hQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="cancelButton" destination="xyd-av-U8Y" id="Zwp-Zn-88m"/>
+                <outlet property="datePicker" destination="Vwg-1q-FWi" id="rWv-1o-uvm"/>
+                <outlet property="label" destination="trB-DI-KTn" id="POk-Cb-BTy"/>
+                <outlet property="selectButton" destination="13R-rX-KHO" id="lbh-az-gNC"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="306.36160714285711"/>
+        </view>
+    </objects>
+</document>
