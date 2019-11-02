@@ -77,6 +77,8 @@
 		325E02C6235C485C00B051E9 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02C5235C485C00B051E9 /* Transition.swift */; };
 		325E02C9235C50EB00B051E9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02C7235C50EB00B051E9 /* TestViewController.swift */; };
 		325E02CA235C50EB00B051E9 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325E02C8235C50EB00B051E9 /* TestViewController.xib */; };
+		32F2B1BD236E2773007E0D5C /* OneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */; };
+		32F2B1BF236E2B32007E0D5C /* OneTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BE236E2B32007E0D5C /* OneTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +191,8 @@
 		325E02C5235C485C00B051E9 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		325E02C7235C50EB00B051E9 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		325E02C8235C50EB00B051E9 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableViewCell.swift; sourceTree = "<group>"; };
+		32F2B1BE236E2B32007E0D5C /* OneTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				3255204A2366398D002E7485 /* M7TableViewCell.swift */,
+				32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 				325E021D235BA63D00B051E9 /* ViewController.swift */,
 				3212FEB223645BD20057213C /* TableViewCellDemoController.swift */,
 				32552052236643C9002E7485 /* TableCellDemo.swift */,
+				32F2B1BE236E2B32007E0D5C /* OneTableView.swift */,
 				32552061236A1301002E7485 /* MessageBubbleDemo.swift */,
 				325E021F235BA63D00B051E9 /* Main.storyboard */,
 				325E0222235BA63F00B051E9 /* Assets.xcassets */,
@@ -710,6 +716,7 @@
 				3212FEB023644ECB0057213C /* TableViewCell.swift in Sources */,
 				32552058236797AA002E7485 /* M7Switch.swift in Sources */,
 				325E027A235C31BC00B051E9 /* Card.swift in Sources */,
+				32F2B1BD236E2773007E0D5C /* OneTableViewCell.swift in Sources */,
 				325E0279235C31BC00B051E9 /* ModalInfoModel.swift in Sources */,
 				325E027F235C31BC00B051E9 /* DatePickerView.swift in Sources */,
 				325E02B5235C3A4D00B051E9 /* DSLabel.swift in Sources */,
@@ -757,6 +764,7 @@
 				32552053236643C9002E7485 /* TableCellDemo.swift in Sources */,
 				325E021E235BA63D00B051E9 /* ViewController.swift in Sources */,
 				325E021A235BA63D00B051E9 /* AppDelegate.swift in Sources */,
+				32F2B1BF236E2B32007E0D5C /* OneTableView.swift in Sources */,
 				325E021C235BA63D00B051E9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

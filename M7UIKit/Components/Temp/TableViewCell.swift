@@ -58,7 +58,7 @@ import UIKit
 
         //simpleSwitch.addTarget(self, action: #selector(perfrAdd), for: .valueChanged)
         
-        simpleSwitch.isOn = true
+        //simpleSwitch.isOn = true
         self.accessoryView = simpleSwitch
         
 
@@ -70,7 +70,9 @@ import UIKit
     func update() {
         
         if leadingImage != nil {
+
             let image = leadingImage
+            //self.imageView?.frame = CGRect(x: 10, y: 30, width: 24, height: 24)
             self.imageView?.image = image
         }
         

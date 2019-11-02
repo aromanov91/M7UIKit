@@ -8,17 +8,17 @@
 
 import UIKit
 
-public class CellModel {
-    var name: String
-    var discription: String
-    var detail: String
-    
-    public init(name: String, discription: String, detail: String){
-        self.name = name
-        self.discription = discription
-        self.detail = detail
-    }
-}
+//public class CellModel {
+//    var name: String
+//    var discription: String
+//    var detail: String
+//
+//    public init(name: String, discription: String, detail: String){
+//        self.name = name
+//        self.discription = discription
+//        self.detail = detail
+//    }
+//}
 
 public enum M7cellAccessoryType {
     case none
@@ -33,6 +33,7 @@ public enum M7cellAccessoryType {
     public func accessoryType(type: M7cellAccessoryType) {
         
         switch type {
+            
         case .none:
             break
             
@@ -91,12 +92,12 @@ public enum M7cellAccessoryType {
         }
     }
     
-    public func refresh(_ model: CellModel) {
-        title.text = model.name
-        subtitle.text = model.discription
-        detail.text = model.detail
-        
-    }
+//    public func refresh() {
+//        title.text = model.name
+//        subtitle.text = model.discription
+//        detail.text = model.detail
+//        
+//    }
     
     public let cellView: UIView = {
         let view = UIView()
@@ -140,15 +141,19 @@ public enum M7cellAccessoryType {
         setup()
     }
     
+    override public func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
 //    override public func prepareForReuse() {
 //        super.prepareForReuse()
-//        
+//
 //        self.title.text = nil
 //        self.subtitle.text = nil
 //        self.detail.text = nil
 //
 //    }
-//    
+//
     
     
 //    override public func setSelected(_ selected: Bool, animated: Bool) {
@@ -169,18 +174,14 @@ public enum M7cellAccessoryType {
             ])
         }
         
-        
         self.addSubview(title)
         self.addSubview(subtitle)
         self.selectionStyle = .none
-        
 
-        
         title.heightAnchor.constraint(equalToConstant: 200).isActive = true
         title.widthAnchor.constraint(equalToConstant: 200).isActive = true
         title.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         title.leftAnchor.constraint(equalTo: self.leftAnchor, constant: card == true ? 40 : 20 ).isActive = true
-        
 
         subtitle.heightAnchor.constraint(equalToConstant: 200).isActive = true
         subtitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
@@ -189,11 +190,7 @@ public enum M7cellAccessoryType {
         subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10 ).isActive = true
         
     }
-    
-    
-    
-    
-    
+
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
         

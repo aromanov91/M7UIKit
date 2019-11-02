@@ -11,7 +11,7 @@ import M7UIKit
 
 class TableCellDemo: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private var data = [CellModel]()
+    private var data = ["Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf"]
     
     
     @IBOutlet weak var tableview: UITableView!
@@ -20,26 +20,26 @@ class TableCellDemo: UIViewController, UITableViewDelegate, UITableViewDataSourc
         super.viewDidLoad()
         setupTableView()
         
-        let item = CellModel(name: "Вибрация", discription: "Офигенная", detail: "Пульсирующая")
-        data.append(item)
-         let item2 = CellModel(name: "ddd", discription: "vvvvv", detail: "dfdfsdfsd")
-        data.append(item2)
-        data.append(item)
-        data.append(item)
-        data.append(item)
-        data.append(item)
-        data.append(item2)
-        data.append(item)
-        data.append(item)
-        data.append(item)
-        data.append(item)
-        data.append(item)
-        data.append(item)
-        data.append(item)
-        data.append(item)
-        data.append(item)
-        data.append(item)
-        data.append(item)
+//        let item = CellModel(name: "Вибрация", discription: "Офигенная", detail: "Пульсирующая")
+//        data.append(item)
+//         let item2 = CellModel(name: "ddd", discription: "vvvvv", detail: "dfdfsdfsd")
+//        data.append(item2)
+//        data.append(item)
+//        data.append(item)
+//        data.append(item)
+//        data.append(item)
+//        data.append(item2)
+//        data.append(item)
+//        data.append(item)
+//        data.append(item)
+//        data.append(item)
+//        data.append(item)
+//        data.append(item)
+//        data.append(item)
+//        data.append(item)
+//        data.append(item)
+//        data.append(item)
+//        data.append(item)
         
     }
     
@@ -76,60 +76,62 @@ class TableCellDemo: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch  indexPath.row {
-        case 0:
-            let cell = tableview.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! M7TableViewCell
-            cell.backgroundColor = UIColor.white
-            cell.card = false
-            cell.accessoryType(type: M7cellAccessoryType.none)
-            let item = data[indexPath.row]
-            cell.refresh(item)
-            return cell
+//        case 0:
+//            let cell = tableview.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! M7TableViewCell
+//            cell.backgroundColor = UIColor.white
+//            cell.card = false
+//            cell.accessoryType(type: M7cellAccessoryType.none)
+//            let item = data[indexPath.row]
+//            cell.refresh(item)
+//            return cell
+//
+//        case 1:
+//            let cell = tableview.dequeueReusableCell(withIdentifier: "cellIddisclosureIndicator", for: indexPath) as! M7TableViewCell
+//            cell.backgroundColor = UIColor.white
+//            cell.card = false
+//            cell.accessoryType(type: M7cellAccessoryType.disclosureIndicator)
+//            let item = data[indexPath.row]
+//            cell.refresh(item)
+//            return cell
+//
+//
+//        case 2:
+//            let cell = tableview.dequeueReusableCell(withIdentifier: "cellIddetailButton", for: indexPath) as! M7TableViewCell
+//            cell.backgroundColor = UIColor.white
+//            cell.card = false
+//            cell.accessoryType(type: M7cellAccessoryType.detailButton)
+//            let item = data[indexPath.row]
+//            cell.refresh(item)
+//            return cell
+//
+//
+//        case 3:
+//            let cell = tableview.dequeueReusableCell(withIdentifier: "cellIdtoggle", for: indexPath) as! M7TableViewCell
+//            cell.backgroundColor = UIColor.white
+//            cell.card = false
+//            cell.accessoryType(type: M7cellAccessoryType.toggle)
+//            let item = data[indexPath.row]
+//            cell.refresh(item)
+//            return cell
+//
+//        case 4:
+//            let cell = tableview.dequeueReusableCell(withIdentifier: "cellIdcheckmark", for: indexPath) as! M7TableViewCell
+//            cell.backgroundColor = UIColor.white
+//            cell.card = false
+//            cell.accessoryType(type: M7cellAccessoryType.checkmark)
+//            let item = data[indexPath.row]
+//            cell.refresh(item)
+//            return cell
             
-        case 1:
-            let cell = tableview.dequeueReusableCell(withIdentifier: "cellIddisclosureIndicator", for: indexPath) as! M7TableViewCell
-            cell.backgroundColor = UIColor.white
-            cell.card = false
-            cell.accessoryType(type: M7cellAccessoryType.disclosureIndicator)
-            let item = data[indexPath.row]
-            cell.refresh(item)
-            return cell
-            
-            
-        case 2:
-            let cell = tableview.dequeueReusableCell(withIdentifier: "cellIddetailButton", for: indexPath) as! M7TableViewCell
-            cell.backgroundColor = UIColor.white
-            cell.card = false
-            cell.accessoryType(type: M7cellAccessoryType.detailButton)
-            let item = data[indexPath.row]
-            cell.refresh(item)
-            return cell
-            
-            
-        case 3:
+        default:
             let cell = tableview.dequeueReusableCell(withIdentifier: "cellIdtoggle", for: indexPath) as! M7TableViewCell
-            cell.backgroundColor = UIColor.white
+            //cell.backgroundColor = UIColor.gray
             cell.card = false
             cell.accessoryType(type: M7cellAccessoryType.toggle)
             let item = data[indexPath.row]
-            cell.refresh(item)
-            return cell
-            
-        case 4:
-            let cell = tableview.dequeueReusableCell(withIdentifier: "cellIdcheckmark", for: indexPath) as! M7TableViewCell
-            cell.backgroundColor = UIColor.white
-            cell.card = false
-            cell.accessoryType(type: M7cellAccessoryType.checkmark)
-            let item = data[indexPath.row]
-            cell.refresh(item)
-            return cell
-            
-        default:
-            let cell = tableview.dequeueReusableCell(withIdentifier: "cellIddisclosureIndicator", for: indexPath) as! M7TableViewCell
-            cell.backgroundColor = UIColor.gray
-            cell.card = false
-            cell.accessoryType(type: M7cellAccessoryType.disclosureIndicator)
-            let item = data[indexPath.row]
-            cell.refresh(item)
+            cell.title.text = item
+            cell.subtitle.text = item
+            cell.detail.text = item
             return cell
             
         }
