@@ -12,7 +12,7 @@ import M7UIKit
 class TableViewController: UITableViewController {
     
 
-    private var data = ["Бля","Пиздец"]
+    private var data = ["Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,19 +26,19 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "M7TableViewCell", for: indexPath) as! M7TableViewCell
-        cell.backgroundColor = UIColor.white
-        
-        //let content = CellModel(name: "dgfd", discription: "fgfd")
-        //cell.refresh(content)
-        return cell
-        
-//        let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-//        cell.textLabel?.text = self.data[indexPath.row]
+//        let cell = self.tableView.dequeueReusableCell(withIdentifier: "M7TableViewCell", for: indexPath) as! M7TableViewCell
+//        cell.backgroundColor = UIColor.white
 //
-//        cell.simpleSwitch.addTarget(self, action: #selector(perfrAdd(param:)), for: .valueChanged)
-//
+//        let content = CellModel(name: "dgfd", discription: "fgfd", detail: "fsdsd")
+//        cell.refresh(content)
 //        return cell
+        
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+        cell.textLabel?.text = self.data[indexPath.row]
+
+        cell.simpleSwitch.addTarget(self, action: #selector(perfrAdd(param:)), for: .valueChanged)
+
+        return cell
         
     }
     

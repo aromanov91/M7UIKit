@@ -39,7 +39,7 @@ import UIKit
         self.accessoryType = .detailButton
         self.detailTextLabel?.text = "Ебой"
         self.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        self.textLabel?.text = "Ячейка"
+        //self.textLabel?.text = "Ячейка"
         
         update()
         

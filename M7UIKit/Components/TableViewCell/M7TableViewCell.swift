@@ -92,8 +92,8 @@ public enum M7cellAccessoryType {
     }
     
     public func refresh(_ model: CellModel) {
-        name.text = model.name
-        discription.text = model.discription
+        title.text = model.name
+        subtitle.text = model.discription
         detail.text = model.detail
         
     }
@@ -106,7 +106,7 @@ public enum M7cellAccessoryType {
         return view
     }()
     
-    @IBInspectable public let name: UILabel = {
+    @IBInspectable public let title: UILabel = {
         let label = UILabel()
         label.text = "Day 1"
         label.textColor = UIColor.black
@@ -115,7 +115,7 @@ public enum M7cellAccessoryType {
         return label
     }()
     
-    public let discription: UILabel = {
+    public let subtitle: UILabel = {
         let label = UILabel()
         label.text = "Day 1"
         label.textColor = UIColor.black
@@ -140,31 +140,64 @@ public enum M7cellAccessoryType {
         setup()
     }
     
+//    override public func prepareForReuse() {
+//        super.prepareForReuse()
+//        
+//        self.title.text = nil
+//        self.subtitle.text = nil
+//        self.detail.text = nil
+//
+//    }
+//    
+    
+    
+//    override public func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//        setup()
+//    }
+    
     public func setup() {
         
-        if card { self.cellView.backgroundColor = UIColor.secondarySystemBackground }
-        addSubview(cellView)
+        if card { self.cellView.backgroundColor = UIColor.secondarySystemBackground
+            
+            addSubview(cellView)
+            NSLayoutConstraint.activate([
+                cellView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+                cellView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
+                cellView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
+                cellView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            ])
+        }
         
-       self.addSubview(name)
+        
+        self.addSubview(title)
+        self.addSubview(subtitle)
         self.selectionStyle = .none
         
-        NSLayoutConstraint.activate([
-            cellView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
-            cellView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
-            cellView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
-            cellView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-        ])
+
         
-        name.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        name.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        name.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        name.leftAnchor.constraint(equalTo: self.leftAnchor, constant: card == true ? 40 : 20 ).isActive = true
+        title.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        title.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        title.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        title.leftAnchor.constraint(equalTo: self.leftAnchor, constant: card == true ? 40 : 20 ).isActive = true
+        
+
+        subtitle.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        subtitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        //subtitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        subtitle.leftAnchor.constraint(equalTo: self.leftAnchor, constant: card == true ? 40 : 20 ).isActive = true
+        subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10 ).isActive = true
+        
     }
+    
+    
     
     
     
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+        
+        
     }
     
     
