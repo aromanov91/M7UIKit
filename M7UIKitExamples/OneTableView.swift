@@ -14,57 +14,61 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
     private var data = ["Бля jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jjfkl jflkj jf kfj jfd jlk j","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf"]
     
     
-    @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         
-//        let item = CellModel(name: "Вибрация", discription: "Офигенная", detail: "Пульсирующая")
-//        data.append(item)
-//         let item2 = CellModel(name: "ddd", discription: "vvvvv", detail: "dfdfsdfsd")
-//        data.append(item2)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item2)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
+        //        let item = CellModel(name: "Вибрация", discription: "Офигенная", detail: "Пульсирующая")
+        //        data.append(item)
+        //         let item2 = CellModel(name: "ddd", discription: "vvvvv", detail: "dfdfsdfsd")
+        //        data.append(item2)
+        //        data.append(item)
+        //        data.append(item)
+        //        data.append(item)
+        //        data.append(item)
+        //        data.append(item2)
+        //        data.append(item)
+        //        data.append(item)
+        //        data.append(item)
+        //        data.append(item)
+        //        data.append(item)
+        //        data.append(item)
+        //        data.append(item)
+        //        data.append(item)
+        //        data.append(item)
+        //        data.append(item)
+        //        data.append(item)
         
     }
     
     func setupTableView() {
         
-        tableview.separatorColor = Colors.gray2
+        tableView.separatorColor = Colors.gray2
         //tableView.separatorStyle = .none.separatorStyle = .none
         
-        tableview.delegate = self
-        tableview.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        tableview.rowHeight = UITableView.automaticDimension
-        tableview.estimatedRowHeight = 44
+         tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableView.automaticDimension
+       
+        //tableView.reloadData()
         
-        tableview.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggle")
-
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggle")
         
-        view.addSubview(tableview)
+        
+        view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
-            tableview.topAnchor.constraint(equalTo: self.view.topAnchor),
-            tableview.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            tableview.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            tableview.leftAnchor.constraint(equalTo: self.view.leftAnchor)
+            tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor)
         ])
+        
+                tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,37 +78,38 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-            let cell = tableview.dequeueReusableCell(withIdentifier: "cellIdtoggle", for: indexPath) as! OneTableViewCell
-            //cell.backgroundColor = UIColor.gray
-            //cell.card = false
-            
-        cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdtoggle", for: indexPath) as! OneTableViewCell
+        //cell.backgroundColor = UIColor.gray
+        //cell.card = true
         
-            
-            
-
-            return cell
+        //cell.cellAccessoryType = .detailButton
         
-    
+       
         
+        cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .toggle)
+        
+        
+        return cell
     }
     
-        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 88
-        }
 
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.section == 0 {
-//            return UITableView.automaticDimension
-//        } else {
-//            return 40
-//        }
+//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 60
 //    }
-
-
+//
     
-
+        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            if indexPath.section == 0 {
+                return  UITableView.automaticDimension
+            } else {
+                return 80
+            }
+        }
+    
+    
+    
+    
     
     
     

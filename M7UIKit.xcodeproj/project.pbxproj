@@ -232,6 +232,7 @@
 		320A0363236B734F00992327 /* Temp */ = {
 			isa = PBXGroup;
 			children = (
+				3255204A2366398D002E7485 /* M7TableViewCell.swift */,
 				3212FEAE23644ECB0057213C /* TableViewCell.swift */,
 				3255205F236A0C07002E7485 /* M7ChatCell.swift */,
 				32552063236A227C002E7485 /* BubbleView.swift */,
@@ -242,7 +243,6 @@
 		320BE42E23644CD200C068C0 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				3255204A2366398D002E7485 /* M7TableViewCell.swift */,
 				32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */,
 			);
 			path = TableViewCell;

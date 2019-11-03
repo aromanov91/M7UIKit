@@ -178,12 +178,13 @@ public enum M7cellAccessoryType {
         self.addSubview(subtitle)
         self.selectionStyle = .none
 
-        title.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        title.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        //title.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        //title.widthAnchor.constraint(equalToConstant: 200).isActive = true
         title.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         title.leftAnchor.constraint(equalTo: self.leftAnchor, constant: card == true ? 40 : 20 ).isActive = true
+        //title.bottomAnchor.constraint(equalTo: )
 
-        subtitle.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        //subtitle.heightAnchor.constraint(equalToConstant: 200).isActive = true
         subtitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
         //subtitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         subtitle.leftAnchor.constraint(equalTo: self.leftAnchor, constant: card == true ? 40 : 20 ).isActive = true

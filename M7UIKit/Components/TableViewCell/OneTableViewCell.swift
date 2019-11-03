@@ -30,20 +30,32 @@ public enum OneCellAccessoryType {
 
 @IBDesignable public class OneTableViewCell: UITableViewCell {
     
-    @IBInspectable public var card: Bool = false {
+//    override public func sizeThatFits(_ size: CGSize) -> CGSize {
+//        return CGSize(width: 375, height: 150)
+//    }
+//
+    public var card: Bool = false {
         didSet {
             if card != oldValue {
-                 initialize()
+                initialize()
             }
         }
     }
     
-
+    public var cellAccessoryType: OneCellAccessoryType = .none {
+        didSet {
+            if cellAccessoryType != oldValue {
+                initialize()
+            }
+//            setNeedsLayout()
+//            invalidateIntrinsicContentSize()
+        }
+    }
     
-    @IBInspectable public let title: UILabel = {
+    public let title: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.text = "Day 1"
+        label.text = ""
         label.textColor = UIColor.black
         label.font = Fonts.bodyBold
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -78,21 +90,20 @@ public enum OneCellAccessoryType {
         return view
     }()
     
-    public var cellAccessoryType: OneCellAccessoryType = .none
     
     public func setup(title: String, subtitle: String = "", detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none) {
         self.title.text = title
         self.subtitle.text = subtitle
         self.detail.text = detail
-        self.cellAccessoryType = accessoryType
         self.card = card
-    
-        setNeedsLayout()
-        invalidateIntrinsicContentSize()
+        cellAccessoryType = accessoryType
+        
+//        setNeedsLayout()
+//        invalidateIntrinsicContentSize()
     }
     
-
-    private let rightMargin: CGFloat = 40
+    
+    private let rightMargin: CGFloat = -80
     
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -102,43 +113,70 @@ public enum OneCellAccessoryType {
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-         initialize()
+        initialize()
+        
+        
     }
-
+    
+//    open override func layoutSubviews() {
+//        super.layoutSubviews()
+//
+//        initialize()
+//    }
+    
+    
+//    open override var bounds: CGRect {
+//        didSet {
+//            if bounds.width != oldValue.width {
+//                invalidateIntrinsicContentSize()
+//            }
+//        }
+//    }
+//    open override var frame: CGRect {
+//        didSet {
+//            if frame.width != oldValue.width {
+//                invalidateIntrinsicContentSize()
+//            }
+//        }
+//    }
+//
+    //override public var intrinsicContentSize: CGSize { return CGSize(width: 375, height: 150) }
+    
     public func initialize() {
         
-        if card {
+        if card == true {
             addSubview(cardView)
             NSLayoutConstraint.activate([
                 cardView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
                 cardView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
                 cardView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
-                cardView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+                cardView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+                cardView.heightAnchor.constraint(equalToConstant: 100)
             ])
         }
+        
         self.addSubview(title)
         self.addSubview(subtitle)
         self.selectionStyle = .none
         
-        
-
-//        title.heightAnchor.constraint(equalToConstant: 200).isActive = true
-//        title.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        //        title.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        //        title.widthAnchor.constraint(equalToConstant: 200).isActive = true
         //title.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        title.leftAnchor.constraint(equalTo: self.leftAnchor, constant: card == true ? 40 : 20 ).isActive = true
+        title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: card == true ? 40 : 20 ).isActive = true
         title.topAnchor.constraint(equalTo: self.topAnchor, constant:20).isActive = true
-        title.rightAnchor.constraint(equalTo: self.rightAnchor, constant: rightMargin).isActive = true
-
-//        subtitle.heightAnchor.constraint(equalToConstant: 200).isActive = true
-//        subtitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
-
-        subtitle.leftAnchor.constraint(equalTo: self.leftAnchor, constant: card == true ? 40 : 20 ).isActive = true
+        title.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: rightMargin).isActive = true
+        //title.bottomAnchor.constraint(equalTo: subtitle.topAnchor, constant: 20).isActive = true
+        
+        //        subtitle.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        //        subtitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        
+        subtitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: card == true ? 40 : 20 ).isActive = true
         subtitle.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 0).isActive = true
-        subtitle.rightAnchor.constraint(equalTo: self.rightAnchor, constant: self.rightMargin).isActive = true
+        subtitle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: self.rightMargin).isActive = true
+        subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 20).isActive = true
         //subtitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
         switch cellAccessoryType {
-            
         case .none:
             break
             
@@ -169,7 +207,6 @@ public enum OneCellAccessoryType {
             
         case .toggle:
             let toggle = M7Switch()
-            //toggle.isOn = true
             toggle.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(toggle)
             toggle.rightAnchor.constraint(equalTo: self.rightAnchor, constant: card == true ? -40 : -20).isActive = true
@@ -189,12 +226,10 @@ public enum OneCellAccessoryType {
         }
         
     }
-
-
     
-    override public func sizeThatFits(_ size: CGSize) -> CGSize {
-        return CGSize(width: 375, height: 120)
-    }
+    
+    
+
     
     
 }
