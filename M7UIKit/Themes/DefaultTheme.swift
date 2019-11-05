@@ -8,7 +8,9 @@
 
 import UIKit
 
-public final class DefaultTheme {
+public struct DefaultTheme {
+    
+    public let primary1 = UIColor.systemPurple
     
     
 /*

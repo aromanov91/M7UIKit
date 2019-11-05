@@ -11,6 +11,6 @@ import UIKit
 class M7Switch: UISwitch {
 
     override func draw(_ rect: CGRect) {
-        onTintColor = Colors.primary
+        onTintColor = M7Colors.primary
     }
 }

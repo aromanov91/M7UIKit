@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3212FEB023644ECB0057213C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3212FEAE23644ECB0057213C /* TableViewCell.swift */; };
 		3212FEB323645BD20057213C /* TableViewCellDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3212FEB223645BD20057213C /* TableViewCellDemoController.swift */; };
+		323F34ED2370579F00B96AE9 /* M7Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323F34EC2370579F00B96AE9 /* M7Label.swift */; };
 		3255204B2366398D002E7485 /* M7TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3255204A2366398D002E7485 /* M7TableViewCell.swift */; };
 		32552053236643C9002E7485 /* TableCellDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32552052236643C9002E7485 /* TableCellDemo.swift */; };
 		32552058236797AA002E7485 /* M7Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32552057236797AA002E7485 /* M7Switch.swift */; };
@@ -30,11 +31,11 @@
 		325E0226235BA63F00B051E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325E0224235BA63F00B051E9 /* LaunchScreen.storyboard */; };
 		325E0231235BA64000B051E9 /* M7UIKitExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E0230235BA64000B051E9 /* M7UIKitExamplesTests.swift */; };
 		325E026D235C31BB00B051E9 /* DS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E023A235C31BB00B051E9 /* DS.swift */; };
-		325E026E235C31BC00B051E9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E023C235C31BB00B051E9 /* Colors.swift */; };
+		325E026E235C31BC00B051E9 /* M7Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E023C235C31BB00B051E9 /* M7Colors.swift */; };
 		325E026F235C31BC00B051E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E023E235C31BB00B051E9 /* Constants.swift */; };
 		325E0270235C31BC00B051E9 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E023F235C31BB00B051E9 /* Montserrat-Bold.ttf */; };
 		325E0271235C31BC00B051E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E0240235C31BB00B051E9 /* Extensions.swift */; };
-		325E0272235C31BC00B051E9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E0241235C31BB00B051E9 /* Fonts.swift */; };
+		325E0272235C31BC00B051E9 /* M7Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E0241235C31BB00B051E9 /* M7Fonts.swift */; };
 		325E0273235C31BC00B051E9 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0242235C31BB00B051E9 /* Montserrat-SemiBold.ttf */; };
 		325E0274235C31BC00B051E9 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0243235C31BB00B051E9 /* Montserrat-Regular.ttf */; };
 		325E0275235C31BC00B051E9 /* OCRAEXT.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 325E0244235C31BB00B051E9 /* OCRAEXT.TTF */; };
@@ -77,6 +78,11 @@
 		325E02C6235C485C00B051E9 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02C5235C485C00B051E9 /* Transition.swift */; };
 		325E02C9235C50EB00B051E9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02C7235C50EB00B051E9 /* TestViewController.swift */; };
 		325E02CA235C50EB00B051E9 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325E02C8235C50EB00B051E9 /* TestViewController.xib */; };
+		32C96AF4236F81EC0035871E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E023F235C31BB00B051E9 /* Montserrat-Bold.ttf */; };
+		32C96AF5236F81EC0035871E /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0242235C31BB00B051E9 /* Montserrat-SemiBold.ttf */; };
+		32C96AF6236F81EC0035871E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0243235C31BB00B051E9 /* Montserrat-Regular.ttf */; };
+		32C96AF9236F8C300035871E /* M7Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C96AF8236F8C300035871E /* M7Space.swift */; };
+		32C96AFB236F90960035871E /* M7Paddings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C96AFA236F90960035871E /* M7Paddings.swift */; };
 		32F2B1BD236E2773007E0D5C /* OneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */; };
 		32F2B1BF236E2B32007E0D5C /* OneTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BE236E2B32007E0D5C /* OneTableView.swift */; };
 /* End PBXBuildFile section */
@@ -122,6 +128,7 @@
 /* Begin PBXFileReference section */
 		3212FEAE23644ECB0057213C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3212FEB223645BD20057213C /* TableViewCellDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellDemoController.swift; sourceTree = "<group>"; };
+		323F34EC2370579F00B96AE9 /* M7Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Label.swift; sourceTree = "<group>"; };
 		3255204A2366398D002E7485 /* M7TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7TableViewCell.swift; sourceTree = "<group>"; };
 		32552052236643C9002E7485 /* TableCellDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellDemo.swift; sourceTree = "<group>"; };
 		32552057236797AA002E7485 /* M7Switch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M7Switch.swift; sourceTree = "<group>"; };
@@ -146,11 +153,11 @@
 		325E0230235BA64000B051E9 /* M7UIKitExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7UIKitExamplesTests.swift; sourceTree = "<group>"; };
 		325E0232235BA64000B051E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		325E023A235C31BB00B051E9 /* DS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DS.swift; sourceTree = "<group>"; };
-		325E023C235C31BB00B051E9 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		325E023C235C31BB00B051E9 /* M7Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M7Colors.swift; sourceTree = "<group>"; };
 		325E023E235C31BB00B051E9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		325E023F235C31BB00B051E9 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		325E0240235C31BB00B051E9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		325E0241235C31BB00B051E9 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		325E0241235C31BB00B051E9 /* M7Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M7Fonts.swift; sourceTree = "<group>"; };
 		325E0242235C31BB00B051E9 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		325E0243235C31BB00B051E9 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		325E0244235C31BB00B051E9 /* OCRAEXT.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = OCRAEXT.TTF; sourceTree = "<group>"; };
@@ -191,6 +198,8 @@
 		325E02C5235C485C00B051E9 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		325E02C7235C50EB00B051E9 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		325E02C8235C50EB00B051E9 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		32C96AF8236F8C300035871E /* M7Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Space.swift; sourceTree = "<group>"; };
+		32C96AFA236F90960035871E /* M7Paddings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Paddings.swift; sourceTree = "<group>"; };
 		32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableViewCell.swift; sourceTree = "<group>"; };
 		32F2B1BE236E2B32007E0D5C /* OneTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,6 +255,14 @@
 				32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		323F34EB2370577100B96AE9 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				323F34EC2370579F00B96AE9 /* M7Label.swift */,
+			);
+			path = Label;
 			sourceTree = "<group>";
 		};
 		3255205623679755002E7485 /* Switch */ = {
@@ -332,6 +349,8 @@
 			isa = PBXGroup;
 			children = (
 				325E023A235C31BB00B051E9 /* DS.swift */,
+				32C96AF8236F8C300035871E /* M7Space.swift */,
+				32C96AFA236F90960035871E /* M7Paddings.swift */,
 				325E023B235C31BB00B051E9 /* Colors */,
 				325E023D235C31BB00B051E9 /* Fonts */,
 			);
@@ -341,7 +360,7 @@
 		325E023B235C31BB00B051E9 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				325E023C235C31BB00B051E9 /* Colors.swift */,
+				325E023C235C31BB00B051E9 /* M7Colors.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -349,7 +368,7 @@
 		325E023D235C31BB00B051E9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				325E0241235C31BB00B051E9 /* Fonts.swift */,
+				325E0241235C31BB00B051E9 /* M7Fonts.swift */,
 				325E0240235C31BB00B051E9 /* Extensions.swift */,
 				325E023E235C31BB00B051E9 /* Constants.swift */,
 				325E023F235C31BB00B051E9 /* Montserrat-Bold.ttf */,
@@ -371,6 +390,7 @@
 		325E0247235C31BB00B051E9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				323F34EB2370577100B96AE9 /* Label */,
 				3255205623679755002E7485 /* Switch */,
 				320BE42E23644CD200C068C0 /* TableViewCell */,
 				325E02BE235C42D800B051E9 /* ModalSelect */,
@@ -687,8 +707,11 @@
 				325E0223235BA63F00B051E9 /* Assets.xcassets in Resources */,
 				325520592368DFF2002E7485 /* Icons.xcassets in Resources */,
 				3255205C2368E035002E7485 /* DatePicker.xib in Resources */,
+				32C96AF4236F81EC0035871E /* Montserrat-Bold.ttf in Resources */,
 				3255205A2368DFFD002E7485 /* Buttons.xcassets in Resources */,
+				32C96AF5236F81EC0035871E /* Montserrat-SemiBold.ttf in Resources */,
 				325E0221235BA63D00B051E9 /* Main.storyboard in Resources */,
+				32C96AF6236F81EC0035871E /* Montserrat-Regular.ttf in Resources */,
 				3255205B2368E030002E7485 /* DatePicker1.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,22 +734,25 @@
 				325E02B6235C3A4D00B051E9 /* DSDatePicker.swift in Sources */,
 				325E028F235C31BC00B051E9 /* SwitchRow.swift in Sources */,
 				325E028D235C31BC00B051E9 /* TextField.swift in Sources */,
+				323F34ED2370579F00B96AE9 /* M7Label.swift in Sources */,
 				325E026D235C31BB00B051E9 /* DS.swift in Sources */,
 				325E02AF235C3A4D00B051E9 /* Alert.swift in Sources */,
 				3212FEB023644ECB0057213C /* TableViewCell.swift in Sources */,
 				32552058236797AA002E7485 /* M7Switch.swift in Sources */,
 				325E027A235C31BC00B051E9 /* Card.swift in Sources */,
 				32F2B1BD236E2773007E0D5C /* OneTableViewCell.swift in Sources */,
+				32C96AFB236F90960035871E /* M7Paddings.swift in Sources */,
 				325E0279235C31BC00B051E9 /* ModalInfoModel.swift in Sources */,
 				325E027F235C31BC00B051E9 /* DatePickerView.swift in Sources */,
 				325E02B5235C3A4D00B051E9 /* DSLabel.swift in Sources */,
 				325E0278235C31BC00B051E9 /* ModalInfoController.swift in Sources */,
 				325E02B2235C3A4D00B051E9 /* DSSelect.swift in Sources */,
 				3255204B2366398D002E7485 /* M7TableViewCell.swift in Sources */,
-				325E0272235C31BC00B051E9 /* Fonts.swift in Sources */,
+				325E0272235C31BC00B051E9 /* M7Fonts.swift in Sources */,
+				32C96AF9236F8C300035871E /* M7Space.swift in Sources */,
 				325E02C0235C432600B051E9 /* ModalSelectButton.swift in Sources */,
 				325E0290235C31BC00B051E9 /* Button.swift in Sources */,
-				325E026E235C31BC00B051E9 /* Colors.swift in Sources */,
+				325E026E235C31BC00B051E9 /* M7Colors.swift in Sources */,
 				325E0276235C31BC00B051E9 /* DefaultTheme.swift in Sources */,
 				325E026F235C31BC00B051E9 /* Constants.swift in Sources */,
 				325E0296235C382900B051E9 /* ModalSelectController.swift in Sources */,

@@ -34,6 +34,17 @@ public enum OneCellAccessoryType {
 //        return CGSize(width: 375, height: 150)
 //    }
 //
+    public var paddingLeading = M7PaddingsSizes.leading.m
+    public var paddingTop = M7PaddingsSizes.top.s
+    public var paddingTrailing = M7PaddingsSizes.trailing.m
+    public var paddingBottom = M7PaddingsSizes.bottom.s
+    
+    struct textStyles {
+        static let title: M7TextStyle = .bodyBold1
+        static let subtitle: M7TextStyle = .body2
+        static let detail: M7TextStyle = .body1
+    }
+    
     public var card: Bool = false {
         didSet {
             if card != oldValue {
@@ -57,7 +68,7 @@ public enum OneCellAccessoryType {
         label.numberOfLines = 0
         label.text = ""
         label.textColor = UIColor.black
-        label.font = Fonts.bodyBold
+        label.font = M7Fonts.bodyBold1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -67,7 +78,7 @@ public enum OneCellAccessoryType {
         label.numberOfLines = 0
         label.text = ""
         label.textColor = UIColor.black
-        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.font = M7Fonts.body2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -162,18 +173,18 @@ public enum OneCellAccessoryType {
         //        title.heightAnchor.constraint(equalToConstant: 200).isActive = true
         //        title.widthAnchor.constraint(equalToConstant: 200).isActive = true
         //title.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: card == true ? 40 : 20 ).isActive = true
-        title.topAnchor.constraint(equalTo: self.topAnchor, constant:20).isActive = true
-        title.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: rightMargin).isActive = true
+        title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: paddingLeading).isActive = true
+        title.topAnchor.constraint(equalTo: self.topAnchor, constant: paddingTop).isActive = true
+        title.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: paddingTrailing).isActive = true
         //title.bottomAnchor.constraint(equalTo: subtitle.topAnchor, constant: 20).isActive = true
         
         //        subtitle.heightAnchor.constraint(equalToConstant: 200).isActive = true
         //        subtitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
         
-        subtitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: card == true ? 40 : 20 ).isActive = true
-        subtitle.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 0).isActive = true
-        subtitle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: self.rightMargin).isActive = true
-        subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 20).isActive = true
+        subtitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: paddingLeading).isActive = true
+        subtitle.topAnchor.constraint(equalTo: title.bottomAnchor).isActive = true
+        subtitle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: paddingTrailing).isActive = true
+        subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: paddingBottom).isActive = true
         //subtitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
         switch cellAccessoryType {

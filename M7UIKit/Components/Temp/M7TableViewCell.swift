@@ -111,7 +111,7 @@ public enum M7cellAccessoryType {
         let label = UILabel()
         label.text = "Day 1"
         label.textColor = UIColor.black
-        label.font = Fonts.bodyBold
+        label.font = M7Fonts.title3
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -120,7 +120,7 @@ public enum M7cellAccessoryType {
         let label = UILabel()
         label.text = "Day 1"
         label.textColor = UIColor.black
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.font = M7Fonts.body1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

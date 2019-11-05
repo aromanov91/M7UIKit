@@ -11,7 +11,7 @@ import M7UIKit
 
 class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private var data = ["Бля jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jjfkl jflkj jf kfj jfd jlk j","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf"]
+    private var data = ["Бля jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jjfkl jflkj jf kfj jfd jlk j","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jj","Пиздец","djsfjsdk","fdgffsds jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jj","dfsdfsdf"]
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -45,7 +45,7 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func setupTableView() {
         
-        tableView.separatorColor = Colors.gray2
+        tableView.separatorColor = M7Colors.gray2
         //tableView.separatorStyle = .none.separatorStyle = .none
         
         tableView.delegate = self
@@ -83,6 +83,7 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
         //cell.card = true
         
         //cell.cellAccessoryType = .detailButton
+       // cell.paddingBottom = 
         
        
         

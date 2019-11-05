@@ -45,7 +45,7 @@ class TableCellDemo: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     func setupTableView() {
         
-        tableview.separatorColor = Colors.gray2
+        tableview.separatorColor = M7Colors.gray2
         //tableView.separatorStyle = .none.separatorStyle = .none
         
         tableview.delegate = self

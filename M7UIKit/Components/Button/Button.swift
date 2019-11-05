@@ -31,26 +31,26 @@ public enum N7ButtonSize: String {
     // MARK: - Button style
     
     /// Font
-    private let fontLabel: UIFont = Fonts.button
+    private let fontLabel: UIFont = M7Fonts.button
     
     /// Primary button
-    private let primaryLabel: UIColor = Colors.white
-    private let primaryBackground: UIColor = Colors.primary
-    private let primaryBackgroundHighlighted: UIColor = Colors.primary.withAlphaComponent(0.8)
+    private let primaryLabel: UIColor = M7Colors.white
+    private let primaryBackground: UIColor = M7Colors.primary
+    private let primaryBackgroundHighlighted: UIColor = M7Colors.primary.withAlphaComponent(0.8)
     
     /// Whie button
-    private let secondaryLabel: UIColor = Colors.label
-    private let secondaryBackground: UIColor = Colors.white
-    private let secondaryShadow = Colors.gray4
+    private let secondaryLabel: UIColor = M7Colors.labelPrimary
+    private let secondaryBackground: UIColor = M7Colors.white
+    private let secondaryShadow = M7Colors.gray4
     
     /// Link
-    private let linkLabel: UIColor = Colors.link
+    private let linkLabel: UIColor = M7Colors.link
     private let linkBackground: UIColor = UIColor.clear
     
     /// Gray
-    private let grayLabel: UIColor = Colors.link
-    private let grayBackground: UIColor = Colors.gray
-    private let grayBackgroundHighlighted: UIColor = Colors.gray.withAlphaComponent(0.8)
+    private let grayLabel: UIColor = M7Colors.link
+    private let grayBackground: UIColor = M7Colors.gray
+    private let grayBackgroundHighlighted: UIColor = M7Colors.gray.withAlphaComponent(0.8)
     
     let imgLeftInset: CGFloat = 12
     let imgRightInset: CGFloat = 12

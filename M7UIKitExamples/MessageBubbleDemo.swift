@@ -26,7 +26,7 @@ class MessageBubbleDemo: UIViewController, UITableViewDelegate, UITableViewDataS
     
     func setupTableView() {
         
-        tableview.separatorColor = Colors.gray2
+        tableview.separatorColor = M7Colors.gray2
         
         tableview.delegate = self
         tableview.dataSource = self

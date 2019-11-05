@@ -8,7 +8,7 @@
 
 import UIKit
 
-public final class Colors: NSObject {
+public final class M7Colors {
     
     // MARK: - Colors
     
@@ -57,20 +57,6 @@ public final class Colors: NSObject {
         }
     }
     
-    public static var whiteDark: UIColor {
-        if #available(iOS 13, *) {
-            return UIColor { (traitCollection: UITraitCollection) -> UIColor in
-                if traitCollection.userInterfaceStyle == .light {
-                    return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                } else {
-                    return #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-                }
-            }
-        } else {
-            return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        }
-    }
-    
     /// Черный
     public static var black: UIColor {
         if #available(iOS 13, *) {
@@ -86,7 +72,7 @@ public final class Colors: NSObject {
         }
     }
     
-    // Цвет ошибок и предупреждений
+    // Цвет ошибок
     public static var error: UIColor {
         if #available(iOS 13, *) {
             return UIColor { (traitCollection: UITraitCollection) -> UIColor in
@@ -98,6 +84,21 @@ public final class Colors: NSObject {
             }
         } else {
             return #colorLiteral(red: 0.9960784314, green: 0.3450980392, blue: 0.3568627451, alpha: 1)
+        }
+    }
+    
+    // Цвет предуперждений
+    public static var warning: UIColor {
+        if #available(iOS 13, *) {
+            return UIColor { (traitCollection: UITraitCollection) -> UIColor in
+                if traitCollection.userInterfaceStyle == .light {
+                    return #colorLiteral(red: 0.8941176471, green: 0.5568627451, blue: 0, alpha: 1)
+                } else {
+                    return UIColor.systemOrange
+                }
+            }
+        } else {
+            return #colorLiteral(red: 0.8941176471, green: 0.5568627451, blue: 0, alpha: 1)
         }
     }
     
@@ -115,7 +116,7 @@ public final class Colors: NSObject {
         }
     }
     
-    public static var label: UIColor {
+    public static var labelPrimary: UIColor {
         if #available(iOS 13, *) {
             return UIColor { (traitCollection: UITraitCollection) -> UIColor in
                 if traitCollection.userInterfaceStyle == .light {
@@ -254,5 +255,68 @@ public final class Colors: NSObject {
             return #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         }
     }
-    //private  init() {}
 }
+
+public enum M7LabelColor {
+    case primary
+    case secondary
+    case link
+    case white
+    case success
+    case error
+    case warning
+    case disabled
+
+    public var color: UIColor {
+        switch self {
+        case .primary:
+            return M7Colors.labelPrimary
+        case .secondary:
+            return M7Colors.labelSecondary
+        case .link:
+            return M7Colors.link
+        case .white:
+            return M7Colors.white
+        case .success:
+            return M7Colors.success
+        case .error:
+            return M7Colors.error
+        case .warning:
+            return M7Colors.warning
+        case .disabled:
+            return M7Colors.gray5
+        }
+    }
+}
+
+
+//public enum M7Color {
+//    case primary
+//    case secondary
+//    case white
+//    caes black
+//    case error
+//    case warning
+//    case success
+//    case disabled
+//
+//    public var color: UIColor {
+//        switch self {
+//        case .regular:
+//            return MSColors.foreground1
+//        case .secondary:
+//            return MSColors.foreground2
+//        case .white:
+//            return MSColors.white
+//        case .primary:
+//            return MSColors.primary
+//        case .error:
+//            return MSColors.error
+//        case .warning:
+//            return MSColors.warning
+//        case .disabled:
+//            return MSColors.disabled
+//        }
+//    }
+//}
+

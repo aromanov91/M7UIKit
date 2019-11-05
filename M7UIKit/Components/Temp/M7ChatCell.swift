@@ -27,7 +27,7 @@ public class M7ChatCell: UITableViewCell {
            let label = UILabel()
            label.text = "Day 1"
            label.textColor = UIColor.black
-           label.font = Fonts.bodyBold
+           label.font = M7Fonts.bodyBold2
            label.translatesAutoresizingMaskIntoConstraints = false
            return label
        }()
