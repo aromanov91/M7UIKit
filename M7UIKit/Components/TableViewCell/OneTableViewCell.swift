@@ -63,12 +63,12 @@ public enum OneCellAccessoryType {
         }
     }
     
-    public let title: UILabel = {
-        let label = UILabel()
+    public let title: M7Label = {
+        let label = M7Label(style: M7TextStyle.largeTitle, colorStyle: M7LabelColor.error)
         label.numberOfLines = 0
         label.text = ""
-        label.textColor = UIColor.black
-        label.font = M7Fonts.bodyBold1
+        //label.textColor = UIColor.black
+        //label.font = M7Fonts.bodyBold1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -79,6 +79,7 @@ public enum OneCellAccessoryType {
         label.text = ""
         label.textColor = UIColor.black
         label.font = M7Fonts.body2
+        //label.isHidden = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

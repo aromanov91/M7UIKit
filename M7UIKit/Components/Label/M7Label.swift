@@ -8,9 +8,23 @@
 
 import UIKit
 
-class M7Label: UILabel {
+
+//public enum N7LabelStyle: String {
+//    case primary = "primary"
+//    case secondary = "secondary"
+//    case gray = "gray"
+//    case link = "link"
+//}
+//
+//public enum N7ButtonRounded: String {
+//    case full = "full"
+//    case l = "l"
+//    case m = "m"
+//}
+
+public class M7Label: UILabel {
     
-    public var style: M7TextStyle = .body1 {
+    public var style = M7TextStyle.body1 {
         didSet {
             initialize()
         }
@@ -22,6 +36,12 @@ class M7Label: UILabel {
         }
     }
 
+
+    private var _textColor: UIColor?
+    private var currentTextColor: UIColor { return _textColor ?? colorStyle.color }
+    
+    
+    
     public init(style: M7TextStyle = .body1, colorStyle: M7LabelColor = .primary) {
         self.style = style
         self.colorStyle = colorStyle
@@ -31,12 +51,12 @@ class M7Label: UILabel {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-        initialize()
+        
     }
     
     private func initialize() {
-//        font = style
-//        textColor = UIColor.black
+        textColor = colorStyle.color
+        font = style.font
     }
 
 }
