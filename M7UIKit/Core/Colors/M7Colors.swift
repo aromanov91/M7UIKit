@@ -288,35 +288,3 @@ public enum M7LabelColor {
         }
     }
 }
-
-
-//public enum M7Color {
-//    case primary
-//    case secondary
-//    case white
-//    caes black
-//    case error
-//    case warning
-//    case success
-//    case disabled
-//
-//    public var color: UIColor {
-//        switch self {
-//        case .regular:
-//            return MSColors.foreground1
-//        case .secondary:
-//            return MSColors.foreground2
-//        case .white:
-//            return MSColors.white
-//        case .primary:
-//            return MSColors.primary
-//        case .error:
-//            return MSColors.error
-//        case .warning:
-//            return MSColors.warning
-//        case .disabled:
-//            return MSColors.disabled
-//        }
-//    }
-//}
-

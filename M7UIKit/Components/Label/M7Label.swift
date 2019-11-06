@@ -22,41 +22,90 @@ import UIKit
 //    case m = "m"
 //}
 
-public class M7Label: UILabel {
+@IBDesignable public class M7Label: UILabel {
     
-    public var style = M7TextStyle.body1 {
+    @IBInspectable public var selectFont: String = "" {
+        didSet {
+            if selectFont != oldValue {
+                initialize()
+            }
+        }
+    }
+    
+    @IBInspectable public var selectColor: String = "" {
+        didSet {
+            if selectColor != oldValue {
+                initialize()
+            }
+        }
+    }
+    
+    
+    public var fontLabel: M7LabelStyle = .body1 {
         didSet {
             initialize()
         }
     }
     
-    public var colorStyle: M7LabelColor = .primary {
+    public var colorLabel: M7LabelColor = .primary {
         didSet {
             initialize()
         }
     }
-
-
-    private var _textColor: UIColor?
-    private var currentTextColor: UIColor { return _textColor ?? colorStyle.color }
     
-    
-    
-    public init(style: M7TextStyle = .body1, colorStyle: M7LabelColor = .primary) {
-        self.style = style
-        self.colorStyle = colorStyle
+    public init(font: M7LabelStyle = .body1, color: M7LabelColor = .primary) {
+        self.fontLabel = font
+        self.colorLabel = color
         super.init(frame: .zero)
         initialize()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        initialize()
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initialize()
+    }
+    
+    
+    private func initialize() {
+        updateFont()
+        updateColor()
+    }
+    
+    private func updateFont() {
+        switch self.selectFont {
+        case "largeTitle": font = M7LabelStyle.largeTitle.font
+        case "title1"    : font = M7LabelStyle.title1.font
+        case "title2"    : font = M7LabelStyle.title2.font
+        case "title3"    : font = M7LabelStyle.title3.font
+        case "body1"     : font = M7LabelStyle.body1.font
+        case "bodyBold1" : font = M7LabelStyle.bodyBold1.font
+        case "body2"     : font = M7LabelStyle.body2.font
+        case "bodyBold2" : font = M7LabelStyle.bodyBold2.font
+        case "button"    : font = M7LabelStyle.button.font
+        case "caption"   : font = M7LabelStyle.caption.font
+        default: font = fontLabel.font
+        }
         
     }
     
-    private func initialize() {
-        textColor = colorStyle.color
-        font = style.font
+    private func updateColor() {
+        switch self.selectColor {
+        case "primary"  : textColor = M7LabelColor.primary.color
+        case "secondary": textColor = M7LabelColor.secondary.color
+        case "link"     : textColor = M7LabelColor.link.color
+        case "white"    : textColor = M7LabelColor.white.color
+        case "success"  : textColor = M7LabelColor.success.color
+        case "error"    : textColor = M7LabelColor.error.color
+        case "warning"  : textColor = M7LabelColor.warning.color
+        case "disabled" : textColor = M7LabelColor.disabled.color
+        default: textColor = colorLabel.color
+        }
     }
-
+ 
 }
+

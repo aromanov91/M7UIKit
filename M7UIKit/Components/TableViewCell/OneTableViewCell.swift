@@ -33,16 +33,16 @@ public enum OneCellAccessoryType {
 //    override public func sizeThatFits(_ size: CGSize) -> CGSize {
 //        return CGSize(width: 375, height: 150)
 //    }
-//
+
     public var paddingLeading = M7PaddingsSizes.leading.m
     public var paddingTop = M7PaddingsSizes.top.s
     public var paddingTrailing = M7PaddingsSizes.trailing.m
     public var paddingBottom = M7PaddingsSizes.bottom.s
     
     struct textStyles {
-        static let title: M7TextStyle = .bodyBold1
-        static let subtitle: M7TextStyle = .body2
-        static let detail: M7TextStyle = .body1
+        static let title: M7LabelStyle = .bodyBold1
+        static let subtitle: M7LabelStyle = .body2
+        static let detail: M7LabelStyle = .body1
     }
     
     public var card: Bool = false {
@@ -64,7 +64,7 @@ public enum OneCellAccessoryType {
     }
     
     public let title: M7Label = {
-        let label = M7Label(style: M7TextStyle.largeTitle, colorStyle: M7LabelColor.error)
+        let label = M7Label(font: M7LabelStyle.bodyBold1, color: M7LabelColor.link)
         label.numberOfLines = 0
         label.text = ""
         //label.textColor = UIColor.black
@@ -152,7 +152,7 @@ public enum OneCellAccessoryType {
 //        }
 //    }
 //
-    //override public var intrinsicContentSize: CGSize { return CGSize(width: 375, height: 150) }
+ //  override public var intrinsicContentSize: CGSize { return CGSize(width: 375, height: 150) }
     
     public func initialize() {
         
