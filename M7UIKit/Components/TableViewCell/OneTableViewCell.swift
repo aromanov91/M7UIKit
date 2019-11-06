@@ -16,7 +16,7 @@ public enum OneCellAccessoryType {
     case toggle
 }
 
-@IBDesignable public class OneTableViewCell: UITableViewCell {
+public class OneTableViewCell: UITableViewCell {
     
     //    override public func sizeThatFits(_ size: CGSize) -> CGSize {
     //        return CGSize(width: 375, height: 150)
@@ -27,7 +27,7 @@ public enum OneCellAccessoryType {
         static var paddingTrailing = M7Paddings.trailing.m
         static var paddingBottom = M7Paddings.bottom.s
         static let rightMargin: CGFloat = -80
-        
+    }
     
     private struct LabelStyles {
         static let titleFont: M7LabelStyle = .bodyBold1

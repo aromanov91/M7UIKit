@@ -97,7 +97,7 @@ public class M7ChatCell: UITableViewCell {
                                     height: .greatestFiniteMagnitude)
         let boundingBox = text.boundingRect(with: constraintRect,
                                             options: .usesLineFragmentOrigin,
-                                            attributes: [.font: label.font],
+                                            attributes: [.font: UIFont.systemFont(ofSize: 18)],
                                             context: nil)
         label.frame.size = CGSize(width: ceil(boundingBox.width),
                                   height: ceil(boundingBox.height))
