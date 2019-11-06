@@ -8,18 +8,6 @@
 
 import UIKit
 
-//public class CellModel {
-//    var name: String
-//    var discription: String
-//    var detail: String
-//
-//    public init(name: String, discription: String, detail: String){
-//        self.name = name
-//        self.discription = discription
-//        self.detail = detail
-//    }
-//}
-
 public enum OneCellAccessoryType {
     case none
     case disclosureIndicator
@@ -30,19 +18,25 @@ public enum OneCellAccessoryType {
 
 @IBDesignable public class OneTableViewCell: UITableViewCell {
     
-//    override public func sizeThatFits(_ size: CGSize) -> CGSize {
-//        return CGSize(width: 375, height: 150)
-//    }
-
-    public var paddingLeading = M7PaddingsSizes.leading.m
-    public var paddingTop = M7PaddingsSizes.top.s
-    public var paddingTrailing = M7PaddingsSizes.trailing.m
-    public var paddingBottom = M7PaddingsSizes.bottom.s
+    //    override public func sizeThatFits(_ size: CGSize) -> CGSize {
+    //        return CGSize(width: 375, height: 150)
+    //    }
+    private struct Constants {
+        static var paddingLeading = M7Paddings.leading.m
+        static var paddingTop = M7Paddings.top.s
+        static var paddingTrailing = M7Paddings.trailing.m
+        static var paddingBottom = M7Paddings.bottom.s
+        static let rightMargin: CGFloat = -80
+        
     
-    struct textStyles {
-        static let title: M7LabelStyle = .bodyBold1
-        static let subtitle: M7LabelStyle = .body2
-        static let detail: M7LabelStyle = .body1
+    private struct LabelStyles {
+        static let titleFont: M7LabelStyle = .bodyBold1
+        static let subtitleFont: M7LabelStyle = .body2
+        static let detailFont: M7LabelStyle = .body1
+        
+        static let titleColor: M7LabelColor = .primary
+        static let subtitleColor: M7LabelColor = .secondary
+        static let detailColor: M7LabelColor = .secondary
     }
     
     public var card: Bool = false {
@@ -52,45 +46,40 @@ public enum OneCellAccessoryType {
             }
         }
     }
-    
+        
+    static let cardViewColor = M7Colors.gray
+        
     public var cellAccessoryType: OneCellAccessoryType = .none {
         didSet {
             if cellAccessoryType != oldValue {
                 initialize()
             }
-//            setNeedsLayout()
-//            invalidateIntrinsicContentSize()
+            //            setNeedsLayout()
+            //            invalidateIntrinsicContentSize()
         }
     }
     
     public let title: M7Label = {
-        let label = M7Label(font: M7LabelStyle.bodyBold1, color: M7LabelColor.link)
+        let label = M7Label(font: LabelStyles.titleFont, color: LabelStyles.titleColor)
         label.numberOfLines = 0
-        label.text = ""
-        //label.textColor = UIColor.black
-        //label.font = M7Fonts.bodyBold1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    public let subtitle: UILabel = {
-        let label = UILabel()
+    public let subtitle: M7Label = {
+        let label = M7Label(font: LabelStyles.subtitleFont, color: LabelStyles.titleColor)
         label.numberOfLines = 0
         label.text = ""
-        label.textColor = UIColor.black
-        label.font = M7Fonts.body2
         //label.isHidden = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    public let detail: UILabel = {
-        let label = UILabel()
+    public let detail: M7Label = {
+        let label = M7Label(font: LabelStyles.detailFont, color: LabelStyles.detailColor)
         label.text = ""
-        label.textColor = UIColor.black
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .right
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -110,49 +99,46 @@ public enum OneCellAccessoryType {
         self.card = card
         cellAccessoryType = accessoryType
         
-//        setNeedsLayout()
-//        invalidateIntrinsicContentSize()
+        //        setNeedsLayout()
+        //        invalidateIntrinsicContentSize()
     }
     
     
-    private let rightMargin: CGFloat = -80
+    
     
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         initialize()
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initialize()
-        
-        
     }
     
-//    open override func layoutSubviews() {
-//        super.layoutSubviews()
-//
-//        initialize()
-//    }
+    //    open override func layoutSubviews() {
+    //        super.layoutSubviews()
+    //
+    //        initialize()
+    //    }
     
     
-//    open override var bounds: CGRect {
-//        didSet {
-//            if bounds.width != oldValue.width {
-//                invalidateIntrinsicContentSize()
-//            }
-//        }
-//    }
-//    open override var frame: CGRect {
-//        didSet {
-//            if frame.width != oldValue.width {
-//                invalidateIntrinsicContentSize()
-//            }
-//        }
-//    }
-//
- //  override public var intrinsicContentSize: CGSize { return CGSize(width: 375, height: 150) }
+    //    open override var bounds: CGRect {
+    //        didSet {
+    //            if bounds.width != oldValue.width {
+    //                invalidateIntrinsicContentSize()
+    //            }
+    //        }
+    //    }
+    //    open override var frame: CGRect {
+    //        didSet {
+    //            if frame.width != oldValue.width {
+    //                invalidateIntrinsicContentSize()
+    //            }
+    //        }
+    //    }
+    //
+    //  override public var intrinsicContentSize: CGSize { return CGSize(width: 375, height: 150) }
     
     public func initialize() {
         
@@ -174,18 +160,18 @@ public enum OneCellAccessoryType {
         //        title.heightAnchor.constraint(equalToConstant: 200).isActive = true
         //        title.widthAnchor.constraint(equalToConstant: 200).isActive = true
         //title.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: paddingLeading).isActive = true
-        title.topAnchor.constraint(equalTo: self.topAnchor, constant: paddingTop).isActive = true
-        title.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: paddingTrailing).isActive = true
+        title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+        title.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.paddingTop).isActive = true
+        title.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
         //title.bottomAnchor.constraint(equalTo: subtitle.topAnchor, constant: 20).isActive = true
         
         //        subtitle.heightAnchor.constraint(equalToConstant: 200).isActive = true
         //        subtitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
         
-        subtitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: paddingLeading).isActive = true
+        subtitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constants.paddingLeading).isActive = true
         subtitle.topAnchor.constraint(equalTo: title.bottomAnchor).isActive = true
-        subtitle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: paddingTrailing).isActive = true
-        subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: paddingBottom).isActive = true
+        subtitle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
+        subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom).isActive = true
         //subtitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
         switch cellAccessoryType {
@@ -241,7 +227,7 @@ public enum OneCellAccessoryType {
     
     
     
-
+    
     
     
 }

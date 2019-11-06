@@ -253,6 +253,17 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		3228E0F723729BF800BDDD53 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				325E023F235C31BB00B051E9 /* Montserrat-Bold.ttf */,
+				325E0242235C31BB00B051E9 /* Montserrat-SemiBold.ttf */,
+				325E0243235C31BB00B051E9 /* Montserrat-Regular.ttf */,
+				325E0244235C31BB00B051E9 /* OCRAEXT.TTF */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		323F34EB2370577100B96AE9 /* Label */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,33 +355,12 @@
 		325E0239235C31BB00B051E9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				325E023A235C31BB00B051E9 /* DS.swift */,
 				32C96AF8236F8C300035871E /* M7Space.swift */,
 				32C96AFA236F90960035871E /* M7Paddings.swift */,
-				325E023B235C31BB00B051E9 /* Colors */,
-				325E023D235C31BB00B051E9 /* Fonts */,
+				325E023C235C31BB00B051E9 /* M7Colors.swift */,
+				325E0241235C31BB00B051E9 /* M7Fonts.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		325E023B235C31BB00B051E9 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-				325E023C235C31BB00B051E9 /* M7Colors.swift */,
-			);
-			path = Colors;
-			sourceTree = "<group>";
-		};
-		325E023D235C31BB00B051E9 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				325E0241235C31BB00B051E9 /* M7Fonts.swift */,
-				325E023F235C31BB00B051E9 /* Montserrat-Bold.ttf */,
-				325E0242235C31BB00B051E9 /* Montserrat-SemiBold.ttf */,
-				325E0243235C31BB00B051E9 /* Montserrat-Regular.ttf */,
-				325E0244235C31BB00B051E9 /* OCRAEXT.TTF */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		325E0245235C31BB00B051E9 /* Themes */ = {
@@ -466,6 +456,7 @@
 		325E0293235C31C500B051E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3228E0F723729BF800BDDD53 /* Fonts */,
 				325E026B235C31BB00B051E9 /* Buttons.xcassets */,
 				325E026C235C31BB00B051E9 /* Icons.xcassets */,
 			);
@@ -482,6 +473,7 @@
 		325E02A0235C3A4D00B051E9 /* Legacy */ = {
 			isa = PBXGroup;
 			children = (
+				325E023A235C31BB00B051E9 /* DS.swift */,
 				325E02C5235C485C00B051E9 /* Transition.swift */,
 				325E02A1235C3A4D00B051E9 /* Alert.swift */,
 				325E02A2235C3A4D00B051E9 /* DSButton.swift */,

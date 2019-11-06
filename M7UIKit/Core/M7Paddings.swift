@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  M7Paddings.swift
 //  M7UIKit
 //
 //  Created by Aleksandr Romanov on 04.11.2019.
@@ -8,49 +8,95 @@
 
 import UIKit
 
-public class M7PaddingsSizes {
-    enum leading {
+public class M7Paddings {
+    public enum leading {
         static let s        = CGFloat(M7Space.s)
         static let m        = CGFloat(M7Space.m)
     }
-    enum top {
+    public enum top {
         static let s        = CGFloat(M7Space.s)
         static let m        = CGFloat(M7Space.m)
     }
-    enum trailing {
+    public enum trailing {
         static let s        = CGFloat(-M7Space.s)
         static let m        = CGFloat(-M7Space.m)
     }
-    enum bottom {
+    public enum bottom {
         static let s        = CGFloat(-M7Space.s)
         static let m        = CGFloat(-M7Space.m)
     }
-    enum between {
+    public enum between {
         static let s        = CGFloat(M7Space.xs)
         static let m        = CGFloat(M7Space.s)
     }
 }
 
-@objc public enum M7Padding: Int, CaseIterable {
-    case leading
-    case top
-    case trailing
-    case bottom
-    case between
+public enum M7PaddingLeading: CaseIterable {
+    case m
+    case s
     
     public var padding: CGFloat {
         switch self {
-        case .leading:
-            return M7PaddingsSizes.leading.m
-        case .top:
-            return M7PaddingsSizes.top.m
-        case .trailing:
-            return M7PaddingsSizes.trailing.m
-        case .bottom:
-            return M7PaddingsSizes.bottom.m
-        case .between:
-            return M7PaddingsSizes.between.m
-            
+        case .m:
+            return M7Paddings.leading.m
+        case .s:
+            return M7Paddings.leading.m
+        }
+    }
+}
+
+public enum M7PaddingTop: CaseIterable {
+    case m
+    case s
+    
+    public var padding: CGFloat {
+        switch self {
+        case .m:
+            return M7Paddings.top.m
+        case .s:
+            return M7Paddings.top.m
+        }
+    }
+}
+
+public enum M7PaddingTrailing: CaseIterable {
+    case m
+    case s
+    
+    public var padding: CGFloat {
+        switch self {
+        case .m:
+            return M7Paddings.trailing.m
+        case .s:
+            return M7Paddings.trailing.m
+        }
+    }
+}
+
+public enum M7PaddingBottom: CaseIterable {
+    case m
+    case s
+    
+    public var padding: CGFloat {
+        switch self {
+        case .m:
+            return M7Paddings.bottom.m
+        case .s:
+            return M7Paddings.bottom.m
+        }
+    }
+}
+
+public enum M7PaddingBetween: CaseIterable {
+    case m
+    case s
+    
+    public var padding: CGFloat {
+        switch self {
+        case .m:
+            return M7Paddings.between.m
+        case .s:
+            return M7Paddings.between.m
         }
     }
 }

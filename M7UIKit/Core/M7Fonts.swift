@@ -8,7 +8,7 @@
 
 import UIKit
 
-public final class M7Fonts {
+public class M7Fonts {
     
     private static let regularFont = "Montserrat-Regular"
     private static let semiBoldFont = "Montserrat-SemiBold"
@@ -30,7 +30,7 @@ public final class M7Fonts {
     public static var body1: UIFont = UIFont(name: regularFont, size: 16) ?? UIFont.systemFont(ofSize: 16, weight: .regular)
     
     /// Bold 16pt
-    public static var bodyBold1: UIFont = UIFont(name: regularFont, size: 16) ?? UIFont.systemFont(ofSize: 16, weight: .semibold)
+    public static var bodyBold1: UIFont = UIFont(name: semiBoldFont, size: 16) ?? UIFont.systemFont(ofSize: 16, weight: .semibold)
     
     /// Regular 14pt
     public static var body2: UIFont = UIFont(name: regularFont, size: 14) ?? UIFont.systemFont(ofSize: 14, weight: .regular)

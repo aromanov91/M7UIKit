@@ -8,7 +8,7 @@
 
 import UIKit
 
-public final class M7Colors {
+public class M7Colors {
     
     // MARK: - Colors
     
