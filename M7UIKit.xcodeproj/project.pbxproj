@@ -84,6 +84,7 @@
 		32F2B1BD236E2773007E0D5C /* OneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */; };
 		32F2B1BF236E2B32007E0D5C /* OneTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BE236E2B32007E0D5C /* OneTableView.swift */; };
 		468E9DA32372D88800CD36A4 /* M7UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E9DA22372D88800CD36A4 /* M7UIKit.swift */; };
+		469C54DD2372E1570055BD06 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 469C54DC2372E1570055BD06 /* .travis.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +201,7 @@
 		32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableViewCell.swift; sourceTree = "<group>"; };
 		32F2B1BE236E2B32007E0D5C /* OneTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableView.swift; sourceTree = "<group>"; };
 		468E9DA22372D88800CD36A4 /* M7UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7UIKit.swift; sourceTree = "<group>"; };
+		469C54DC2372E1570055BD06 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +316,7 @@
 				325E0293235C31C500B051E9 /* Resources */,
 				325E01FC235BA57000B051E9 /* M7UIKit.h */,
 				468E9DA22372D88800CD36A4 /* M7UIKit.swift */,
+				469C54DC2372E1570055BD06 /* .travis.yml */,
 				325E01FD235BA57000B051E9 /* Info.plist */,
 			);
 			path = M7UIKit;
@@ -665,6 +668,7 @@
 			files = (
 				325E0274235C31BC00B051E9 /* Montserrat-Regular.ttf in Resources */,
 				325E02CA235C50EB00B051E9 /* TestViewController.xib in Resources */,
+				469C54DD2372E1570055BD06 /* .travis.yml in Resources */,
 				325E027B235C31BC00B051E9 /* Card.xib in Resources */,
 				325E028E235C31BC00B051E9 /* SwitchRow.xib in Resources */,
 				325E0275235C31BC00B051E9 /* OCRAEXT.TTF in Resources */,
