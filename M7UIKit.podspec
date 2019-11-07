@@ -108,7 +108,7 @@ DESC
   # spec.resources = "Resources/*.png"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
-  spec.resource_bundle = { 'M7UIKitResources' => "M7UIKIt/**/*.{storyboard,xcassets,strings,stringsdict}" }
+  spec.resource_bundle = { 'M7UIKitResources' => "M7UIKIt/**/*.{storyboard,xcassets,strings,stringsdict,ttf}" }
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

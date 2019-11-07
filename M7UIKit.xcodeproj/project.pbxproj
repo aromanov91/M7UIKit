@@ -53,9 +53,6 @@
 		325E0290235C31BC00B051E9 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E026A235C31BB00B051E9 /* Button.swift */; };
 		325E0291235C31BC00B051E9 /* Buttons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325E026B235C31BB00B051E9 /* Buttons.xcassets */; };
 		325E0292235C31BC00B051E9 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325E026C235C31BB00B051E9 /* Icons.xcassets */; };
-		325E0296235C382900B051E9 /* ModalSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E0294235C382900B051E9 /* ModalSelectController.swift */; };
-		325E0297235C382900B051E9 /* ModalSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325E0295235C382900B051E9 /* ModalSelectView.xib */; };
-		325E0299235C388700B051E9 /* ModalSelectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E0298235C388700B051E9 /* ModalSelectModel.swift */; };
 		325E029B235C39BA00B051E9 /* M7UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325E01F9235BA57000B051E9 /* M7UIKit.framework */; };
 		325E029C235C39BA00B051E9 /* M7UIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 325E01F9235BA57000B051E9 /* M7UIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		325E02AF235C3A4D00B051E9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02A1235C3A4D00B051E9 /* Alert.swift */; };
@@ -71,11 +68,7 @@
 		325E02B9235C3A4D00B051E9 /* DSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02AC235C3A4D00B051E9 /* DSTextField.swift */; };
 		325E02BA235C3A4D00B051E9 /* DSButtonWhite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02AD235C3A4D00B051E9 /* DSButtonWhite.swift */; };
 		325E02BB235C3A4D00B051E9 /* DSColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02AE235C3A4D00B051E9 /* DSColorSelector.swift */; };
-		325E02C0235C432600B051E9 /* ModalSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02BF235C432600B051E9 /* ModalSelectButton.swift */; };
-		325E02C4235C462300B051E9 /* ModalSelectButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325E02C3235C462300B051E9 /* ModalSelectButton.xib */; };
 		325E02C6235C485C00B051E9 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02C5235C485C00B051E9 /* Transition.swift */; };
-		325E02C9235C50EB00B051E9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02C7235C50EB00B051E9 /* TestViewController.swift */; };
-		325E02CA235C50EB00B051E9 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325E02C8235C50EB00B051E9 /* TestViewController.xib */; };
 		32C96AF4236F81EC0035871E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E023F235C31BB00B051E9 /* Montserrat-Bold.ttf */; };
 		32C96AF5236F81EC0035871E /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0242235C31BB00B051E9 /* Montserrat-SemiBold.ttf */; };
 		32C96AF6236F81EC0035871E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0243235C31BB00B051E9 /* Montserrat-Regular.ttf */; };
@@ -174,9 +167,6 @@
 		325E026A235C31BB00B051E9 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		325E026B235C31BB00B051E9 /* Buttons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Buttons.xcassets; sourceTree = "<group>"; };
 		325E026C235C31BB00B051E9 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
-		325E0294235C382900B051E9 /* ModalSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSelectController.swift; sourceTree = "<group>"; };
-		325E0295235C382900B051E9 /* ModalSelectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalSelectView.xib; sourceTree = "<group>"; };
-		325E0298235C388700B051E9 /* ModalSelectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSelectModel.swift; sourceTree = "<group>"; };
 		325E02A1235C3A4D00B051E9 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		325E02A2235C3A4D00B051E9 /* DSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSButton.swift; sourceTree = "<group>"; };
 		325E02A3235C3A4D00B051E9 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
@@ -190,11 +180,7 @@
 		325E02AC235C3A4D00B051E9 /* DSTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSTextField.swift; sourceTree = "<group>"; };
 		325E02AD235C3A4D00B051E9 /* DSButtonWhite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSButtonWhite.swift; sourceTree = "<group>"; };
 		325E02AE235C3A4D00B051E9 /* DSColorSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSColorSelector.swift; sourceTree = "<group>"; };
-		325E02BF235C432600B051E9 /* ModalSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSelectButton.swift; sourceTree = "<group>"; };
-		325E02C3235C462300B051E9 /* ModalSelectButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalSelectButton.xib; sourceTree = "<group>"; };
 		325E02C5235C485C00B051E9 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
-		325E02C7235C50EB00B051E9 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		325E02C8235C50EB00B051E9 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		32C96AF8236F8C300035871E /* M7Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Space.swift; sourceTree = "<group>"; };
 		32C96AFA236F90960035871E /* M7Paddings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Paddings.swift; sourceTree = "<group>"; };
 		32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableViewCell.swift; sourceTree = "<group>"; };
@@ -380,7 +366,6 @@
 				323F34EB2370577100B96AE9 /* Label */,
 				3255205623679755002E7485 /* Switch */,
 				320BE42E23644CD200C068C0 /* TableViewCell */,
-				325E02BE235C42D800B051E9 /* ModalSelect */,
 				325E0248235C31BB00B051E9 /* ModalInfo */,
 				325E024C235C31BB00B051E9 /* Card */,
 				325E024F235C31BB00B051E9 /* DatePicker */,
@@ -501,28 +486,6 @@
 				325E02AB235C3A4D00B051E9 /* MyView.swift */,
 			);
 			path = Lern;
-			sourceTree = "<group>";
-		};
-		325E02BD235C42C400B051E9 /* ModalView */ = {
-			isa = PBXGroup;
-			children = (
-				325E0298235C388700B051E9 /* ModalSelectModel.swift */,
-				325E0295235C382900B051E9 /* ModalSelectView.xib */,
-				325E0294235C382900B051E9 /* ModalSelectController.swift */,
-			);
-			path = ModalView;
-			sourceTree = "<group>";
-		};
-		325E02BE235C42D800B051E9 /* ModalSelect */ = {
-			isa = PBXGroup;
-			children = (
-				325E02C7235C50EB00B051E9 /* TestViewController.swift */,
-				325E02C8235C50EB00B051E9 /* TestViewController.xib */,
-				325E02BF235C432600B051E9 /* ModalSelectButton.swift */,
-				325E02C3235C462300B051E9 /* ModalSelectButton.xib */,
-				325E02BD235C42C400B051E9 /* ModalView */,
-			);
-			path = ModalSelect;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -664,7 +627,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				325E0274235C31BC00B051E9 /* Montserrat-Regular.ttf in Resources */,
-				325E02CA235C50EB00B051E9 /* TestViewController.xib in Resources */,
 				325E027B235C31BC00B051E9 /* Card.xib in Resources */,
 				325E028E235C31BC00B051E9 /* SwitchRow.xib in Resources */,
 				325E0275235C31BC00B051E9 /* OCRAEXT.TTF in Resources */,
@@ -673,8 +635,6 @@
 				325E027D235C31BC00B051E9 /* DatePicker1.xib in Resources */,
 				325E0273235C31BC00B051E9 /* Montserrat-SemiBold.ttf in Resources */,
 				325E0270235C31BC00B051E9 /* Montserrat-Bold.ttf in Resources */,
-				325E02C4235C462300B051E9 /* ModalSelectButton.xib in Resources */,
-				325E0297235C382900B051E9 /* ModalSelectView.xib in Resources */,
 				325E02B7235C3A4D00B051E9 /* MyView.xib in Resources */,
 				325E0292235C31BC00B051E9 /* Icons.xcassets in Resources */,
 				325E0277235C31BC00B051E9 /* ModalInfoController.xib in Resources */,
@@ -740,23 +700,19 @@
 				3255204B2366398D002E7485 /* M7TableViewCell.swift in Sources */,
 				325E0272235C31BC00B051E9 /* M7Fonts.swift in Sources */,
 				32C96AF9236F8C300035871E /* M7Space.swift in Sources */,
-				325E02C0235C432600B051E9 /* ModalSelectButton.swift in Sources */,
 				325E0290235C31BC00B051E9 /* Button.swift in Sources */,
 				325E026E235C31BC00B051E9 /* M7Colors.swift in Sources */,
 				325E0276235C31BC00B051E9 /* DefaultTheme.swift in Sources */,
-				325E0296235C382900B051E9 /* ModalSelectController.swift in Sources */,
 				325E02BA235C3A4D00B051E9 /* DSButtonWhite.swift in Sources */,
 				325E02B9235C3A4D00B051E9 /* DSTextField.swift in Sources */,
 				32552064236A227C002E7485 /* BubbleView.swift in Sources */,
 				325E027C235C31BC00B051E9 /* DatePicker.swift in Sources */,
-				325E02C9235C50EB00B051E9 /* TestViewController.swift in Sources */,
 				325E02B3235C3A4D00B051E9 /* DSBottonGray.swift in Sources */,
 				32552060236A0C07002E7485 /* M7ChatCell.swift in Sources */,
 				325E02B4235C3A4D00B051E9 /* DesignSystem.swift in Sources */,
 				325E02BB235C3A4D00B051E9 /* DSColorSelector.swift in Sources */,
 				325E02B0235C3A4D00B051E9 /* DSButton.swift in Sources */,
 				325E02B8235C3A4D00B051E9 /* MyView.swift in Sources */,
-				325E0299235C388700B051E9 /* ModalSelectModel.swift in Sources */,
 				325E02B1235C3A4D00B051E9 /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
