@@ -12,7 +12,6 @@ jobs:
         uses: aromanov91/M7UIKit@master
       - name: Build and test
         run: |
-          cd M7UIKit
-          xcodebuild clean test -project M7UIKit.xcodeproj -scheme M7UIKit -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+          xcodebuild clean test -project M7UIKit.xcodeproj -scheme M7UIKit -destination "${destination}" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
         env: 
          destination: ${{ matrix.destination }}
