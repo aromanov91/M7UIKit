@@ -9,7 +9,7 @@ jobs:
           destination: ['platform=iOS Simulator,OS=13.2,name=iPhone X']
     steps:
       - name: Checkout
-        uses: aromanov91/M7UIKit@master
+        uses: actions/checkout@v1
       - name: Build and test
         run: |
           xcodebuild clean test -project M7UIKit.xcodeproj -scheme M7UIKit -destination "${destination}" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
