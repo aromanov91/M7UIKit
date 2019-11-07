@@ -17,4 +17,4 @@ jobs:
       env:
         COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
       run: |
-        pod trunk push M7UIKit.podspec
+        pod trunk push M7UIKit.podspec --skip-import-validation --allow-warnings
