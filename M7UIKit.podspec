@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "M7UIKit"
-  spec.version      = "1.1.0"
+  spec.version      = "1.1.1"
   spec.summary      = "A another uikit M7UIKit."
 
   # This description is used to generate tags and improve search results.

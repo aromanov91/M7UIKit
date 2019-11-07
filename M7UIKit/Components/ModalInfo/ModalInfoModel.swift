@@ -8,6 +8,7 @@
 
 import Foundation
 public class ModalInfoModel {
+    
     let title: String
     
     public init(title: String){
