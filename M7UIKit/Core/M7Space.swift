@@ -34,7 +34,7 @@ public class M7Space {
     /// 72
     static let xxl          = 72
     
-    /// 144
+    /// 96
     static let xxxl         = 96
     
 }
