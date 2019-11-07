@@ -1,17 +1,17 @@
-on: push
-name: Test
+name: CI
+on:
+  push:
+    branches:
+    - master
+    
 jobs:
-  test:
-    name: Test
-    runs-on: macOS-latest
-    strategy:
-        matrix:
-          destination: ['platform=iOS Simulator,OS=13.2,name=iPhone X']
+  build:
+  runs-on: macOS-latest
+    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Build and test
-        run: |
-          xcodebuild clean test -project M7UIKit.xcodeproj -scheme M7UIKit -destination "${destination}" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-        env: 
-         destination: ${{ matrix.destination }}
+    - uses: actions/checkout@v1
+    - name: Publish to CocoaPod register
+      env:
+        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+      run: |
+        pod trunk push M7UIKit.podspec
