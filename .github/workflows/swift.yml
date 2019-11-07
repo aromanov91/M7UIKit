@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Publish to CocoaPod register
-#      env:
-#        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+      env:
+        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
 #      run: |
 #        pod trunk push M7UIKit.podspec --skip-import-validation --allow-warnings
