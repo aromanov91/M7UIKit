@@ -14,18 +14,22 @@ public class ModalInfoController: UIViewController {
          closeButton.addTarget(self, action:  #selector(self.closeButtonAction), for: .touchUpInside)
       }
    }
+    
    public var model: ModalInfoModel!
    public init() {
       super.init(nibName: "ModalInfoController", bundle: Bundle(for: ModalInfoController.self))
    }
+    
    required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
+    
    override public func viewDidLoad() {
       super.viewDidLoad()
       titleLabel.text = model.title
    }
 }
+
 @objc extension ModalInfoController {
    private func closeButtonAction() {
       self.dismiss(animated: true, completion: nil)
