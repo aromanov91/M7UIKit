@@ -72,6 +72,35 @@ public class M7Fonts {
         public static var caption: CGFloat = 1.09
         
     }
+    
+    public struct Kerning {
+        
+        public static let largeTitle: CGFloat = 0.39
+        
+        /// Bold 28pt
+        public static let title1: CGFloat = 0.36
+        
+        /// Bold 22pt
+        public static var title2: CGFloat = 0.35
+        
+        /// Bold 20pt
+        public static var title3: CGFloat = 0.38
+        
+        /// Regular 16pt
+        public static var body1: CGFloat = -0.39
+        
+        
+        /// Regular 14pt
+        public static var body2: CGFloat = -0.34
+        
+        
+        /// Bold 16pt
+        public static var button: CGFloat = -0.39
+        
+        /// Bold 12pt
+        public static var caption: CGFloat = 3
+        
+    }
 }
 
 public enum M7LabelStyle {

@@ -21,9 +21,9 @@ class ViewController: UIViewController {
 
         //Transition.StoryboardNav(Transition)
         
-        let vc = ModalSelectController()
-        vc.model = ModalSelectModel(title: "Hello")
-        self.present(vc, animated: true, completion: nil)
+//        let vc = ModalSelectController()
+//        vc.model = ModalSelectModel(title: "Hello")
+//        self.present(vc, animated: true, completion: nil)
     }
     
 }
