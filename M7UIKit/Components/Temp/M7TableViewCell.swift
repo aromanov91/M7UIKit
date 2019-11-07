@@ -163,7 +163,7 @@ public enum M7cellAccessoryType {
     
     public func setup() {
         
-        if card { self.cellView.backgroundColor = UIColor.secondarySystemBackground
+        if card { self.cellView.backgroundColor = M7Colors.gray
             
             addSubview(cellView)
             NSLayoutConstraint.activate([
