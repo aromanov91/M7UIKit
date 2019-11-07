@@ -8,3 +8,7 @@ env:
 
 script:
   - xcodebuild clean build test -project "M7UIKit.xcodeproj" -scheme M7UIKit -sdk $TEST_SDK ONLY_ACTIVE_ARCH=NO | xcpretty
+  
+ after_success:
+  - slather
+  - bash <(curl -s https://codecov.io/bash) -f reports/cobertura.xml -X coveragepy -X gcov -X xcode
