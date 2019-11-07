@@ -10,6 +10,10 @@ import UIKit
 
 @IBDesignable public class M7Label: UILabel {
     
+    var paragraphStyle = NSMutableParagraphStyle()
+    
+    var kerning: CGFloat = 1.0
+    
     @IBInspectable public var selectFont: String = "" {
         didSet {
             if selectFont != oldValue {
@@ -81,39 +85,77 @@ import UIKit
     
     private func updateLineHeight() {
         
-        var paragraphStyle = NSMutableParagraphStyle()
-        
         if selectFont != "" {
             switch self.selectFont {
-            case "largeTitle": paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.largeTitle
-            case "title1"    : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title1
-            case "title2"    : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title2
-            case "title3"    : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title3
-            case "body1"     : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
-            case "bodyBold1" : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
-            case "body2"     : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body2
-            case "bodyBold2" : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body2
-            case "button"    : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
-            case "caption"   : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.caption
+            case "largeTitle":
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.largeTitle
+                kerning = M7Fonts.Kerning.largeTitle
+            case "title1":
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title1
+                kerning = M7Fonts.Kerning.title1
+            case "title2":
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title2
+                kerning = M7Fonts.Kerning.title2
+            case "title3":
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title3
+                kerning = M7Fonts.Kerning.title3
+            case "body1" :
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
+                kerning = M7Fonts.Kerning.body1
+            case "bodyBold1":
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
+                kerning = M7Fonts.Kerning.body1
+            case "body2":
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body2
+                kerning = M7Fonts.Kerning.body2
+            case "bodyBold2":
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body2
+                kerning = M7Fonts.Kerning.body2
+            case "button":
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
+                kerning = M7Fonts.Kerning.body1
+            case "caption":
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.caption
+                kerning = M7Fonts.Kerning.caption
             default: break
             }
             
         } else {
             switch self.fontLabel {
-            case .largeTitle : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.largeTitle
-            case .title1     : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title1
-            case .title2     : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title2
-            case .title3     : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title3
-            case .body1      : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
-            case .bodyBold1  : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
-            case .body2      : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body2
-            case .bodyBold2  : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body2
-            case .button     : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
-            case .caption    : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.caption
+            case .largeTitle :
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.largeTitle
+                kerning = M7Fonts.Kerning.largeTitle
+            case .title1:
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title1
+                kerning = M7Fonts.Kerning.title1
+            case .title2:
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title2
+                kerning = M7Fonts.Kerning.title2
+            case .title3:
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title3
+                kerning = M7Fonts.Kerning.title3
+            case .body1:
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
+                kerning =  M7Fonts.Kerning.body1
+            case .bodyBold1:
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
+                kerning = M7Fonts.Kerning.body1
+            case .body2:
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body2
+                kerning = M7Fonts.Kerning.body2
+            case .bodyBold2:
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body2
+                kerning = M7Fonts.Kerning.body2
+            case .button:
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
+                kerning = M7Fonts.Kerning.body1
+            case .caption:
+                paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.caption
+                kerning =  M7Fonts.Kerning.caption
             }
         }
         
-        attributedText = NSMutableAttributedString(string: text ?? "Label", attributes: [NSAttributedString.Key.kern: -0.39, NSAttributedString.Key.paragraphStyle: paragraphStyle])
+        attributedText = NSMutableAttributedString(string: text ?? "Label", attributes: [NSAttributedString.Key.kern: kerning, NSAttributedString.Key.paragraphStyle: paragraphStyle])
     }
     
     private func updateColor() {
