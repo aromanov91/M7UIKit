@@ -1,0 +1,6 @@
+coverage_service: cobertura_xml
+xcodeproj: M7UIKit.xcodeproj
+scheme: M7UIKit
+output_directory: reports
+ignore:
+  - M7UIKitTests/*
