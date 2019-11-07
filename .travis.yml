@@ -1,7 +1,5 @@
 language: objective-c
-osx_image: xcode11.2
-before_install:
-  - gem install cocoapods --pre
-xcode_workspace: M7UIKit.xcworkspace
-xcode_scheme: M7UIKitExamples
-script: set -o pipefail && xcodebuild test -workspace M7UIKit.xcworkspace -scheme M7UIKitExamples|xcpretty
+osx_image: xcode11.3
+
+script:
+- xcodebuild clean build test -project "M7UIKit.xcodeproj" -scheme CheckBox -sdk iphonesimulator13.2 -destination "OS=13.2,name=iPhone X" ONLY_ACTIVE_ARCH=NO
