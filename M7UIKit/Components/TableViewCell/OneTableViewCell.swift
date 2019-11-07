@@ -60,7 +60,7 @@ public class OneTableViewCell: UITableViewCell {
     }
     
     public let title: M7Label = {
-        let label = M7Label(font: LabelStyles.titleFont, color: LabelStyles.titleColor)
+        var label = M7Label(font: LabelStyles.titleFont, color: LabelStyles.titleColor)
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -102,9 +102,6 @@ public class OneTableViewCell: UITableViewCell {
         //        setNeedsLayout()
         //        invalidateIntrinsicContentSize()
     }
-    
-    
-    
     
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

@@ -15,10 +15,10 @@ public class M7Fonts {
     private static let boldFont = "Montserrat-Bold"
     
     /// Bold 34pt
-    public static let largeTitle = UIFont(name: boldFont, size: 34) ?? UIFont.systemFont(ofSize: 34, weight: .bold)
+    public static var largeTitle = UIFont(name: boldFont, size: 34) ?? UIFont.systemFont(ofSize: 34, weight: .bold)
     
     /// Bold 28pt
-    public static let title1 = UIFont(name: boldFont, size: 28) ?? UIFont.systemFont(ofSize: 28, weight: .bold)
+    public static var title1 = UIFont(name: boldFont, size: 28) ?? UIFont.systemFont(ofSize: 28, weight: .bold)
     
     /// Bold 22pt
     public static var title2 = UIFont(name: boldFont, size: 22) ?? UIFont.systemFont(ofSize: 22, weight: .bold)
@@ -43,6 +43,35 @@ public class M7Fonts {
     
     /// Bold 12pt
     public static var caption = UIFont(name: boldFont, size: 12) ?? UIFont.systemFont(ofSize: 12, weight: .bold)
+    
+    public struct LineHeights {
+        
+        public static let largeTitle: CGFloat = 1.16
+        
+        /// Bold 28pt
+        public static let title1: CGFloat = 1.05
+        
+        /// Bold 22pt
+        public static var title2: CGFloat = 1.04
+        
+        /// Bold 20pt
+        public static var title3: CGFloat = 0.98
+        
+        /// Regular 16pt
+        public static var body1: CGFloat = 1.23
+        
+        
+        /// Regular 14pt
+        public static var body2: CGFloat = 1.17
+        
+        
+        /// Bold 16pt
+        public static var button: CGFloat = 1.23
+        
+        /// Bold 12pt
+        public static var caption: CGFloat = 1.09
+        
+    }
 }
 
 public enum M7LabelStyle {

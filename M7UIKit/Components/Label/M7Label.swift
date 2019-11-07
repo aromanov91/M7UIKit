@@ -8,20 +8,6 @@
 
 import UIKit
 
-
-//public enum N7LabelStyle: String {
-//    case primary = "primary"
-//    case secondary = "secondary"
-//    case gray = "gray"
-//    case link = "link"
-//}
-//
-//public enum N7ButtonRounded: String {
-//    case full = "full"
-//    case l = "l"
-//    case m = "m"
-//}
-
 @IBDesignable public class M7Label: UILabel {
     
     @IBInspectable public var selectFont: String = "" {
@@ -74,6 +60,7 @@ import UIKit
     private func initialize() {
         updateFont()
         updateColor()
+        updateLineHeight()
     }
     
     private func updateFont() {
@@ -90,7 +77,43 @@ import UIKit
         case "caption"   : font = M7LabelStyle.caption.font
         default: font = fontLabel.font
         }
+    }
+    
+    private func updateLineHeight() {
         
+        var paragraphStyle = NSMutableParagraphStyle()
+        
+        if selectFont != "" {
+            switch self.selectFont {
+            case "largeTitle": paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.largeTitle
+            case "title1"    : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title1
+            case "title2"    : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title2
+            case "title3"    : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title3
+            case "body1"     : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
+            case "bodyBold1" : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
+            case "body2"     : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body2
+            case "bodyBold2" : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body2
+            case "button"    : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
+            case "caption"   : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.caption
+            default: break
+            }
+            
+        } else {
+            switch self.fontLabel {
+            case .largeTitle : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.largeTitle
+            case .title1     : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title1
+            case .title2     : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title2
+            case .title3     : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.title3
+            case .body1      : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
+            case .bodyBold1  : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
+            case .body2      : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body2
+            case .bodyBold2  : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body2
+            case .button     : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.body1
+            case .caption    : paragraphStyle.lineHeightMultiple = M7Fonts.LineHeights.caption
+            }
+        }
+        
+        attributedText = NSMutableAttributedString(string: text ?? "Label", attributes: [NSAttributedString.Key.kern: -0.39, NSAttributedString.Key.paragraphStyle: paragraphStyle])
     }
     
     private func updateColor() {
@@ -106,6 +129,6 @@ import UIKit
         default: textColor = colorLabel.color
         }
     }
- 
+    
 }
 

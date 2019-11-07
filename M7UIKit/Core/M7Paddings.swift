@@ -10,24 +10,24 @@ import UIKit
 
 public class M7Paddings {
     public enum leading {
-        static let s        = CGFloat(M7Space.s)
-        static let m        = CGFloat(M7Space.m)
+        static let s = CGFloat(M7Space.s)
+        static let m = CGFloat(M7Space.m)
     }
     public enum top {
-        static let s        = CGFloat(M7Space.s)
-        static let m        = CGFloat(M7Space.m)
+        static let s = CGFloat(M7Space.s)
+        static let m = CGFloat(M7Space.m)
     }
     public enum trailing {
-        static let s        = CGFloat(-M7Space.s)
-        static let m        = CGFloat(-M7Space.m)
+        static let s = CGFloat(-M7Space.s)
+        static let m = CGFloat(-M7Space.m)
     }
     public enum bottom {
-        static let s        = CGFloat(-M7Space.s)
-        static let m        = CGFloat(-M7Space.m)
+        static let s = CGFloat(-M7Space.s)
+        static let m = CGFloat(-M7Space.m)
     }
     public enum between {
-        static let s        = CGFloat(M7Space.xs)
-        static let m        = CGFloat(M7Space.s)
+        static let s = CGFloat(M7Space.xs)
+        static let m = CGFloat(M7Space.s)
     }
 }
 
