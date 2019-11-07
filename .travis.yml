@@ -1,5 +1,5 @@
 language: objective-c
 osx_image: xcode11.2
 xcode_workspace: M7UIKit.xcworkspace
-xcode_scheme: M7UIKit
+xcode_scheme: M7UIKitExamples
 script: set -o pipefail && xcodebuild test -workspace M7UIKit.xcworkspace -scheme M7UIKitExamples|xcpretty
