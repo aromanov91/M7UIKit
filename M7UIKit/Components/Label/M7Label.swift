@@ -8,7 +8,8 @@
 
 import UIKit
 
-@IBDesignable public class M7Label: UILabel {
+@IBDesignable
+public class M7Label: UILabel {
     
     var paragraphStyle = NSMutableParagraphStyle()
     
