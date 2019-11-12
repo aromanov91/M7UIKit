@@ -23,9 +23,16 @@ public class OneTableViewCell: UITableViewCell {
     //    }
     private struct Constants {
         static var paddingLeading = M7Paddings.leading.m
-        static var paddingTop = M7Paddings.top.s
+//        {
+//            didSet{
+//                if icon.image.name != nil {
+//                    return paddingLeading + 40
+//                }
+//            }
+//        }
+        static var paddingTop = M7Paddings.top.m
         static var paddingTrailing = M7Paddings.trailing.m
-        static var paddingBottom = M7Paddings.bottom.s
+        static var paddingBottom = M7Paddings.bottom.m
         static let rightMargin: CGFloat = -80
     }
     
@@ -91,12 +98,24 @@ public class OneTableViewCell: UITableViewCell {
         return view
     }()
     
+    public let icon: UIImageView = {
+        let imageView = UIImageView()
+        let image = UIImage()
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = UIColor.gray
+        imageView.layer.cornerRadius = 10
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
     
-    public func setup(title: String, subtitle: String = "", detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none) {
+    public func setup(title: String, subtitle: String = "", detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none, icon: String = "") {
         self.title.text = title
         self.subtitle.text = subtitle
         self.detail.text = detail
         self.card = card
+        self.icon.image = UIImage(named: icon)
         cellAccessoryType = accessoryType
         
         //        setNeedsLayout()
@@ -150,6 +169,8 @@ public class OneTableViewCell: UITableViewCell {
             ])
         }
         
+        self.addSubview(icon)
+        
         self.addSubview(title)
         self.addSubview(subtitle)
         self.selectionStyle = .none
@@ -157,17 +178,17 @@ public class OneTableViewCell: UITableViewCell {
         //        title.heightAnchor.constraint(equalToConstant: 200).isActive = true
         //        title.widthAnchor.constraint(equalToConstant: 200).isActive = true
         //title.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+        title.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
         title.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.paddingTop).isActive = true
-        title.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
+        title.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
         //title.bottomAnchor.constraint(equalTo: subtitle.topAnchor, constant: 20).isActive = true
         
         //        subtitle.heightAnchor.constraint(equalToConstant: 200).isActive = true
         //        subtitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
         
-        subtitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+        subtitle.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
         subtitle.topAnchor.constraint(equalTo: title.bottomAnchor).isActive = true
-        subtitle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
+        subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
         subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom).isActive = true
         //subtitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
@@ -182,13 +203,13 @@ public class OneTableViewCell: UITableViewCell {
             cellDisclosureIndicator.image = disclosureIndicatorImage
             cellDisclosureIndicator.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(cellDisclosureIndicator)
-            cellDisclosureIndicator.rightAnchor.constraint(equalTo: self.rightAnchor, constant: card == true ? -40 : -20).isActive = true
+            cellDisclosureIndicator.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: card == true ? -40 : -20).isActive = true
             cellDisclosureIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
             cellDisclosureIndicator.widthAnchor.constraint(equalToConstant: 24).isActive = true
             cellDisclosureIndicator.heightAnchor.constraint(equalToConstant: 24).isActive = true
             
             self.addSubview(detail)
-            detail.rightAnchor.constraint(equalTo: self.rightAnchor, constant: card == true ? -64 : -44).isActive = true
+            detail.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: card == true ? -64 : -44).isActive = true
             detail.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
             
         case .detailButton:
@@ -196,7 +217,7 @@ public class OneTableViewCell: UITableViewCell {
             detailButton.translatesAutoresizingMaskIntoConstraints = false
             detailButton.setTitle("Button", for: .normal)
             self.addSubview(detailButton)
-            detailButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: card == true ? -40 : -20).isActive = true
+            detailButton.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: card == true ? -40 : -20).isActive = true
             detailButton.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
             detailButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
             
@@ -204,7 +225,7 @@ public class OneTableViewCell: UITableViewCell {
             let toggle = M7Switch()
             toggle.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(toggle)
-            toggle.rightAnchor.constraint(equalTo: self.rightAnchor, constant: card == true ? -40 : -20).isActive = true
+            toggle.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: card == true ? -40 : -20).isActive = true
             toggle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
             
         case .checkmark:
@@ -214,7 +235,7 @@ public class OneTableViewCell: UITableViewCell {
             cellCheckmark.image = cellCheckmarkSelectedImage
             cellCheckmark.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(cellCheckmark)
-            cellCheckmark.rightAnchor.constraint(equalTo: self.rightAnchor, constant: card == true ? -40 : -20).isActive = true
+            cellCheckmark.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: card == true ? -40 : -20).isActive = true
             cellCheckmark.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
             cellCheckmark.widthAnchor.constraint(equalToConstant: 32).isActive = true
             cellCheckmark.heightAnchor.constraint(equalToConstant: 32).isActive = true

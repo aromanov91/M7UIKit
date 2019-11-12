@@ -11,7 +11,7 @@ import M7UIKit
 
 class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private var data = ["Бля jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jjfkl jflkj jf kfj jfd jlk j","Загаловок","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jj","Пиздец","djsfjsdk","fdgffsds jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jj","dfsdfsdf"]
+    private var data = ["Бля jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jjfkl jflkj jf kfj jfd jlk j","Загаловок","Djsfjsdk","Fdgffsds","Dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jj","Пиздец","djsfjsdk","fdgffsds jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jj","dfsdfsdf"]
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -19,28 +19,6 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        
-        //        let item = CellModel(name: "Вибрация", discription: "Офигенная", detail: "Пульсирующая")
-        //        data.append(item)
-        //         let item2 = CellModel(name: "ddd", discription: "vvvvv", detail: "dfdfsdfsd")
-        //        data.append(item2)
-        //        data.append(item)
-        //        data.append(item)
-        //        data.append(item)
-        //        data.append(item)
-        //        data.append(item2)
-        //        data.append(item)
-        //        data.append(item)
-        //        data.append(item)
-        //        data.append(item)
-        //        data.append(item)
-        //        data.append(item)
-        //        data.append(item)
-        //        data.append(item)
-        //        data.append(item)
-        //        data.append(item)
-        //        data.append(item)
-        
     }
     
     func setupTableView() {
@@ -51,12 +29,16 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
         tableView.delegate = self
         tableView.dataSource = self
         
-         tableView.estimatedRowHeight = 80
+        tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableView.automaticDimension
-       
+        
         //tableView.reloadData()
         
         tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggle")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellcheckmark")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldetailButton")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldisclosureIndicator")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellnone")
         
         
         view.addSubview(tableView)
@@ -68,7 +50,7 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
             tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor)
         ])
         
-                tableView.reloadData()
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,35 +60,58 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdtoggle", for: indexPath) as! OneTableViewCell
-        //cell.backgroundColor = UIColor.gray
-        //cell.card = true
+        switch  indexPath.row {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellcheckmark", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark, icon: "Apple")
+            return cell
+            
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "celldetailButton", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .detailButton, icon: "Apple")
+            return cell
+            
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "celldisclosureIndicator", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .disclosureIndicator)
+            return cell
+            
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellnone", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .none)
+            return cell
+            
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdtoggle", for: indexPath) as! OneTableViewCell
+            //cell.backgroundColor = UIColor.gray
+            //cell.card = true
+            
+            //cell.cellAccessoryType = .detailButton
+            // cell.paddingBottom =
+            
+            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .toggle)
+            
+            return cell
+        }
         
-        //cell.cellAccessoryType = .detailButton
-       // cell.paddingBottom = 
-        
-       
-        
-        cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .toggle)
         
         
-        return cell
     }
     
-
     
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 60
-//    }
-//
     
-        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            if indexPath.section == 0 {
-                return  UITableView.automaticDimension
-            } else {
-                return 80
-            }
+    //    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        return 60
+    //    }
+    //
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return  UITableView.automaticDimension
+        } else {
+            return 80
         }
+    }
     
     
     

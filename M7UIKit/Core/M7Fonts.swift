@@ -62,7 +62,7 @@ public class M7Fonts {
         
         
         /// Regular 14pt
-        public static var body2: CGFloat = 1.17
+        public static var body2: CGFloat = 1.41
         
         
         /// Bold 16pt
