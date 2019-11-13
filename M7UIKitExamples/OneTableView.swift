@@ -11,9 +11,9 @@ import M7UIKit
 
 class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-//    private var data = ["Бля jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jjfkl jflkj jf kfj jfd jlk j","Загаловок","Djsfjsdk","Fdgffsds","Dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jj","Пиздец","djsfjsdk","fdgffsds jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jj","dfsdfsdf"]
+    //    private var data = ["Бля jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jjfkl jflkj jf kfj jfd jlk j","Загаловок","Djsfjsdk","Fdgffsds","Dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jj","Пиздец","djsfjsdk","fdgffsds jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jj","dfsdfsdf"]
     
-     private var data = ["Suitcase Fusion is a professional font manager that lets you preview, manage, and activate, all your fonts in one place. And now, with their handy new plugin, Suitcase Fusion integrates directly with Sketch so you always have the right fonts, when you need them. Find out more over on the","Suitcase Fusion is a professional font manager that lets you preview, manage, and activate, all your fonts in one place. And now, with their handy new plugin, Suitcase Fusion integrates directly with Sketch so you always have the right fonts, when you need them. Find out more over on the","Suitcase Fusion is a professional font manager that lets you preview, manage, and activate, all your fonts in one place. And now, with their handy new plugin, Suitcase Fusion integrates directly with Sketch so you always have the right fonts, when you need them. Find out more over on the","Suitcase Fusion is a professional font manager that lets you preview, manage, and activate, all your fonts in one place. And now, with their handy new plugin, Suitcase Fusion integrates directly with Sketch so you always have the right fonts, when you need them. Find out more over on the","Suitcase Fusion is a professional font manager that lets you preview, manage, and activate, all your fonts in one place. And now, with their handy new plugin, Suitcase Fusion integrates directly with Sketch so you always have the right fonts, when you need them. Find out more over on the","Suitcase Fusion is a professional font manager that lets you preview, manage, and activate, all your fonts in one place. And now, with their handy new plugin, Suitcase Fusion integrates directly with Sketch so you always have the right fonts, when you need them. Find out more over on the","Suitcase Fusion is a professional font manager that lets you preview, manage, and activate, all your fonts in one place. And now, with their handy new plugin, Suitcase Fusion integrates directly with Sketch so you always have the right fonts, when you need them. Find out more over on the","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jj","Пиздец","djsfjsdk","fdgffsds jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jj","dfsdfsdf"]
+    private var data = ["Suitcase Fusion is a professional font manager that lets you preview, manage, and activate, all your fonts in one place. And now, with their handy new plugin, Suitcase Fusion integrates directly with Sketch so you always have the right fonts, when you need them. Find out more over on the","Suitcase Fusion is a professional font manager that lets you preview, manage, and activate, all your fonts in one place. And now, with their handy new plugin, Suitcase Fusion integrates directly with Sketch so you always have the right fonts, when you need them. Find out more over on the","Suitcase Fusion is a professional font manager that lets you preview, manage, and activate, all your fonts in one place. And now, with their handy new plugin, Suitcase Fusion integrates directly with Sketch so you always have the right fonts, when you need them. Find out more over on the","Suitcase Fusion is a professional font manager that lets you preview, manage, and activate, all your fonts in one place. And now, with their handy new plugin, Suitcase Fusion integrates directly with Sketch so you always have the right fonts, when you need them. Find out more over on the","Suitcase Fusion is a professional font manager that lets you preview, manage, and activate, all your fonts in one place. And now, with their handy new plugin, Suitcase Fusion integrates directly with Sketch so you always have the right fonts, when you need them. Find out more over on the","Suitcase Fusion is a professional font manager that lets you preview, manage, and activate, all your fonts in one place. And now, with their handy new plugin, Suitcase Fusion integrates directly with Sketch so you always have the right fonts, when you need them. Find out more over on the","Suitcase Fusion is a professional font manager that lets you preview, manage, and activate, all your fonts in one place. And now, with their handy new plugin, Suitcase Fusion integrates directly with Sketch so you always have the right fonts, when you need them. Find out more over on the","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля","Пиздец","djsfjsdk","fdgffsds","dfsdfsdf","Бля jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jj","Пиздец","djsfjsdk","fdgffsds jdkkfrej j jkkj krjrkjjr jkj je klejrkrjjrejkjjkfjkkfjjkjfjk j jj","dfsdfsdf"]
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -42,6 +42,24 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
         tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldisclosureIndicator")
         tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellnone")
         
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggle1")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellcheckmark1")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldetailButton1")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldisclosureIndicator1")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellnone1")
+        
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggle2")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellcheckmark2")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldetailButton2")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldisclosureIndicator2")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellnone2")
+        
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggle3")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellcheckmark3")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldetailButton3")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldisclosureIndicator3")
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellnone3")
+        
         
         view.addSubview(tableView)
         
@@ -65,12 +83,12 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
         switch  indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellcheckmark", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark, icon: "Apple")
+            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark)
             return cell
             
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "celldetailButton", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .detailButton, icon: "Apple")
+            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .detailButton)
             return cell
             
         case 2:
@@ -81,6 +99,66 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellnone", for: indexPath) as! OneTableViewCell
             cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .none)
+            return cell
+            
+        case 4:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellcheckmark1", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark, icon: "Apple2")
+            return cell
+            
+        case 5:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "celldetailButton1", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .detailButton, icon: "Apple2")
+            return cell
+            
+        case 6:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "celldisclosureIndicator1", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .disclosureIndicator, icon: "Apple2")
+            return cell
+            
+        case 7:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellnone1", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .none, icon: "Apple2")
+            return cell
+            
+        case 8:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellcheckmark2", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark, icon: "Apple")
+            return cell
+            
+        case 9:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "celldetailButton2", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .detailButton, icon: "Apple")
+            return cell
+            
+        case 10:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "celldisclosureIndicator2", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .disclosureIndicator, icon: "Apple")
+            return cell
+            
+        case 11:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellnone2", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .none, icon: "Apple")
+            return cell
+            
+        case 12:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellcheckmark3", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark)
+            return cell
+            
+        case 13:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "celldetailButton3", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .detailButton)
+            return cell
+            
+        case 14:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "celldisclosureIndicator3", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .disclosureIndicator)
+            return cell
+            
+        case 15:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellnone3", for: indexPath) as! OneTableViewCell
+            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .none)
             return cell
             
         default:

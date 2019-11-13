@@ -18,15 +18,24 @@ public enum OneCellAccessoryType {
 
 public class OneTableViewCell: UITableViewCell {
     
+    public enum CellTipe {
+        case title
+        case titleSubtitle
+        case titleIcon
+        case titleSubtitleIcon
+    }
+    
+    private var cellTypeSelect: CellTipe = .title
+    
     //    override public func sizeThatFits(_ size: CGSize) -> CGSize {
     //        return CGSize(width: 375, height: 150)
     //    }
     private struct Constants {
-        static var paddingLeading = M7Paddings.leading.m
-        static var paddimgBetween = M7Paddings.between.m
-        static var paddingTop = M7Paddings.top.m
+        static var paddingLeading  = M7Paddings.leading.m
+        static var paddimgBetween  = M7Paddings.between.m
+        static var paddingTop      = M7Paddings.top.m
         static var paddingTrailing = M7Paddings.trailing.m
-        static var paddingBottom = M7Paddings.bottom.m
+        static var paddingBottom   = M7Paddings.bottom.m
         //static let rightMargin: CGFloat = -80
     }
     
@@ -92,6 +101,8 @@ public class OneTableViewCell: UITableViewCell {
         return view
     }()
     
+    private var iconName = ""
+    
     public let icon: UIImageView = {
         let imageView = UIImageView()
         let image = UIImage()
@@ -104,17 +115,54 @@ public class OneTableViewCell: UITableViewCell {
         return imageView
     }()
     
-    public func setup(title: String, subtitle: String = "", detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none, icon: String = "") {
+    public func setup(title: String, subtitle: String, detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none, icon: String) {
         self.title.text = title
         self.subtitle.text = subtitle
         self.detail.text = detail
         self.card = card
         self.icon.image = UIImage(named: icon)
         cellAccessoryType = accessoryType
+        self.cellTypeSelect = .titleSubtitleIcon
         
-        //        setNeedsLayout()
-        //        invalidateIntrinsicContentSize()
+        setNeedsLayout()
+        invalidateIntrinsicContentSize()
     }
+    
+    public func setup(title: String, subtitle: String = "", detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none) {
+        self.title.text = title
+        self.subtitle.text = subtitle
+        self.detail.text = detail
+        self.card = card
+        cellAccessoryType = accessoryType
+        self.cellTypeSelect = .titleSubtitle
+        
+        setNeedsLayout()
+        invalidateIntrinsicContentSize()
+    }
+    
+    public func setup(title: String, detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none, icon: String) {
+        self.title.text = title
+        self.detail.text = detail
+        self.card = card
+        self.icon.image = UIImage(named: icon)
+        cellAccessoryType = accessoryType
+        self.cellTypeSelect = .titleIcon
+        
+        setNeedsLayout()
+        invalidateIntrinsicContentSize()
+    }
+    
+    public func setup(title: String, detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none) {
+        self.title.text = title
+        self.detail.text = detail
+        self.card = card
+        cellAccessoryType = accessoryType
+        self.cellTypeSelect = .title
+        
+        setNeedsLayout()
+        invalidateIntrinsicContentSize()
+    }
+    
     
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -126,11 +174,11 @@ public class OneTableViewCell: UITableViewCell {
         initialize()
     }
     
-    //    open override func layoutSubviews() {
-    //        super.layoutSubviews()
+    //        open override func layoutSubviews() {
+    //            super.layoutSubviews()
     //
-    //        initialize()
-    //    }
+    //            initialize()
+    //        }
     
     
     //    open override var bounds: CGRect {
@@ -151,6 +199,18 @@ public class OneTableViewCell: UITableViewCell {
     //  override public var intrinsicContentSize: CGSize { return CGSize(width: 375, height: 150) }
     
     public func initialize() {
+        
+        if iconName != "" {
+            print("iconName ====================")
+        }
+        
+        print("====================")
+        
+        print(icon.image)
+        
+        if icon.image == nil {
+            print("nil nil nil nil nil nil nil ============")
+        }
         
         if card == true {
             addSubview(cardView)
@@ -252,12 +312,5 @@ public class OneTableViewCell: UITableViewCell {
             title.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - cellCheckmark.frame.width - Constants.paddimgBetween).isActive = true
             subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - cellCheckmark.frame.width - Constants.paddimgBetween).isActive = true
         }
-        
     }
-    
-    
-    
-    
-    
-    
 }
