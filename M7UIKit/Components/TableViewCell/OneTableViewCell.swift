@@ -16,14 +16,16 @@ public enum OneCellAccessoryType {
     case toggle
 }
 
+public enum CellTipe {
+    case title
+    case titleSubtitle
+    case titleIcon
+    case titleSubtitleIcon
+}
+
 public class OneTableViewCell: UITableViewCell {
     
-    public enum CellTipe {
-        case title
-        case titleSubtitle
-        case titleIcon
-        case titleSubtitleIcon
-    }
+
     
     private var cellTypeSelect: CellTipe = .title
     
@@ -115,53 +117,54 @@ public class OneTableViewCell: UITableViewCell {
         return imageView
     }()
     
-    public func setup(title: String, subtitle: String, detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none, icon: String) {
+//    public func setup(title: String, subtitle: String, detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none, icon: String) {
+//        self.title.text = title
+//        self.subtitle.text = subtitle
+//        self.detail.text = detail
+//        self.card = card
+//        self.icon.image = UIImage(named: icon)
+//        cellAccessoryType = accessoryType
+//        self.cellTypeSelect = .titleSubtitleIcon
+//
+//        setNeedsLayout()
+//        invalidateIntrinsicContentSize()
+//    }
+    
+//    public func setup(title: String, subtitle: String = "", detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none) {
+//        self.title.text = title
+//        self.subtitle.text = subtitle
+//        self.detail.text = detail
+//        self.card = card
+//        cellAccessoryType = accessoryType
+//        self.cellTypeSelect = .titleSubtitle
+//
+//        setNeedsLayout()
+//        invalidateIntrinsicContentSize()
+//    }
+    
+    public func setup(title: String, subtitle: String = "", detail: String = "", card: Bool = false, type: CellTipe = .title, accessoryType: OneCellAccessoryType = .none, icon: String = "") {
         self.title.text = title
         self.subtitle.text = subtitle
         self.detail.text = detail
         self.card = card
         self.icon.image = UIImage(named: icon)
-        cellAccessoryType = accessoryType
-        self.cellTypeSelect = .titleSubtitleIcon
+        self.cellAccessoryType = accessoryType
+        self.cellTypeSelect = type
         
         setNeedsLayout()
         invalidateIntrinsicContentSize()
     }
     
-    public func setup(title: String, subtitle: String = "", detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none) {
-        self.title.text = title
-        self.subtitle.text = subtitle
-        self.detail.text = detail
-        self.card = card
-        cellAccessoryType = accessoryType
-        self.cellTypeSelect = .titleSubtitle
-        
-        setNeedsLayout()
-        invalidateIntrinsicContentSize()
-    }
-    
-    public func setup(title: String, detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none, icon: String) {
-        self.title.text = title
-        self.detail.text = detail
-        self.card = card
-        self.icon.image = UIImage(named: icon)
-        cellAccessoryType = accessoryType
-        self.cellTypeSelect = .titleIcon
-        
-        setNeedsLayout()
-        invalidateIntrinsicContentSize()
-    }
-    
-    public func setup(title: String, detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none) {
-        self.title.text = title
-        self.detail.text = detail
-        self.card = card
-        cellAccessoryType = accessoryType
-        self.cellTypeSelect = .title
-        
-        setNeedsLayout()
-        invalidateIntrinsicContentSize()
-    }
+//    public func setup(title: String, detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none) {
+//        self.title.text = title
+//        self.detail.text = detail
+//        self.card = card
+//        cellAccessoryType = accessoryType
+//        self.cellTypeSelect = .title
+//
+//        setNeedsLayout()
+//        invalidateIntrinsicContentSize()
+//    }
     
     
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -223,16 +226,16 @@ public class OneTableViewCell: UITableViewCell {
             ])
         }
         
-        self.addSubview(icon)
-        
-        self.addSubview(title)
-        self.addSubview(subtitle)
         self.selectionStyle = .none
         
+        self.addSubview(icon)
+        
+
         self.separatorInset = UIEdgeInsets(top: 0, left: Constants.paddingLeading, bottom: 0, right: 0)
         self.layoutMargins = UIEdgeInsets(top: 0, left: Constants.paddingLeading, bottom: 0, right: 0)
         
-        
+        self.addSubview(title)
+        self.addSubview(subtitle)
         
         //        title.heightAnchor.constraint(equalToConstant: 200).isActive = true
         //        title.widthAnchor.constraint(equalToConstant: 200).isActive = true
@@ -250,6 +253,19 @@ public class OneTableViewCell: UITableViewCell {
         
         subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom).isActive = true
         //subtitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        
+        switch cellTypeSelect {
+        case .titleSubtitle:
+            break
+            
+            
+        default:
+            break
+        }
+        
+        
+        
+
         
         switch cellAccessoryType {
         case .none:

@@ -81,85 +81,85 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch  indexPath.row {
-        case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellcheckmark", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark)
-            return cell
-            
-        case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "celldetailButton", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .detailButton)
-            return cell
-            
-        case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "celldisclosureIndicator", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .disclosureIndicator)
-            return cell
-            
-        case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellnone", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .none)
-            return cell
-            
-        case 4:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellcheckmark1", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark, icon: "Apple2")
-            return cell
-            
-        case 5:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "celldetailButton1", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .detailButton, icon: "Apple2")
-            return cell
-            
-        case 6:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "celldisclosureIndicator1", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .disclosureIndicator, icon: "Apple2")
-            return cell
-            
-        case 7:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellnone1", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .none, icon: "Apple2")
-            return cell
-            
-        case 8:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellcheckmark2", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark, icon: "Apple")
-            return cell
-            
-        case 9:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "celldetailButton2", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .detailButton, icon: "Apple")
-            return cell
-            
-        case 10:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "celldisclosureIndicator2", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .disclosureIndicator, icon: "Apple")
-            return cell
-            
-        case 11:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellnone2", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .none, icon: "Apple")
-            return cell
-            
-        case 12:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellcheckmark3", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark)
-            return cell
-            
-        case 13:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "celldetailButton3", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .detailButton)
-            return cell
-            
-        case 14:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "celldisclosureIndicator3", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .disclosureIndicator)
-            return cell
-            
-        case 15:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellnone3", for: indexPath) as! OneTableViewCell
-            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .none)
-            return cell
+//        case 0:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "cellcheckmark", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark)
+//            return cell
+//
+//        case 1:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "celldetailButton", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .detailButton)
+//            return cell
+//
+//        case 2:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "celldisclosureIndicator", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .disclosureIndicator)
+//            return cell
+//
+//        case 3:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "cellnone", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .none)
+//            return cell
+//
+//        case 4:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "cellcheckmark1", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark, icon: "Apple2")
+//            return cell
+//
+//        case 5:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "celldetailButton1", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .detailButton, icon: "Apple2")
+//            return cell
+//
+//        case 6:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "celldisclosureIndicator1", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .disclosureIndicator, icon: "Apple2")
+//            return cell
+//
+//        case 7:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "cellnone1", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .none, icon: "Apple2")
+//            return cell
+//
+//        case 8:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "cellcheckmark2", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark, icon: "Apple")
+//            return cell
+//
+//        case 9:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "celldetailButton2", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .detailButton, icon: "Apple")
+//            return cell
+//
+//        case 10:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "celldisclosureIndicator2", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .disclosureIndicator, icon: "Apple")
+//            return cell
+//
+//        case 11:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "cellnone2", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .none, icon: "Apple")
+//            return cell
+//
+//        case 12:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "cellcheckmark3", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .checkmark)
+//            return cell
+//
+//        case 13:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "celldetailButton3", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .detailButton)
+//            return cell
+//
+//        case 14:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "celldisclosureIndicator3", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .disclosureIndicator)
+//            return cell
+//
+//        case 15:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "cellnone3", for: indexPath) as! OneTableViewCell
+//            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .none)
+//            return cell
             
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdtoggle", for: indexPath) as! OneTableViewCell
@@ -169,7 +169,7 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
             //cell.cellAccessoryType = .detailButton
             // cell.paddingBottom =
             
-            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, accessoryType: .toggle)
+            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, type: .titleSubtitle, accessoryType: .toggle)
             
             return cell
         }
