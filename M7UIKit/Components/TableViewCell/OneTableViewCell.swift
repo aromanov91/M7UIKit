@@ -27,7 +27,15 @@ public class OneTableViewCell: UITableViewCell {
     
 
     
-    private var cellTypeSelect: CellTipe = .title
+    private var cellTypeSelect: CellTipe = .title {
+        didSet {
+            if cellTypeSelect != oldValue {
+                initialize()
+            }
+            //            setNeedsLayout()
+            //            invalidateIntrinsicContentSize()
+        }
+    }
     
     //    override public func sizeThatFits(_ size: CGSize) -> CGSize {
     //        return CGSize(width: 375, height: 150)
@@ -237,26 +245,24 @@ public class OneTableViewCell: UITableViewCell {
         self.addSubview(title)
         self.addSubview(subtitle)
         
-        //        title.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        //        title.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        //title.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        title.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
-        title.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.paddingTop).isActive = true
-        
-        //title.bottomAnchor.constraint(equalTo: subtitle.topAnchor, constant: 20).isActive = true
-        
-        //        subtitle.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        //        subtitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        
-        subtitle.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
-        subtitle.topAnchor.constraint(equalTo: title.bottomAnchor).isActive = true
-        
-        subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom).isActive = true
-        //subtitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        
         switch cellTypeSelect {
         case .titleSubtitle:
-            break
+                    //        title.heightAnchor.constraint(equalToConstant: 200).isActive = true
+            //        title.widthAnchor.constraint(equalToConstant: 200).isActive = true
+            //title.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+            title.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+            title.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.paddingTop).isActive = true
+            
+            //title.bottomAnchor.constraint(equalTo: subtitle.topAnchor, constant: 20).isActive = true
+            
+            //        subtitle.heightAnchor.constraint(equalToConstant: 200).isActive = true
+            //        subtitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
+            
+            subtitle.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+            subtitle.topAnchor.constraint(equalTo: title.bottomAnchor).isActive = true
+            
+            subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom).isActive = true
+            //subtitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
             
             
         default:
