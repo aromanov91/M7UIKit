@@ -169,7 +169,10 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
             //cell.cellAccessoryType = .detailButton
             // cell.paddingBottom =
             
-            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, type: .titleSubtitle, accessoryType: .toggle)
+            
+            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, type: .title, accessoryType: .toggle)
+            
+            //cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, type: .title, accessoryType: .toggle)
             
             return cell
         }

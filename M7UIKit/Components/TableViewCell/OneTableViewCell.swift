@@ -90,7 +90,7 @@ public class OneTableViewCell: UITableViewCell {
         let label = M7Label(font: LabelStyles.subtitleFont, color: LabelStyles.titleColor)
         label.numberOfLines = 0
         label.text = ""
-        //label.isHidden = true
+        label.isHidden = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -246,7 +246,15 @@ public class OneTableViewCell: UITableViewCell {
         self.addSubview(subtitle)
         
         switch cellTypeSelect {
+        case .title:
+            
+            title.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+            title.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.paddingTop).isActive = true
+            
+            title.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom).isActive = true
+            
         case .titleSubtitle:
+            subtitle.isHidden = false
                     //        title.heightAnchor.constraint(equalToConstant: 200).isActive = true
             //        title.widthAnchor.constraint(equalToConstant: 200).isActive = true
             //title.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
@@ -317,7 +325,11 @@ public class OneTableViewCell: UITableViewCell {
             toggle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
             
             title.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - toggle.frame.width - Constants.paddimgBetween).isActive = true
-            subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - toggle.frame.width - Constants.paddimgBetween).isActive = true
+            
+            
+            if cellTypeSelect == .titleSubtitle {
+                subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - toggle.frame.width - Constants.paddimgBetween).isActive = true
+            }
             
         case .checkmark:
             let cellCheckmark = UIImageView(frame: CGRect(x: 4, y: 50, width: 32, height: 32))
