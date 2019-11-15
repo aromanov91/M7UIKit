@@ -36,29 +36,33 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         //tableView.reloadData()
         
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggle")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellcheckmark")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldetailButton")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldisclosureIndicator")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellnone")
+              tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggleLL")
         
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggle1")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellcheckmark1")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldetailButton1")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldisclosureIndicator1")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellnone1")
+ //       tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggle")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellcheckmark")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldetailButton")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldisclosureIndicator")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellnone")
+//
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggle1")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellcheckmark1")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldetailButton1")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldisclosureIndicator1")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellnone1")
+//
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggle2")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellcheckmark2")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldetailButton2")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldisclosureIndicator2")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellnone2")
+//
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggle3")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellcheckmark3")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldetailButton3")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldisclosureIndicator3")
+//        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellnone3")
         
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggle2")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellcheckmark2")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldetailButton2")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldisclosureIndicator2")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellnone2")
         
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellIdtoggle3")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellcheckmark3")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldetailButton3")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "celldisclosureIndicator3")
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: "cellnone3")
         
         
         view.addSubview(tableView)
@@ -162,15 +166,20 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
 //            return cell
             
         default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdtoggle", for: indexPath) as! OneTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdtoggleLL", for: indexPath) as! OneTableViewCell
             //cell.backgroundColor = UIColor.gray
             //cell.card = true
             
             //cell.cellAccessoryType = .detailButton
             // cell.paddingBottom =
             
+            //cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, type: .titleIcon, accessoryType: .toggle, icon: "Apple")
             
-            cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, type: .title, accessoryType: .toggle)
+            cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, type: .titleSubtitleIcon, accessoryType: .toggle, icon: "Apple2")
+            
+             //cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, type: .titleIcon, accessoryType: .toggle)
+            
+            //cell.setup(title: data[indexPath.row], detail: data[indexPath.row], card: false, type: .title, accessoryType: .toggle)
             
             //cell.setup(title: data[indexPath.row], subtitle: data[indexPath.row], detail: data[indexPath.row], card: false, type: .title, accessoryType: .toggle)
             
