@@ -67,15 +67,29 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         view.addSubview(tableView)
         
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor)
-        ])
+//        NSLayoutConstraint.activate([
+//            tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
+//            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+//            tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+//            tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor)
+//        ])
+        
+        self.tableView.translatesAutoresizingMaskIntoConstraints = false
+            
+
+            // Fill containing view
+
+        
         
         tableView.reloadData()
     }
+    
+//     func tableView(_ tableView: UITableView, titleForHeaderInSection
+//                                section: Int) -> String? {
+//       return "Header"
+//    }
+    
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 1

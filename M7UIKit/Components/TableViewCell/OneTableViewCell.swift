@@ -289,8 +289,10 @@ public class OneTableViewCell: UITableViewCell {
             
             subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
             
-            self.separatorInset = UIEdgeInsets(top: 0, left: self.frame.width - title.frame.width, bottom: 0, right: 0)
-            self.layoutMargins = UIEdgeInsets(top: 0, left: Constants.paddingLeading, bottom: 0, right: 0)
+            let separatorInset = Constants.paddingLeading + 48 + Constants.paddimgBetween
+            
+            self.separatorInset = UIEdgeInsets(top: 0, left: separatorInset, bottom: 0, right: 0)
+            self.layoutMargins = UIEdgeInsets(top: 0, left: separatorInset, bottom: 0, right: 0)
         }
     }
     

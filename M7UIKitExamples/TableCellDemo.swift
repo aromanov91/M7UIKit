@@ -16,6 +16,8 @@ class TableCellDemo: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var tableview: UITableView!
     
+  //  open var insetsContentViewsToSafeArea: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -51,6 +53,9 @@ class TableCellDemo: UIViewController, UITableViewDelegate, UITableViewDataSourc
         tableview.delegate = self
         tableview.dataSource = self
         
+       // var insetsContentViewsToSafeArea: Bool = true
+        
+        
         tableview.register(M7TableViewCell.self, forCellReuseIdentifier: "cellId")
         tableview.register(M7TableViewCell.self, forCellReuseIdentifier: "cellIddisclosureIndicator")
             tableview.register(M7TableViewCell.self, forCellReuseIdentifier: "cellIddetailButton")
@@ -60,12 +65,14 @@ class TableCellDemo: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         view.addSubview(tableview)
         
-        NSLayoutConstraint.activate([
-            tableview.topAnchor.constraint(equalTo: self.view.topAnchor),
-            tableview.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            tableview.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            tableview.leftAnchor.constraint(equalTo: self.view.leftAnchor)
-        ])
+        self.tableview.translatesAutoresizingMaskIntoConstraints = false
+        
+
+        // Fill containing view
+        self.tableview.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        self.tableview.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        self.tableview.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        self.tableview.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
