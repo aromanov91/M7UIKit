@@ -69,9 +69,10 @@
 		325E02BA235C3A4D00B051E9 /* DSButtonWhite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02AD235C3A4D00B051E9 /* DSButtonWhite.swift */; };
 		325E02BB235C3A4D00B051E9 /* DSColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02AE235C3A4D00B051E9 /* DSColorSelector.swift */; };
 		325E02C6235C485C00B051E9 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02C5235C485C00B051E9 /* Transition.swift */; };
+		32BF477B238094EF002BAD51 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0243235C31BB00B051E9 /* Montserrat-Regular.ttf */; };
+		32BF477D2380A10C002BAD51 /* M7NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF477C2380A10C002BAD51 /* M7NavigationBar.swift */; };
 		32C96AF4236F81EC0035871E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E023F235C31BB00B051E9 /* Montserrat-Bold.ttf */; };
 		32C96AF5236F81EC0035871E /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0242235C31BB00B051E9 /* Montserrat-SemiBold.ttf */; };
-		32C96AF6236F81EC0035871E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0243235C31BB00B051E9 /* Montserrat-Regular.ttf */; };
 		32C96AF9236F8C300035871E /* M7Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C96AF8236F8C300035871E /* M7Space.swift */; };
 		32C96AFB236F90960035871E /* M7Paddings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C96AFA236F90960035871E /* M7Paddings.swift */; };
 		32F2B1BD236E2773007E0D5C /* OneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */; };
@@ -181,6 +182,7 @@
 		325E02AD235C3A4D00B051E9 /* DSButtonWhite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSButtonWhite.swift; sourceTree = "<group>"; };
 		325E02AE235C3A4D00B051E9 /* DSColorSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSColorSelector.swift; sourceTree = "<group>"; };
 		325E02C5235C485C00B051E9 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		32BF477C2380A10C002BAD51 /* M7NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = M7NavigationBar.swift; path = M7UIKit/Components/M7NavigationBar.swift; sourceTree = SOURCE_ROOT; };
 		32C96AF8236F8C300035871E /* M7Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Space.swift; sourceTree = "<group>"; };
 		32C96AFA236F90960035871E /* M7Paddings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Paddings.swift; sourceTree = "<group>"; };
 		32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableViewCell.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				323F34EC2370579F00B96AE9 /* M7Label.swift */,
+				32BF477C2380A10C002BAD51 /* M7NavigationBar.swift */,
 			);
 			path = Label;
 			sourceTree = "<group>";
@@ -660,7 +663,7 @@
 				3255205A2368DFFD002E7485 /* Buttons.xcassets in Resources */,
 				32C96AF5236F81EC0035871E /* Montserrat-SemiBold.ttf in Resources */,
 				325E0221235BA63D00B051E9 /* Main.storyboard in Resources */,
-				32C96AF6236F81EC0035871E /* Montserrat-Regular.ttf in Resources */,
+				32BF477B238094EF002BAD51 /* Montserrat-Regular.ttf in Resources */,
 				3255205B2368E030002E7485 /* DatePicker1.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -692,6 +695,7 @@
 				325E027A235C31BC00B051E9 /* Card.swift in Sources */,
 				32F2B1BD236E2773007E0D5C /* OneTableViewCell.swift in Sources */,
 				32C96AFB236F90960035871E /* M7Paddings.swift in Sources */,
+				32BF477D2380A10C002BAD51 /* M7NavigationBar.swift in Sources */,
 				325E0279235C31BC00B051E9 /* ModalInfoModel.swift in Sources */,
 				325E027F235C31BC00B051E9 /* DatePickerView.swift in Sources */,
 				325E02B5235C3A4D00B051E9 /* DSLabel.swift in Sources */,

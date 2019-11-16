@@ -15,7 +15,7 @@ public class M7Fonts {
     private static let boldFont = "Montserrat-Bold"
     
     /// Bold 34pt
-    public static var largeTitle = UIFont(name: boldFont, size: 34) ?? UIFont.systemFont(ofSize: 34, weight: .bold)
+    public static var largeTitle = UIFont(name: semiBoldFont, size: 34) ?? UIFont.systemFont(ofSize: 34, weight: .bold)
     
     /// Bold 28pt
     public static var title1 = UIFont(name: boldFont, size: 28) ?? UIFont.systemFont(ofSize: 28, weight: .bold)

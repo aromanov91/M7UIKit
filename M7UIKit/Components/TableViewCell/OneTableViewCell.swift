@@ -25,9 +25,7 @@ public enum CellTipe {
 }
 
 public class OneTableViewCell: UITableViewCell {
-    
-    
-    
+
     private var cellTypeSelect: CellTipe = .none  {
         didSet {
             if cellTypeSelect != oldValue {
@@ -37,17 +35,13 @@ public class OneTableViewCell: UITableViewCell {
             invalidateIntrinsicContentSize()
         }
     }
-    
-    //    override public func sizeThatFits(_ size: CGSize) -> CGSize {
-    //        return CGSize(width: 375, height: 150)
-    //    }
+
     private struct Constants {
         static var paddingLeading  = M7Paddings.leading.m
         static var paddimgBetween  = M7Paddings.between.m
         static var paddingTop      = M7Paddings.top.m
         static var paddingTrailing = M7Paddings.trailing.m
         static var paddingBottom   = M7Paddings.bottom.m
-        //static let rightMargin: CGFloat = -80
     }
     
     private struct LabelStyles {
@@ -120,37 +114,11 @@ public class OneTableViewCell: UITableViewCell {
         imageView.image = image
         imageView.contentMode = .scaleAspectFit
         imageView.isHidden = true
-        //        imageView.layer.cornerRadius = 10
-        //        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    //    public func setup(title: String, subtitle: String, detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none, icon: String) {
-    //        self.title.text = title
-    //        self.subtitle.text = subtitle
-    //        self.detail.text = detail
-    //        self.card = card
-    //        self.icon.image = UIImage(named: icon)
-    //        cellAccessoryType = accessoryType
-    //        self.cellTypeSelect = .titleSubtitleIcon
-    //
-    //        setNeedsLayout()
-    //        invalidateIntrinsicContentSize()
-    //    }
-    
-    //    public func setup(title: String, subtitle: String = "", detail: String = "", card: Bool = false, accessoryType: OneCellAccessoryType = .none) {
-    //        self.title.text = title
-    //        self.subtitle.text = subtitle
-    //        self.detail.text = detail
-    //        self.card = card
-    //        cellAccessoryType = accessoryType
-    //        self.cellTypeSelect = .titleSubtitle
-    //
-    //        setNeedsLayout()
-    //        invalidateIntrinsicContentSize()
-    //    }
-    
+
     public func setup(title: String, subtitle: String = "", detail: String = "", card: Bool = false, type: CellTipe = .title, accessoryType: OneCellAccessoryType = .none, icon: String = "") {
         self.title.text = title
         self.subtitle.text = subtitle
@@ -190,8 +158,6 @@ public class OneTableViewCell: UITableViewCell {
         initialize()
     }
     
-    //  override public var intrinsicContentSize: CGSize { return CGSize(width: 375, height: 150) }
-    
     private func updateType() {
         switch cellTypeSelect {
         case .title:
@@ -220,7 +186,6 @@ public class OneTableViewCell: UITableViewCell {
             subtitle.topAnchor.constraint(equalTo: title.bottomAnchor).isActive = true
             
             subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom).isActive = true
-            //subtitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
             
             subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
             
@@ -236,7 +201,7 @@ public class OneTableViewCell: UITableViewCell {
             
             title.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 16).isActive = true
             title.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.paddingTop).isActive = true
-            title.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom).isActive = true
+            title.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom - 4).isActive = true
             title.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
             
             let separatorInset = Constants.paddingLeading + 32 + Constants.paddimgBetween
@@ -252,7 +217,7 @@ public class OneTableViewCell: UITableViewCell {
             self.addSubview(icon)
             
             icon.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
-            icon.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.paddingTop).isActive = true
+            icon.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.paddingTop + 4).isActive = true
             icon.heightAnchor.constraint(equalToConstant: 48).isActive = true
             icon.widthAnchor.constraint(equalToConstant: 48).isActive = true
             
@@ -263,7 +228,7 @@ public class OneTableViewCell: UITableViewCell {
             subtitle.leadingAnchor.constraint(equalTo:  icon.trailingAnchor, constant: Constants.paddimgBetween).isActive = true
             subtitle.topAnchor.constraint(equalTo: title.bottomAnchor).isActive = true
             
-            subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom).isActive = true
+            subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom - 4).isActive = true
             
             subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
             

@@ -11,7 +11,7 @@ import M7UIKit
 
 class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private var data = ["Text","Text","Text","Text","Text"]
+    private var data = ["On the other hand","We denounce","Indignation and dislike","Men who are so","Beguiled and demoralized"]
 
     var sections = ["Title", "Title and Subtitle", "Icon title", "Icon Title and Subtitle"]
     var itemsInSections = [["1A", "1B", "1C", "1B", "1C"], ["2A", "2B","2A", "2B","2A",], ["3A", "3B", "3C", "3D", "3E"], ["3A", "3B", "3C", "3D", "3E"]]
