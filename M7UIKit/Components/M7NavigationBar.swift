@@ -12,30 +12,30 @@ import UIKit
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        initBase()
-    }
-
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        initBase()
+        initialize()
     }
     
-    private func initBase() {
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initialize()
+    }
+    
+    private func initialize() {
         prefersLargeTitles = true
         
-      
-
         
-let attrs = [
-    NSAttributedString.Key.foregroundColor: M7Colors.labelPrimary,
-    NSAttributedString.Key.font: M7Fonts.bodyBold1
-]
+        
+        
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: M7Colors.labelPrimary,
+            NSAttributedString.Key.font: M7Fonts.bodyBold1
+        ]
         
         let attrsLarge = [
             NSAttributedString.Key.foregroundColor: M7Colors.labelPrimary,
             NSAttributedString.Key.font: M7Fonts.largeTitle
         ]
-
+        
         self.largeTitleTextAttributes = attrsLarge
         self.titleTextAttributes = attrs
         
@@ -45,23 +45,23 @@ let attrs = [
             buttonAppearance.normal.titleTextAttributes = [.foregroundColor : UIColor.darkGray]
             
         }
-            
         
         
-       // titlePositionAdjustment = UIOffset(horizontal: 20, vertical: 30)
-//
+        
+        // titlePositionAdjustment = UIOffset(horizontal: 20, vertical: 30)
+        //
         //self.navigationController?.navigationBar.shadowImage = UIImage()
         //self.navigationController?.navigationBar.isTranslucent = true
         //self.navigationController?.navigationBar.barTintColor = DesignSystem.Color.background
         //self.navigationController?.navigationBar.backgroundColor = DesignSystem.Color.background
         //self.navigationController!.navigationBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 144.0)
-
-//        if #available(iOS 13.0, *) {
-//            backgroundColor = UIColor.black
-//        } else {
-//            // Fallback on earlier versions
-//        }
-
-        }
-
+        
+        //        if #available(iOS 13.0, *) {
+        //            backgroundColor = UIColor.black
+        //        } else {
+        //            // Fallback on earlier versions
+        //        }
+        
+    }
+    
 }

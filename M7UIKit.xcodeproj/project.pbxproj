@@ -10,6 +10,7 @@
 		3212FEB023644ECB0057213C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3212FEAE23644ECB0057213C /* TableViewCell.swift */; };
 		3212FEB323645BD20057213C /* TableViewCellDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3212FEB223645BD20057213C /* TableViewCellDemoController.swift */; };
 		321AB3B02381CAA700608A24 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321AB3AF2381CAA700608A24 /* SettingsViewController.swift */; };
+		321AB3B22381E4C700608A24 /* M7Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321AB3B12381E4C700608A24 /* M7Base.swift */; };
 		323F34ED2370579F00B96AE9 /* M7Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323F34EC2370579F00B96AE9 /* M7Label.swift */; };
 		3255204B2366398D002E7485 /* M7TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3255204A2366398D002E7485 /* M7TableViewCell.swift */; };
 		32552053236643C9002E7485 /* TableCellDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32552052236643C9002E7485 /* TableCellDemo.swift */; };
@@ -126,6 +127,7 @@
 		3212FEAE23644ECB0057213C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3212FEB223645BD20057213C /* TableViewCellDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellDemoController.swift; sourceTree = "<group>"; };
 		321AB3AF2381CAA700608A24 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		321AB3B12381E4C700608A24 /* M7Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Base.swift; sourceTree = "<group>"; };
 		323F34EC2370579F00B96AE9 /* M7Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Label.swift; sourceTree = "<group>"; };
 		3255204A2366398D002E7485 /* M7TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7TableViewCell.swift; sourceTree = "<group>"; };
 		32552052236643C9002E7485 /* TableCellDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellDemo.swift; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				325E024D235C31BB00B051E9 /* Card.swift */,
+				321AB3B12381E4C700608A24 /* M7Base.swift */,
 				325E024E235C31BB00B051E9 /* Card.xib */,
 			);
 			path = Card;
@@ -720,6 +723,7 @@
 				325E0279235C31BC00B051E9 /* ModalInfoModel.swift in Sources */,
 				325E027F235C31BC00B051E9 /* DatePickerView.swift in Sources */,
 				32BF47842381B40A002BAD51 /* ThemeManager.swift in Sources */,
+				321AB3B22381E4C700608A24 /* M7Base.swift in Sources */,
 				325E02B5235C3A4D00B051E9 /* DSLabel.swift in Sources */,
 				325E0278235C31BC00B051E9 /* ModalInfoController.swift in Sources */,
 				325E02B2235C3A4D00B051E9 /* DSSelect.swift in Sources */,

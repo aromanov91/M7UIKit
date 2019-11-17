@@ -15,7 +15,7 @@ class GenerealViewController: UIViewController {
     
     private let cellIdentifier = "ComponentCell"
     
-    private let componentsNames = ["Buttons","TableView Cells","Labels"]
+    private let componentsNames = ["Buttons","TableView Cells","Labels","Base"]
 
     
     override func viewDidLoad() {
