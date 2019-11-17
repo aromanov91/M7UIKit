@@ -39,6 +39,17 @@ let attrs = [
         self.largeTitleTextAttributes = attrsLarge
         self.titleTextAttributes = attrs
         
+        
+        if #available(iOS 13.0, *) {
+            let buttonAppearance = UIBarButtonItemAppearance()
+            buttonAppearance.normal.titleTextAttributes = [.foregroundColor : UIColor.darkGray]
+            
+        }
+            
+        
+        
+       // titlePositionAdjustment = UIOffset(horizontal: 20, vertical: 30)
+//
         //self.navigationController?.navigationBar.shadowImage = UIImage()
         //self.navigationController?.navigationBar.isTranslucent = true
         //self.navigationController?.navigationBar.barTintColor = DesignSystem.Color.background

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k0A-NB-oBM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SYX-ru-iiq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DR1-6s-wig">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="DR1-6s-wig">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <connections>
                                     <outlet property="dataSource" destination="blW-lA-ceC" id="134-xi-qLk"/>
@@ -33,32 +33,359 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X0A-VD-JhT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Table cell" id="mT8-57-UkL"/>
+                    <navigationItem key="navigationItem" title="Table cell" largeTitleDisplayMode="never" id="mT8-57-UkL"/>
                     <connections>
                         <outlet property="tableView" destination="DR1-6s-wig" id="3wH-eX-j3N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W93-sN-85l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3334.7826086956525" y="807.58928571428567"/>
+            <point key="canvasLocation" x="4244.927536231884" y="807.58928571428567"/>
+        </scene>
+        <!--Buttons-->
+        <scene sceneID="4QL-B4-A9d">
+            <objects>
+                <viewController id="Bp8-7P-83G" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zbW-Gs-VOQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="aU0-x4-Vjc">
+                                <rect key="frame" x="24" y="112" width="366" height="416"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVj-Sc-0S8" customClass="M7Button" customModule="M7UIKit">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="primary"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="rounded" value="l"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scale" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beb-51-cT4" customClass="M7Button" customModule="M7UIKit">
+                                        <rect key="frame" x="0.0" y="80" width="366" height="56"/>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="secondary"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="rounded" value="l"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scale" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMG-nZ-IbP" customClass="M7Button" customModule="M7UIKit">
+                                        <rect key="frame" x="0.0" y="160" width="366" height="56"/>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="gray"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="rounded" value="l"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scale" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVt-yQ-QQB" customClass="M7Button" customModule="M7UIKit">
+                                        <rect key="frame" x="0.0" y="240" width="366" height="56"/>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="link"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scale" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="HRK-S9-pVE">
+                                        <rect key="frame" x="0.0" y="320" width="366" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyG-e7-M3K" customClass="M7Button" customModule="M7UIKit">
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="36"/>
+                                                <state key="normal" title="Button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="primary"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="rounded" value="m"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="size" value="m"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riS-Ej-8Nf" customClass="M7Button" customModule="M7UIKit">
+                                                <rect key="frame" x="195" y="0.0" width="171" height="36"/>
+                                                <state key="normal" title="Button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="gray"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="rounded" value="full"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="scale" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="size" value="m"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="UyG-e7-M3K" firstAttribute="width" secondItem="riS-Ej-8Nf" secondAttribute="width" id="k15-z9-VvN"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Zrm-hM-L0K">
+                                        <rect key="frame" x="0.0" y="380" width="366" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fy5-PS-MjJ" customClass="M7Button" customModule="M7UIKit">
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="36"/>
+                                                <state key="normal" title="Button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="secondary"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="rounded" value="m"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="size" value="m"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCZ-u9-eGg" customClass="M7Button" customModule="M7UIKit">
+                                                <rect key="frame" x="195" y="0.0" width="171" height="36"/>
+                                                <state key="normal" title="Button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="link"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="rounded" value="full"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="scale" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="size" value="m"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Fy5-PS-MjJ" firstAttribute="width" secondItem="bCZ-u9-eGg" secondAttribute="width" id="pVB-DG-4Or"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aU0-x4-Vjc" firstAttribute="leading" secondItem="XZ0-ia-Ihp" secondAttribute="leading" constant="24" id="LZK-Jp-UYR"/>
+                            <constraint firstItem="aU0-x4-Vjc" firstAttribute="top" secondItem="XZ0-ia-Ihp" secondAttribute="top" constant="24" id="MiE-cm-U0f"/>
+                            <constraint firstItem="XZ0-ia-Ihp" firstAttribute="trailing" secondItem="aU0-x4-Vjc" secondAttribute="trailing" constant="24" id="wzz-ET-M8H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XZ0-ia-Ihp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Buttons" id="mvF-Uo-y71"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z4a-2x-jmJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1uv-Q6-toa" customClass="M7Button" customModule="M7UIKit">
+                    <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="type" value="link"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rounded" value="m"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="scale" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VCw-YH-GMz" customClass="M7Button" customModule="M7UIKit">
+                    <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="type" value="gray"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rounded" value="m"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="scale" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7TF-74-JGo" customClass="M7Button" customModule="M7UIKit">
+                    <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="type" value="primary"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rounded" value="m"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="scale" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eRX-R9-Ylq" customClass="M7Button" customModule="M7UIKit">
+                    <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="type" value="secondary"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rounded" value="m"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="scale" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </objects>
+            <point key="canvasLocation" x="4229" y="1622"/>
+        </scene>
+        <!--Labels-->
+        <scene sceneID="BAj-Df-xOE">
+            <objects>
+                <viewController id="eBo-XY-8t4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Trh-DS-3PP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GPt-UF-TJn">
+                                <rect key="frame" x="24" y="112" width="366" height="377.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LargeTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qH-zq-QwK" customClass="M7Label" customModule="M7UIKit">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="48.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectFont" value="largeTitle"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzt-US-k2p" customClass="M7Label" customModule="M7UIKit">
+                                        <rect key="frame" x="0.0" y="64.5" width="366" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectFont" value="title1"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRX-H2-70d" customClass="M7Label" customModule="M7UIKit">
+                                        <rect key="frame" x="0.0" y="116.5" width="366" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectFont" value="title2"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ip1-Eo-RbX" customClass="M7Label" customModule="M7UIKit">
+                                        <rect key="frame" x="0.0" y="160.5" width="366" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectFont" value="title3"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body1 bold" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ht-kq-IrH" customClass="M7Label" customModule="M7UIKit">
+                                        <rect key="frame" x="0.0" y="200.5" width="366" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectFont" value="bodyBold1"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bod1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVk-OU-okb" customClass="M7Label" customModule="M7UIKit">
+                                        <rect key="frame" x="0.0" y="240.5" width="366" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectFont" value="body1"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body2 bold" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ov-NP-uTl" customClass="M7Label" customModule="M7UIKit">
+                                        <rect key="frame" x="0.0" y="280.5" width="366" height="24.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectFont" value="bodyBold2"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UI-Bg-2pH" customClass="M7Label" customModule="M7UIKit">
+                                        <rect key="frame" x="0.0" y="321" width="366" height="24.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectFont" value="body2"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93P-fL-pEy" customClass="M7Label" customModule="M7UIKit">
+                                        <rect key="frame" x="0.0" y="361.5" width="366" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectFont" value="caption"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GPt-UF-TJn" firstAttribute="top" secondItem="6Fs-KQ-Lpw" secondAttribute="top" constant="24" id="NB8-G9-v2r"/>
+                            <constraint firstItem="GPt-UF-TJn" firstAttribute="leading" secondItem="6Fs-KQ-Lpw" secondAttribute="leading" constant="24" id="Qsh-od-PDX"/>
+                            <constraint firstItem="6Fs-KQ-Lpw" firstAttribute="trailing" secondItem="GPt-UF-TJn" secondAttribute="trailing" constant="24" id="tVx-ra-d0D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Fs-KQ-Lpw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Labels" id="nlq-AB-NuA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgK-b4-9SQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9wg-Tz-7VP" customClass="M7Label" customModule="M7UIKit">
+                    <rect key="frame" x="0.0" y="0.0" width="366" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NH7-51-VfG" customClass="M7Label" customModule="M7UIKit">
+                    <rect key="frame" x="0.0" y="0.0" width="366" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </objects>
+            <point key="canvasLocation" x="5239" y="1604"/>
+        </scene>
+        <!--M7 UIKit-->
+        <scene sceneID="o88-aS-cNA">
+            <objects>
+                <viewController id="eCI-ly-8UH" customClass="GenerealViewController" customModule="M7UIKitExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O5O-I9-w7q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TY6-SH-awO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="eCI-ly-8UH" id="0HO-2E-RyL"/>
+                                    <outlet property="delegate" destination="eCI-ly-8UH" id="bvv-1M-XIX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BrH-ng-7RO" firstAttribute="bottom" secondItem="TY6-SH-awO" secondAttribute="bottom" id="Ay6-OE-TEc"/>
+                            <constraint firstItem="BrH-ng-7RO" firstAttribute="trailing" secondItem="TY6-SH-awO" secondAttribute="trailing" id="Lzp-5u-oeH"/>
+                            <constraint firstItem="TY6-SH-awO" firstAttribute="top" secondItem="BrH-ng-7RO" secondAttribute="top" id="MB2-iJ-N4F"/>
+                            <constraint firstItem="TY6-SH-awO" firstAttribute="leading" secondItem="BrH-ng-7RO" secondAttribute="leading" id="PrS-q1-BG5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BrH-ng-7RO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="M7 UIKit" id="yet-FT-Z5a"/>
+                    <connections>
+                        <outlet property="tableView" destination="TY6-SH-awO" id="Erl-VA-hlI"/>
+                        <segue destination="blW-lA-ceC" kind="show" identifier="TableView Cells" id="ZZw-h0-DQs"/>
+                        <segue destination="Bp8-7P-83G" kind="show" identifier="Buttons" id="52V-He-llo"/>
+                        <segue destination="eBo-XY-8t4" kind="show" identifier="Labels" id="fUa-eW-NVm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HaM-5B-ain" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3221.739130434783" y="807.58928571428567"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="yMh-Xb-f7o">
+        <scene sceneID="Rnk-Ig-zse">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k0A-NB-oBM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SYX-ru-iiq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3uC-dj-Ep3" customClass="M7NavigationBar" customModule="M7UIKit">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="waY-8P-ifj" customClass="M7NavigationBar" customModule="M7UIKit">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="blW-lA-ceC" kind="relationship" relationship="rootViewController" id="jyw-6R-Fef"/>
+                        <segue destination="eCI-ly-8UH" kind="relationship" relationship="rootViewController" id="ElX-qq-znw"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o8T-C0-R8M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsz-4M-E4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2424.6376811594205" y="807.58928571428567"/>
+            <point key="canvasLocation" x="2311.594202898551" y="807.58928571428567"/>
         </scene>
     </scenes>
 </document>

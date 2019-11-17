@@ -34,6 +34,8 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
         tableView.separatorColor = M7Colors.gray2
         //tableView.separatorStyle = .none.separatorStyle = .none
         
+       
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -68,7 +70,7 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         
-        tableView.reloadData()
+        //tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection

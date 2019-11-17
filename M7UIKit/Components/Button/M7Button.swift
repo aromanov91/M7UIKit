@@ -26,7 +26,8 @@ public enum N7ButtonSize: String {
     case m = "m"
 }
 
-@IBDesignable public class Button: UIButton {
+@IBDesignable
+public class M7Button: UIButton {
     
     // MARK: - Button style
     

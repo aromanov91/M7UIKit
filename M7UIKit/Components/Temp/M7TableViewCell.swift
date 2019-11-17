@@ -54,7 +54,7 @@ public enum M7cellAccessoryType {
             detail.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
             
         case .detailButton:
-            let detailButton = Button(type: N7ButtonStyle.gray, size: N7ButtonSize.m, rounded: N7ButtonRounded.full)
+            let detailButton = M7Button(type: N7ButtonStyle.gray, size: N7ButtonSize.m, rounded: N7ButtonRounded.full)
             detailButton.translatesAutoresizingMaskIntoConstraints = false
             detailButton.setTitle("Button", for: .normal)
             self.addSubview(detailButton)

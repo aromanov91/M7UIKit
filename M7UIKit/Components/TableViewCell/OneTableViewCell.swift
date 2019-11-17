@@ -278,7 +278,7 @@ public class OneTableViewCell: UITableViewCell {
             }
             
         case .detailButton:
-            let detailButton = Button(type: N7ButtonStyle.gray, size: N7ButtonSize.m, rounded: N7ButtonRounded.full)
+            let detailButton = M7Button(type: N7ButtonStyle.gray, size: N7ButtonSize.m, rounded: N7ButtonRounded.full)
             detailButton.translatesAutoresizingMaskIntoConstraints = false
             detailButton.setTitle("Button", for: .normal)
             self.addSubview(detailButton)
@@ -339,7 +339,7 @@ public class OneTableViewCell: UITableViewCell {
             ])
         }
         
-        self.selectionStyle = .none
+        //self.selectionStyle = .none
         
         
     }

@@ -50,7 +50,7 @@
 		325E028D235C31BC00B051E9 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E0265235C31BB00B051E9 /* TextField.swift */; };
 		325E028E235C31BC00B051E9 /* SwitchRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325E0267235C31BB00B051E9 /* SwitchRow.xib */; };
 		325E028F235C31BC00B051E9 /* SwitchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E0268235C31BB00B051E9 /* SwitchRow.swift */; };
-		325E0290235C31BC00B051E9 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E026A235C31BB00B051E9 /* Button.swift */; };
+		325E0290235C31BC00B051E9 /* M7Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E026A235C31BB00B051E9 /* M7Button.swift */; };
 		325E0291235C31BC00B051E9 /* Buttons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325E026B235C31BB00B051E9 /* Buttons.xcassets */; };
 		325E0292235C31BC00B051E9 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325E026C235C31BB00B051E9 /* Icons.xcassets */; };
 		325E029B235C39BA00B051E9 /* M7UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325E01F9235BA57000B051E9 /* M7UIKit.framework */; };
@@ -71,6 +71,7 @@
 		325E02C6235C485C00B051E9 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02C5235C485C00B051E9 /* Transition.swift */; };
 		32BF477B238094EF002BAD51 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0243235C31BB00B051E9 /* Montserrat-Regular.ttf */; };
 		32BF477D2380A10C002BAD51 /* M7NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF477C2380A10C002BAD51 /* M7NavigationBar.swift */; };
+		32BF477F2380ADAB002BAD51 /* GenerealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF477E2380ADAB002BAD51 /* GenerealViewController.swift */; };
 		32C96AF4236F81EC0035871E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E023F235C31BB00B051E9 /* Montserrat-Bold.ttf */; };
 		32C96AF5236F81EC0035871E /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0242235C31BB00B051E9 /* Montserrat-SemiBold.ttf */; };
 		32C96AF9236F8C300035871E /* M7Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C96AF8236F8C300035871E /* M7Space.swift */; };
@@ -165,7 +166,7 @@
 		325E0265235C31BB00B051E9 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		325E0267235C31BB00B051E9 /* SwitchRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchRow.xib; sourceTree = "<group>"; };
 		325E0268235C31BB00B051E9 /* SwitchRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchRow.swift; sourceTree = "<group>"; };
-		325E026A235C31BB00B051E9 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		325E026A235C31BB00B051E9 /* M7Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M7Button.swift; sourceTree = "<group>"; };
 		325E026B235C31BB00B051E9 /* Buttons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Buttons.xcassets; sourceTree = "<group>"; };
 		325E026C235C31BB00B051E9 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		325E02A1235C3A4D00B051E9 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -183,6 +184,7 @@
 		325E02AE235C3A4D00B051E9 /* DSColorSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSColorSelector.swift; sourceTree = "<group>"; };
 		325E02C5235C485C00B051E9 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		32BF477C2380A10C002BAD51 /* M7NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = M7NavigationBar.swift; path = M7UIKit/Components/M7NavigationBar.swift; sourceTree = SOURCE_ROOT; };
+		32BF477E2380ADAB002BAD51 /* GenerealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerealViewController.swift; sourceTree = "<group>"; };
 		32C96AF8236F8C300035871E /* M7Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Space.swift; sourceTree = "<group>"; };
 		32C96AFA236F90960035871E /* M7Paddings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Paddings.swift; sourceTree = "<group>"; };
 		32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableViewCell.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				32552052236643C9002E7485 /* TableCellDemo.swift */,
 				32F2B1BE236E2B32007E0D5C /* OneTableView.swift */,
 				32552061236A1301002E7485 /* MessageBubbleDemo.swift */,
+				32BF477E2380ADAB002BAD51 /* GenerealViewController.swift */,
 				325E021F235BA63D00B051E9 /* Main.storyboard */,
 				325E0222235BA63F00B051E9 /* Assets.xcassets */,
 				325E0224235BA63F00B051E9 /* LaunchScreen.storyboard */,
@@ -439,7 +442,7 @@
 		325E0269235C31BB00B051E9 /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				325E026A235C31BB00B051E9 /* Button.swift */,
+				325E026A235C31BB00B051E9 /* M7Button.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -704,7 +707,7 @@
 				3255204B2366398D002E7485 /* M7TableViewCell.swift in Sources */,
 				325E0272235C31BC00B051E9 /* M7Fonts.swift in Sources */,
 				32C96AF9236F8C300035871E /* M7Space.swift in Sources */,
-				325E0290235C31BC00B051E9 /* Button.swift in Sources */,
+				325E0290235C31BC00B051E9 /* M7Button.swift in Sources */,
 				325E026E235C31BC00B051E9 /* M7Colors.swift in Sources */,
 				325E0276235C31BC00B051E9 /* DefaultTheme.swift in Sources */,
 				325E02BA235C3A4D00B051E9 /* DSButtonWhite.swift in Sources */,
@@ -734,6 +737,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3212FEB323645BD20057213C /* TableViewCellDemoController.swift in Sources */,
+				32BF477F2380ADAB002BAD51 /* GenerealViewController.swift in Sources */,
 				32552062236A1301002E7485 /* MessageBubbleDemo.swift in Sources */,
 				32552053236643C9002E7485 /* TableCellDemo.swift in Sources */,
 				325E021E235BA63D00B051E9 /* ViewController.swift in Sources */,
