@@ -38,6 +38,7 @@ class GenerealViewController: UIViewController {
         view.addSubview(tableView)
         
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
+        
     }
 }
 
@@ -50,12 +51,14 @@ extension GenerealViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! OneTableViewCell
         cell.setup(title: componentsNames[indexPath.row],
                   accessoryType: .disclosureIndicator)
+        
+        
        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: componentsNames[indexPath.row], sender: nil)
         
-        //self.parent?.navigationController?.pushViewController(OneTableView(), animated: true)
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
 }

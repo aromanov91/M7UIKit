@@ -13,13 +13,15 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     private var data = ["On the other hand","We denounce","Indignation and dislike","Men who are so","Beguiled and demoralized"]
 
-    var sections = ["Title", "Title and Subtitle", "Icon title", "Icon Title and Subtitle"]
-    var itemsInSections = [["1A", "1B", "1C", "1B", "1C"], ["2A", "2B","2A", "2B","2A",], ["3A", "3B", "3C", "3D", "3E"], ["3A", "3B", "3C", "3D", "3E"]]
+    var sections = ["Title", "Title and Subtitle", "Icon title", "Icon Title and Subtitle","Radio and checkbox"]
+    var itemsInSections = [["1A", "1B", "1C", "1B", "1C"], ["2A", "2B","2A", "2B","2A",], ["3A", "3B", "3C", "3D", "3E"], ["3A", "3B", "3C", "3D", "3E"], ["3A", "3B", "3C", "3D"]]
     
     var identifires = [["titleNone","titleDisclosureIndicator","titleDetailButton","titleCheckmark","titleToogle"],
                        ["titleSubitileNone","titleSubitileDisclosureIndicator","titleSubitileDetailButton","titleSubitileCheckmark","titleSubitileToogle"],
                        ["imagetitleNone","imagetitleDisclosureIndicator","imagetitleDetailButton","imagetitleCheckmark","imagetitleToogle"],
-                       ["imagetitleSubitileNone","imagetitleSubitileDisclosureIndicator","imagetitleSubitileDetailButton","imagetitleSubitileCheckmark","imagetitleSubitileToogle"]]
+                       ["imagetitleSubitileNone","imagetitleSubitileDisclosureIndicator","imagetitleSubitileDetailButton","imagetitleSubitileCheckmark","imagetitleSubitileToogle"],
+    
+    ["titleCheckmarkUnselect","titleCheckmarkSelect","titleRadioSelect","titleRadioUnselect"]]
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -32,9 +34,6 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
     func setupTableView() {
         
         tableView.separatorColor = M7Colors.gray2
-        //tableView.separatorStyle = .none.separatorStyle = .none
-        
-       
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -66,15 +65,17 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
         tableView.register(OneTableViewCell.self, forCellReuseIdentifier: identifires[3][3])
         tableView.register(OneTableViewCell.self, forCellReuseIdentifier: identifires[3][4])
         
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: identifires[4][0])
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: identifires[4][1])
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: identifires[4][2])
+        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: identifires[4][3])
+        
         view.addSubview(tableView)
         
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
-        
-        //tableView.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection
-        section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.sections[section]
     }
     
@@ -83,7 +84,6 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return self.itemsInSections[section].count
     }
     
@@ -111,7 +111,7 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
                 cell.setup(title: data[indexPath.row],
                            detail: data[indexPath.row],
                            card: false,
-                           accessoryType: .checkmark)
+                           accessoryType: .checkmarkUnselect)
                 return cell
             case 4:
                 let cell = tableView.dequeueReusableCell(withIdentifier: identifires[0][4], for: indexPath) as! OneTableViewCell
@@ -154,7 +154,7 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
                            subtitle: data[indexPath.row],
                            detail: data[indexPath.row],
                            card: false,
-                           accessoryType: .checkmark)
+                           accessoryType: .checkmarkSelect)
                 return cell
                 
             case 4:
@@ -197,7 +197,7 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
                 cell.setup(title: data[indexPath.row],
                            detail: data[indexPath.row],
                            card: false,
-                           accessoryType: .checkmark,
+                           accessoryType: .checkmarkSelect,
                            icon: "Apple")
                 return cell
             case 4:
@@ -248,7 +248,7 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
                            subtitle: data[indexPath.row],
                            detail: data[indexPath.row],
                            card: false,
-                           accessoryType: .checkmark,
+                           accessoryType: .checkmarkSelect,
                            icon: "Apple2")
                 return cell
                 
@@ -273,6 +273,38 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
                 return cell
             }
             
+        case 4:
+            switch  indexPath.row {
+            case 1:
+                let cell = tableView.dequeueReusableCell(withIdentifier: identifires[4][1], for: indexPath) as! OneTableViewCell
+                cell.setup(title: data[indexPath.row],
+                           detail: "10",
+                           card: false,
+                           accessoryType: .checkmarkSelect)
+                return cell
+            case 2:
+                let cell = tableView.dequeueReusableCell(withIdentifier: identifires[4][2], for: indexPath) as! OneTableViewCell
+                cell.setup(title: data[indexPath.row],
+                           detail: data[indexPath.row],
+                           card: false,
+                           accessoryType: .radioUnselect)
+                return cell
+            case 3:
+                let cell = tableView.dequeueReusableCell(withIdentifier: identifires[4][3], for: indexPath) as! OneTableViewCell
+                cell.setup(title: data[indexPath.row],
+                           detail: data[indexPath.row],
+                           card: false,
+                           accessoryType: .radioSelect)
+                return cell
+            default:
+                let cell = tableView.dequeueReusableCell(withIdentifier: identifires[4][0], for: indexPath) as! OneTableViewCell
+                cell.setup(title: data[indexPath.row],
+                           detail: data[indexPath.row],
+                           card: false,
+                           accessoryType: .checkmarkUnselect)
+                return cell
+            }
+            
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "def", for: indexPath)
             cell.textLabel?.text = "Section = \(indexPath.section), cell = \(indexPath.row)"
@@ -283,6 +315,11 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return  UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

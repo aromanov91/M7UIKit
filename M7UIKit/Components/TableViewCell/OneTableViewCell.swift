@@ -12,7 +12,10 @@ public enum OneCellAccessoryType {
     case none
     case disclosureIndicator
     case detailButton
-    case checkmark
+    case checkmarkSelect
+    case checkmarkUnselect
+    case radioSelect
+    case radioUnselect
     case toggle
 }
 
@@ -278,6 +281,8 @@ public class OneTableViewCell: UITableViewCell {
             }
             
         case .detailButton:
+            self.selectionStyle = .none
+            
             let detailButton = M7Button(type: N7ButtonStyle.gray, size: N7ButtonSize.m, rounded: N7ButtonRounded.full)
             detailButton.translatesAutoresizingMaskIntoConstraints = false
             detailButton.setTitle("Button", for: .normal)
@@ -293,6 +298,8 @@ public class OneTableViewCell: UITableViewCell {
             }
             
         case .toggle:
+            self.selectionStyle = .none
+            
             let toggle = M7Switch()
             toggle.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(toggle)
@@ -306,12 +313,69 @@ public class OneTableViewCell: UITableViewCell {
                 subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - toggle.frame.width - Constants.paddimgBetween).isActive = true
             }
             
-        case .checkmark:
+        case .checkmarkSelect:
+            self.selectionStyle = .none
             let cellCheckmark = UIImageView(frame: CGRect(x: 4, y: 50, width: 32, height: 32))
             cellCheckmark.contentMode = .scaleAspectFit
             let cellCheckmarkSelectedImage = UIImage(named: "CheckmarkSelected")
             cellCheckmark.image = cellCheckmarkSelectedImage
+            cellCheckmark.backgroundColor = M7Colors.primary
+            cellCheckmark.layer.cornerRadius = 8
             cellCheckmark.translatesAutoresizingMaskIntoConstraints = false
+            self.addSubview(cellCheckmark)
+            cellCheckmark.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: card == true ? -40 : -20).isActive = true
+            cellCheckmark.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+            cellCheckmark.widthAnchor.constraint(equalToConstant: 32).isActive = true
+            cellCheckmark.heightAnchor.constraint(equalToConstant: 32).isActive = true
+            
+            title.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - cellCheckmark.frame.width - Constants.paddimgBetween).isActive = true
+            if cellTypeSelect == .titleSubtitle || cellTypeSelect == .titleSubtitleIcon {
+                subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - cellCheckmark.frame.width - Constants.paddimgBetween).isActive = true
+            }
+            
+        case .checkmarkUnselect:
+            self.selectionStyle = .none
+            let cellCheckmark = UIImageView(frame: CGRect(x: 4, y: 50, width: 32, height: 32))
+            cellCheckmark.contentMode = .scaleAspectFit
+            let cellCheckmarkSelectedImage = UIImage(named: "CheckmarkUnselected")
+            cellCheckmark.image = cellCheckmarkSelectedImage
+          cellCheckmark.translatesAutoresizingMaskIntoConstraints = false
+            self.addSubview(cellCheckmark)
+            cellCheckmark.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: card == true ? -40 : -20).isActive = true
+            cellCheckmark.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+            cellCheckmark.widthAnchor.constraint(equalToConstant: 32).isActive = true
+            cellCheckmark.heightAnchor.constraint(equalToConstant: 32).isActive = true
+            
+            title.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - cellCheckmark.frame.width - Constants.paddimgBetween).isActive = true
+            if cellTypeSelect == .titleSubtitle || cellTypeSelect == .titleSubtitleIcon {
+                subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - cellCheckmark.frame.width - Constants.paddimgBetween).isActive = true
+            }
+        case .radioSelect:
+            self.selectionStyle = .none
+            let cellCheckmark = UIImageView(frame: CGRect(x: 4, y: 50, width: 32, height: 32))
+            cellCheckmark.contentMode = .scaleAspectFit
+            let cellCheckmarkSelectedImage = UIImage(named: "RadioSelected")
+            cellCheckmark.image = cellCheckmarkSelectedImage
+            cellCheckmark.backgroundColor = M7Colors.primary
+            cellCheckmark.layer.cornerRadius = cellCheckmark.frame.height / 2
+            cellCheckmark.translatesAutoresizingMaskIntoConstraints = false
+            self.addSubview(cellCheckmark)
+            cellCheckmark.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: card == true ? -40 : -20).isActive = true
+            cellCheckmark.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+            cellCheckmark.widthAnchor.constraint(equalToConstant: 32).isActive = true
+            cellCheckmark.heightAnchor.constraint(equalToConstant: 32).isActive = true
+            
+            title.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - cellCheckmark.frame.width - Constants.paddimgBetween).isActive = true
+            if cellTypeSelect == .titleSubtitle || cellTypeSelect == .titleSubtitleIcon {
+                subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - cellCheckmark.frame.width - Constants.paddimgBetween).isActive = true
+            }
+        case .radioUnselect:
+            self.selectionStyle = .none
+            let cellCheckmark = UIImageView(frame: CGRect(x: 4, y: 50, width: 32, height: 32))
+            cellCheckmark.contentMode = .scaleAspectFit
+            let cellCheckmarkSelectedImage = UIImage(named: "RadioUnselected")
+            cellCheckmark.image = cellCheckmarkSelectedImage
+                      cellCheckmark.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(cellCheckmark)
             cellCheckmark.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: card == true ? -40 : -20).isActive = true
             cellCheckmark.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
