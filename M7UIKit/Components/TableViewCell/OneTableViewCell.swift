@@ -50,7 +50,7 @@ public class OneTableViewCell: UITableViewCell {
     private struct LabelStyles {
         static let titleFont: M7LabelStyle = .bodyBold1
         static let subtitleFont: M7LabelStyle = .body2
-        static let detailFont: M7LabelStyle = .body1
+        static let detailFont: M7LabelStyle = .bodyBold1
         
         static let titleColor: M7LabelColor = .primary
         static let subtitleColor: M7LabelColor = .secondary
@@ -169,7 +169,7 @@ public class OneTableViewCell: UITableViewCell {
             title.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
             title.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.paddingTop).isActive = true
             
-            title.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom).isActive = true
+            title.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom - 4).isActive = true
             
             title.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
             
@@ -299,16 +299,15 @@ public class OneTableViewCell: UITableViewCell {
             
         case .toggle:
             self.selectionStyle = .none
-            
+
             let toggle = M7Switch()
             toggle.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(toggle)
             toggle.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: card == true ? -40 : -20).isActive = true
             toggle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-            
+
             title.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - toggle.frame.width - Constants.paddimgBetween).isActive = true
-            
-            
+
             if cellTypeSelect == .titleSubtitle || cellTypeSelect == .titleSubtitleIcon {
                 subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - toggle.frame.width - Constants.paddimgBetween).isActive = true
             }
@@ -402,9 +401,5 @@ public class OneTableViewCell: UITableViewCell {
                 cardView.heightAnchor.constraint(equalToConstant: 100)
             ])
         }
-        
-        //self.selectionStyle = .none
-        
-        
     }
 }

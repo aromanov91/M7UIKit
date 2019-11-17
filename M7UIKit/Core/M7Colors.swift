@@ -17,13 +17,13 @@ public class M7Colors {
         if #available(iOS 13, *) {
             return UIColor { (traitCollection: UITraitCollection) -> UIColor in
                 if traitCollection.userInterfaceStyle == .light {
-                    return #colorLiteral(red: 0.6509803922, green: 0.4901960784, blue: 0.9803921569, alpha: 1)
+                    return ThemeManager.currentTheme().primary
                 } else {
                     return UIColor.systemPurple
                 }
             }
         } else {
-            return #colorLiteral(red: 0.6509803922, green: 0.4901960784, blue: 0.9803921569, alpha: 1)
+            return ThemeManager.currentTheme().primary
         }
     }
 
@@ -162,13 +162,13 @@ public class M7Colors {
         if #available(iOS 13, *) {
             return UIColor { (traitCollection: UITraitCollection) -> UIColor in
                 if traitCollection.userInterfaceStyle == .light {
-                    return #colorLiteral(red: 0.4823529412, green: 0.3019607843, blue: 0.8745098039, alpha: 1)
+                    return ThemeManager.currentTheme().primary
                 } else {
-                    return #colorLiteral(red: 0.6509803922, green: 0.4901960784, blue: 0.9803921569, alpha: 1)
+                    return ThemeManager.currentTheme().primary
                 }
             }
         } else {
-            return #colorLiteral(red: 0.4823529412, green: 0.3098039216, blue: 0.7647058824, alpha: 1)
+            return ThemeManager.currentTheme().primary
         }
     }
     

@@ -14,7 +14,7 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
     private var data = ["On the other hand","We denounce","Indignation and dislike","Men who are so","Beguiled and demoralized"]
 
     var sections = ["Title", "Title and Subtitle", "Icon title", "Icon Title and Subtitle","Radio and checkbox"]
-    var itemsInSections = [["1A", "1B", "1C", "1B", "1C"], ["2A", "2B","2A", "2B","2A",], ["3A", "3B", "3C", "3D", "3E"], ["3A", "3B", "3C", "3D", "3E"], ["3A", "3B", "3C", "3D"]]
+    var itemsInSections = [["1A", "1B", "1C", "1B", "1C"], ["2A", "2B","2A", "2B","2A",], ["3A", "3B", "3C", "3D", "3E"], ["3A", "3B", "3C", "3D", "3E"], ["5A", "5B", "5C", "5D"]]
     
     var identifires = [["titleNone","titleDisclosureIndicator","titleDetailButton","titleCheckmark","titleToogle"],
                        ["titleSubitileNone","titleSubitileDisclosureIndicator","titleSubitileDetailButton","titleSubitileCheckmark","titleSubitileToogle"],
@@ -95,7 +95,7 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
             case 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: identifires[0][1], for: indexPath) as! OneTableViewCell
                 cell.setup(title: data[indexPath.row],
-                           detail: "10",
+                           detail: "Detail",
                            card: false,
                            accessoryType: .disclosureIndicator)
                 return cell
@@ -313,14 +313,11 @@ class OneTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         return  UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
 }
 

@@ -51,10 +51,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="aU0-x4-Vjc">
-                                <rect key="frame" x="24" y="112" width="366" height="416"/>
+                                <rect key="frame" x="24" y="112" width="366" height="300"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVj-Sc-0S8" customClass="M7Button" customModule="M7UIKit">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="type" value="primary"/>
@@ -64,7 +64,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beb-51-cT4" customClass="M7Button" customModule="M7UIKit">
-                                        <rect key="frame" x="0.0" y="80" width="366" height="56"/>
+                                        <rect key="frame" x="0.0" y="54" width="366" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="type" value="secondary"/>
@@ -74,7 +74,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMG-nZ-IbP" customClass="M7Button" customModule="M7UIKit">
-                                        <rect key="frame" x="0.0" y="160" width="366" height="56"/>
+                                        <rect key="frame" x="0.0" y="108" width="366" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="type" value="gray"/>
@@ -84,7 +84,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVt-yQ-QQB" customClass="M7Button" customModule="M7UIKit">
-                                        <rect key="frame" x="0.0" y="240" width="366" height="56"/>
+                                        <rect key="frame" x="0.0" y="162" width="366" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="type" value="link"/>
@@ -92,10 +92,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="HRK-S9-pVE">
-                                        <rect key="frame" x="0.0" y="320" width="366" height="36"/>
+                                        <rect key="frame" x="0.0" y="216" width="366" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyG-e7-M3K" customClass="M7Button" customModule="M7UIKit">
-                                                <rect key="frame" x="0.0" y="0.0" width="171" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="type" value="primary"/>
@@ -104,7 +104,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riS-Ej-8Nf" customClass="M7Button" customModule="M7UIKit">
-                                                <rect key="frame" x="195" y="0.0" width="171" height="36"/>
+                                                <rect key="frame" x="195" y="0.0" width="171" height="30"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="type" value="gray"/>
@@ -120,10 +120,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Zrm-hM-L0K">
-                                        <rect key="frame" x="0.0" y="380" width="366" height="36"/>
+                                        <rect key="frame" x="0.0" y="270" width="366" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fy5-PS-MjJ" customClass="M7Button" customModule="M7UIKit">
-                                                <rect key="frame" x="0.0" y="0.0" width="171" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="type" value="secondary"/>
@@ -132,7 +132,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCZ-u9-eGg" customClass="M7Button" customModule="M7UIKit">
-                                                <rect key="frame" x="195" y="0.0" width="171" height="36"/>
+                                                <rect key="frame" x="195" y="0.0" width="171" height="30"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="type" value="link"/>
@@ -331,6 +331,47 @@
             </objects>
             <point key="canvasLocation" x="5239" y="1604"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="ui0-JA-Mpr">
+            <objects>
+                <viewController id="UaA-zB-7mr" customClass="SettingsViewController" customModule="M7UIKitExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fkt-cb-vyX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N4F-el-dzW">
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UaA-zB-7mr" id="mNx-o6-llB"/>
+                                    <outlet property="delegate" destination="UaA-zB-7mr" id="rsh-Hv-vrF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gr4-t9-HG5" firstAttribute="bottom" secondItem="N4F-el-dzW" secondAttribute="bottom" id="8je-GH-h7S"/>
+                            <constraint firstItem="N4F-el-dzW" firstAttribute="leading" secondItem="gr4-t9-HG5" secondAttribute="leading" id="9M8-oM-5Lj"/>
+                            <constraint firstItem="N4F-el-dzW" firstAttribute="top" secondItem="gr4-t9-HG5" secondAttribute="top" id="WoP-0o-fKo"/>
+                            <constraint firstItem="gr4-t9-HG5" firstAttribute="trailing" secondItem="N4F-el-dzW" secondAttribute="trailing" id="vsP-80-o8K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gr4-t9-HG5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="b2n-5x-9k7">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="cancel" id="QSh-cS-AoL">
+                            <connections>
+                                <action selector="closeVC:" destination="UaA-zB-7mr" id="EOL-TT-5He"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="N4F-el-dzW" id="X6V-TZ-9bb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eRW-X4-9og" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4137.68115942029" y="98.4375"/>
+        </scene>
         <!--M7 UIKit-->
         <scene sceneID="o88-aS-cNA">
             <objects>
@@ -357,7 +398,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BrH-ng-7RO"/>
                     </view>
-                    <navigationItem key="navigationItem" title="M7 UIKit" id="yet-FT-Z5a"/>
+                    <navigationItem key="navigationItem" title="M7 UIKit" id="yet-FT-Z5a">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="4rL-sb-JHN">
+                            <connections>
+                                <segue destination="rmu-HR-DMg" kind="presentation" id="ej8-Hg-gXa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="TY6-SH-awO" id="Erl-VA-hlI"/>
                         <segue destination="blW-lA-ceC" kind="show" identifier="TableView Cells" id="ZZw-h0-DQs"/>
@@ -386,6 +433,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsz-4M-E4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2311.594202898551" y="807.58928571428567"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="teh-Fu-KIO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rmu-HR-DMg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pBG-NI-khD" customClass="M7NavigationBar" customModule="M7UIKit">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UaA-zB-7mr" kind="relationship" relationship="rootViewController" id="Vdi-fy-H6V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CSP-jT-Nrd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3227.536231884058" y="98.4375"/>
         </scene>
     </scenes>
 </document>

@@ -16,33 +16,9 @@ class TableCellDemo: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var tableview: UITableView!
     
-  //  open var insetsContentViewsToSafeArea: Bool = true
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        
-//        let item = CellModel(name: "Вибрация", discription: "Офигенная", detail: "Пульсирующая")
-//        data.append(item)
-//         let item2 = CellModel(name: "ddd", discription: "vvvvv", detail: "dfdfsdfsd")
-//        data.append(item2)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item2)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-//        data.append(item)
-        
     }
     
     func setupTableView() {
@@ -52,10 +28,7 @@ class TableCellDemo: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         tableview.delegate = self
         tableview.dataSource = self
-        
-       // var insetsContentViewsToSafeArea: Bool = true
-        
-        
+
         tableview.register(M7TableViewCell.self, forCellReuseIdentifier: "cellId")
         tableview.register(M7TableViewCell.self, forCellReuseIdentifier: "cellIddisclosureIndicator")
             tableview.register(M7TableViewCell.self, forCellReuseIdentifier: "cellIddetailButton")
@@ -67,8 +40,6 @@ class TableCellDemo: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         self.tableview.translatesAutoresizingMaskIntoConstraints = false
         
-
-        // Fill containing view
         self.tableview.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         self.tableview.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
         self.tableview.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
@@ -76,7 +47,6 @@ class TableCellDemo: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // 1
         return data.count
     }
     
@@ -140,9 +110,7 @@ class TableCellDemo: UIViewController, UITableViewDelegate, UITableViewDataSourc
             cell.subtitle.text = item
             cell.detail.text = item
             return cell
-            
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3212FEB023644ECB0057213C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3212FEAE23644ECB0057213C /* TableViewCell.swift */; };
 		3212FEB323645BD20057213C /* TableViewCellDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3212FEB223645BD20057213C /* TableViewCellDemoController.swift */; };
+		321AB3B02381CAA700608A24 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321AB3AF2381CAA700608A24 /* SettingsViewController.swift */; };
 		323F34ED2370579F00B96AE9 /* M7Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323F34EC2370579F00B96AE9 /* M7Label.swift */; };
 		3255204B2366398D002E7485 /* M7TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3255204A2366398D002E7485 /* M7TableViewCell.swift */; };
 		32552053236643C9002E7485 /* TableCellDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32552052236643C9002E7485 /* TableCellDemo.swift */; };
@@ -72,6 +73,8 @@
 		32BF477B238094EF002BAD51 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0243235C31BB00B051E9 /* Montserrat-Regular.ttf */; };
 		32BF477D2380A10C002BAD51 /* M7NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF477C2380A10C002BAD51 /* M7NavigationBar.swift */; };
 		32BF477F2380ADAB002BAD51 /* GenerealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF477E2380ADAB002BAD51 /* GenerealViewController.swift */; };
+		32BF47812381B20C002BAD51 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF47802381B20C002BAD51 /* UIColor+Extensions.swift */; };
+		32BF47842381B40A002BAD51 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF47832381B40A002BAD51 /* ThemeManager.swift */; };
 		32C96AF4236F81EC0035871E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E023F235C31BB00B051E9 /* Montserrat-Bold.ttf */; };
 		32C96AF5236F81EC0035871E /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0242235C31BB00B051E9 /* Montserrat-SemiBold.ttf */; };
 		32C96AF9236F8C300035871E /* M7Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C96AF8236F8C300035871E /* M7Space.swift */; };
@@ -122,6 +125,7 @@
 /* Begin PBXFileReference section */
 		3212FEAE23644ECB0057213C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3212FEB223645BD20057213C /* TableViewCellDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellDemoController.swift; sourceTree = "<group>"; };
+		321AB3AF2381CAA700608A24 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		323F34EC2370579F00B96AE9 /* M7Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Label.swift; sourceTree = "<group>"; };
 		3255204A2366398D002E7485 /* M7TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7TableViewCell.swift; sourceTree = "<group>"; };
 		32552052236643C9002E7485 /* TableCellDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellDemo.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 		325E02C5235C485C00B051E9 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		32BF477C2380A10C002BAD51 /* M7NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = M7NavigationBar.swift; path = M7UIKit/Components/M7NavigationBar.swift; sourceTree = SOURCE_ROOT; };
 		32BF477E2380ADAB002BAD51 /* GenerealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerealViewController.swift; sourceTree = "<group>"; };
+		32BF47802381B20C002BAD51 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		32BF47832381B40A002BAD51 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		32C96AF8236F8C300035871E /* M7Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Space.swift; sourceTree = "<group>"; };
 		32C96AFA236F90960035871E /* M7Paddings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Paddings.swift; sourceTree = "<group>"; };
 		32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableViewCell.swift; sourceTree = "<group>"; };
@@ -302,6 +308,7 @@
 				325E0245235C31BB00B051E9 /* Themes */,
 				325E0239235C31BB00B051E9 /* Core */,
 				325E0247235C31BB00B051E9 /* Components */,
+				32BF47822381B216002BAD51 /* Extensions */,
 				325E0293235C31C500B051E9 /* Resources */,
 				325E01FC235BA57000B051E9 /* M7UIKit.h */,
 				468E9DA22372D88800CD36A4 /* M7UIKit.swift */,
@@ -330,6 +337,7 @@
 				32F2B1BE236E2B32007E0D5C /* OneTableView.swift */,
 				32552061236A1301002E7485 /* MessageBubbleDemo.swift */,
 				32BF477E2380ADAB002BAD51 /* GenerealViewController.swift */,
+				321AB3AF2381CAA700608A24 /* SettingsViewController.swift */,
 				325E021F235BA63D00B051E9 /* Main.storyboard */,
 				325E0222235BA63F00B051E9 /* Assets.xcassets */,
 				325E0224235BA63F00B051E9 /* LaunchScreen.storyboard */,
@@ -362,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				325E0246235C31BB00B051E9 /* DefaultTheme.swift */,
+				32BF47832381B40A002BAD51 /* ThemeManager.swift */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
@@ -492,6 +501,14 @@
 				325E02AB235C3A4D00B051E9 /* MyView.swift */,
 			);
 			path = Lern;
+			sourceTree = "<group>";
+		};
+		32BF47822381B216002BAD51 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				32BF47802381B20C002BAD51 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -693,6 +710,7 @@
 				325E026D235C31BB00B051E9 /* DS.swift in Sources */,
 				325E02AF235C3A4D00B051E9 /* Alert.swift in Sources */,
 				468E9DA32372D88800CD36A4 /* M7UIKit.swift in Sources */,
+				32BF47812381B20C002BAD51 /* UIColor+Extensions.swift in Sources */,
 				3212FEB023644ECB0057213C /* TableViewCell.swift in Sources */,
 				32552058236797AA002E7485 /* M7Switch.swift in Sources */,
 				325E027A235C31BC00B051E9 /* Card.swift in Sources */,
@@ -701,6 +719,7 @@
 				32BF477D2380A10C002BAD51 /* M7NavigationBar.swift in Sources */,
 				325E0279235C31BC00B051E9 /* ModalInfoModel.swift in Sources */,
 				325E027F235C31BC00B051E9 /* DatePickerView.swift in Sources */,
+				32BF47842381B40A002BAD51 /* ThemeManager.swift in Sources */,
 				325E02B5235C3A4D00B051E9 /* DSLabel.swift in Sources */,
 				325E0278235C31BC00B051E9 /* ModalInfoController.swift in Sources */,
 				325E02B2235C3A4D00B051E9 /* DSSelect.swift in Sources */,
@@ -744,6 +763,7 @@
 				325E021A235BA63D00B051E9 /* AppDelegate.swift in Sources */,
 				32F2B1BF236E2B32007E0D5C /* OneTableView.swift in Sources */,
 				325E021C235BA63D00B051E9 /* SceneDelegate.swift in Sources */,
+				321AB3B02381CAA700608A24 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
