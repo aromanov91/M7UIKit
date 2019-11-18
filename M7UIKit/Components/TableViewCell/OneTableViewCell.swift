@@ -192,6 +192,9 @@ public class OneTableViewCell: UITableViewCell {
             
             subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
             
+            self.separatorInset = UIEdgeInsets(top: 0, left: Constants.paddingLeading, bottom: 0, right: 0)
+            self.layoutMargins = UIEdgeInsets(top: 0, left: Constants.paddingLeading, bottom: 0, right: 0)
+            
         case .titleIcon:
             icon.isHidden = false
             self.addSubview(title)
