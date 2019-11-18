@@ -39,7 +39,7 @@ class SettingsViewController: UIViewController {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableView.automaticDimension
         
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        tableView.register(M7TableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         
         view.addSubview(tableView)
         
@@ -60,14 +60,14 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         
         if theme == themes[indexPath.row] {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! OneTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! M7TableViewCell
             cell.setup(title: themesName[indexPath.row],
                        accessoryType: .radioSelect)
             return cell
             
         } else {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! OneTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! M7TableViewCell
             cell.setup(title: themesName[indexPath.row],
                        accessoryType: .radioUnselect)
             return cell

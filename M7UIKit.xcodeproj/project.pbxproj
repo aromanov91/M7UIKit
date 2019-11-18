@@ -60,8 +60,8 @@
 		32C96AF5236F81EC0035871E /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0242235C31BB00B051E9 /* Montserrat-SemiBold.ttf */; };
 		32C96AF9236F8C300035871E /* M7Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C96AF8236F8C300035871E /* M7Space.swift */; };
 		32C96AFB236F90960035871E /* M7Paddings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C96AFA236F90960035871E /* M7Paddings.swift */; };
-		32F2B1BD236E2773007E0D5C /* OneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */; };
-		32F2B1BF236E2B32007E0D5C /* OneTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BE236E2B32007E0D5C /* OneTableView.swift */; };
+		32F2B1BD236E2773007E0D5C /* M7TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BC236E2773007E0D5C /* M7TableViewCell.swift */; };
+		32F2B1BF236E2B32007E0D5C /* TableViewCellDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BE236E2B32007E0D5C /* TableViewCellDemo.swift */; };
 		468E9DA32372D88800CD36A4 /* M7UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E9DA22372D88800CD36A4 /* M7UIKit.swift */; };
 /* End PBXBuildFile section */
 
@@ -155,8 +155,8 @@
 		32BF47832381B40A002BAD51 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		32C96AF8236F8C300035871E /* M7Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Space.swift; sourceTree = "<group>"; };
 		32C96AFA236F90960035871E /* M7Paddings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Paddings.swift; sourceTree = "<group>"; };
-		32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableViewCell.swift; sourceTree = "<group>"; };
-		32F2B1BE236E2B32007E0D5C /* OneTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableView.swift; sourceTree = "<group>"; };
+		32F2B1BC236E2773007E0D5C /* M7TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7TableViewCell.swift; sourceTree = "<group>"; };
+		32F2B1BE236E2B32007E0D5C /* TableViewCellDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellDemo.swift; sourceTree = "<group>"; };
 		468E9DA22372D88800CD36A4 /* M7UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7UIKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,7 +197,7 @@
 		320BE42E23644CD200C068C0 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */,
+				32F2B1BC236E2773007E0D5C /* M7TableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -291,7 +291,7 @@
 			children = (
 				325E0219235BA63D00B051E9 /* AppDelegate.swift */,
 				325E021B235BA63D00B051E9 /* SceneDelegate.swift */,
-				32F2B1BE236E2B32007E0D5C /* OneTableView.swift */,
+				32F2B1BE236E2B32007E0D5C /* TableViewCellDemo.swift */,
 				32BF477E2380ADAB002BAD51 /* GenerealViewController.swift */,
 				321AB3AF2381CAA700608A24 /* SettingsViewController.swift */,
 				325E021F235BA63D00B051E9 /* Main.storyboard */,
@@ -339,8 +339,6 @@
 				3255205623679755002E7485 /* Switch */,
 				320BE42E23644CD200C068C0 /* TableViewCell */,
 				325E0248235C31BB00B051E9 /* ModalInfo */,
-				325E024C235C31BB00B051E9 /* Card */,
-				325E024F235C31BB00B051E9 /* DatePicker */,
 				325E0263235C31BB00B051E9 /* TextField */,
 				325E0269235C31BB00B051E9 /* Button */,
 				325E02A0235C3A4D00B051E9 /* Legacy */,
@@ -354,6 +352,7 @@
 				325E0249235C31BB00B051E9 /* ModalInfoController.xib */,
 				325E024A235C31BB00B051E9 /* ModalInfoController.swift */,
 				325E024B235C31BB00B051E9 /* ModalInfoModel.swift */,
+				321AB3B12381E4C700608A24 /* M7Base.swift */,
 			);
 			path = ModalInfo;
 			sourceTree = "<group>";
@@ -362,7 +361,6 @@
 			isa = PBXGroup;
 			children = (
 				325E024D235C31BB00B051E9 /* Card.swift */,
-				321AB3B12381E4C700608A24 /* M7Base.swift */,
 				325E024E235C31BB00B051E9 /* Card.xib */,
 			);
 			path = Card;
@@ -423,6 +421,8 @@
 		325E02A0235C3A4D00B051E9 /* Legacy */ = {
 			isa = PBXGroup;
 			children = (
+				325E024F235C31BB00B051E9 /* DatePicker */,
+				325E024C235C31BB00B051E9 /* Card */,
 				325E02C5235C485C00B051E9 /* Transition.swift */,
 				325E02A1235C3A4D00B051E9 /* Alert.swift */,
 				325E02A6235C3A4D00B051E9 /* DesignSystem.swift */,
@@ -635,7 +635,7 @@
 				32BF47812381B20C002BAD51 /* UIColor+Extensions.swift in Sources */,
 				32552058236797AA002E7485 /* M7Switch.swift in Sources */,
 				325E027A235C31BC00B051E9 /* Card.swift in Sources */,
-				32F2B1BD236E2773007E0D5C /* OneTableViewCell.swift in Sources */,
+				32F2B1BD236E2773007E0D5C /* M7TableViewCell.swift in Sources */,
 				32C96AFB236F90960035871E /* M7Paddings.swift in Sources */,
 				32BF477D2380A10C002BAD51 /* M7NavigationBar.swift in Sources */,
 				325E0279235C31BC00B051E9 /* ModalInfoModel.swift in Sources */,
@@ -669,7 +669,7 @@
 				32BF477F2380ADAB002BAD51 /* GenerealViewController.swift in Sources */,
 				325E021E235BA63D00B051E9 /* ViewController.swift in Sources */,
 				325E021A235BA63D00B051E9 /* AppDelegate.swift in Sources */,
-				32F2B1BF236E2B32007E0D5C /* OneTableView.swift in Sources */,
+				32F2B1BF236E2B32007E0D5C /* TableViewCellDemo.swift in Sources */,
 				325E021C235BA63D00B051E9 /* SceneDelegate.swift in Sources */,
 				321AB3B02381CAA700608A24 /* SettingsViewController.swift in Sources */,
 			);
@@ -848,7 +848,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VF3N89U52T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -862,7 +862,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.romanovappleconnect.M7UIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -876,7 +876,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VF3N89U52T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -890,7 +890,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.romanovappleconnect.M7UIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

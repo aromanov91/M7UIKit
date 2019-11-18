@@ -27,7 +27,7 @@ public enum CellTipe {
     case titleSubtitleIcon
 }
 
-public class OneTableViewCell: UITableViewCell {
+public class M7TableViewCell: UITableViewCell {
 
     private var cellTypeSelect: CellTipe = .none  {
         didSet {
