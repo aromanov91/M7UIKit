@@ -45,15 +45,17 @@ class TableViewController: UITableViewController {
 //        return cell
         
         
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-        cell.textLabel?.text = self.data[indexPath.row]
+//        let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+//        cell.textLabel?.text = self.data[indexPath.row]
+//
+//        self.selectIndex = indexPath.row
+//
+//        cell.simpleSwitch.isOn = switv[indexPath.row]
+//        cell.simpleSwitch.addTarget(self, action: #selector(perfrAdd(param:)), for: .valueChanged)
+//
+//        return cell
         
-        self.selectIndex = indexPath.row
-        
-        cell.simpleSwitch.isOn = switv[indexPath.row]
-        cell.simpleSwitch.addTarget(self, action: #selector(perfrAdd(param:)), for: .valueChanged)
-
-        return cell
+        return UITableViewCell()
         
     }
     

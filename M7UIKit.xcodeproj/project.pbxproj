@@ -7,21 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3212FEB023644ECB0057213C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3212FEAE23644ECB0057213C /* TableViewCell.swift */; };
 		3212FEB323645BD20057213C /* TableViewCellDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3212FEB223645BD20057213C /* TableViewCellDemoController.swift */; };
 		321AB3B02381CAA700608A24 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321AB3AF2381CAA700608A24 /* SettingsViewController.swift */; };
 		321AB3B22381E4C700608A24 /* M7Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321AB3B12381E4C700608A24 /* M7Base.swift */; };
 		323F34ED2370579F00B96AE9 /* M7Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323F34EC2370579F00B96AE9 /* M7Label.swift */; };
-		3255204B2366398D002E7485 /* M7TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3255204A2366398D002E7485 /* M7TableViewCell.swift */; };
-		32552053236643C9002E7485 /* TableCellDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32552052236643C9002E7485 /* TableCellDemo.swift */; };
 		32552058236797AA002E7485 /* M7Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32552057236797AA002E7485 /* M7Switch.swift */; };
 		325520592368DFF2002E7485 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325E026C235C31BB00B051E9 /* Icons.xcassets */; };
 		3255205A2368DFFD002E7485 /* Buttons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325E026B235C31BB00B051E9 /* Buttons.xcassets */; };
 		3255205B2368E030002E7485 /* DatePicker1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325E0251235C31BB00B051E9 /* DatePicker1.xib */; };
 		3255205C2368E035002E7485 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325E0252235C31BB00B051E9 /* DatePicker.xib */; };
-		32552060236A0C07002E7485 /* M7ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3255205F236A0C07002E7485 /* M7ChatCell.swift */; };
-		32552062236A1301002E7485 /* MessageBubbleDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32552061236A1301002E7485 /* MessageBubbleDemo.swift */; };
-		32552064236A227C002E7485 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32552063236A227C002E7485 /* BubbleView.swift */; };
 		325E0203235BA57000B051E9 /* M7UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325E01F9235BA57000B051E9 /* M7UIKit.framework */; };
 		325E0208235BA57000B051E9 /* M7UIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E0207235BA57000B051E9 /* M7UIKitTests.swift */; };
 		325E020A235BA57000B051E9 /* M7UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 325E01FC235BA57000B051E9 /* M7UIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,7 +26,6 @@
 		325E0223235BA63F00B051E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325E0222235BA63F00B051E9 /* Assets.xcassets */; };
 		325E0226235BA63F00B051E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325E0224235BA63F00B051E9 /* LaunchScreen.storyboard */; };
 		325E0231235BA64000B051E9 /* M7UIKitExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E0230235BA64000B051E9 /* M7UIKitExamplesTests.swift */; };
-		325E026D235C31BB00B051E9 /* DS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E023A235C31BB00B051E9 /* DS.swift */; };
 		325E026E235C31BC00B051E9 /* M7Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E023C235C31BB00B051E9 /* M7Colors.swift */; };
 		325E0270235C31BC00B051E9 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E023F235C31BB00B051E9 /* Montserrat-Bold.ttf */; };
 		325E0272235C31BC00B051E9 /* M7Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E0241235C31BB00B051E9 /* M7Fonts.swift */; };
@@ -50,26 +43,13 @@
 		325E027E235C31BC00B051E9 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325E0252235C31BB00B051E9 /* DatePicker.xib */; };
 		325E027F235C31BC00B051E9 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E0253235C31BB00B051E9 /* DatePickerView.swift */; };
 		325E028D235C31BC00B051E9 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E0265235C31BB00B051E9 /* TextField.swift */; };
-		325E028E235C31BC00B051E9 /* SwitchRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325E0267235C31BB00B051E9 /* SwitchRow.xib */; };
-		325E028F235C31BC00B051E9 /* SwitchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E0268235C31BB00B051E9 /* SwitchRow.swift */; };
 		325E0290235C31BC00B051E9 /* M7Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E026A235C31BB00B051E9 /* M7Button.swift */; };
 		325E0291235C31BC00B051E9 /* Buttons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325E026B235C31BB00B051E9 /* Buttons.xcassets */; };
 		325E0292235C31BC00B051E9 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325E026C235C31BB00B051E9 /* Icons.xcassets */; };
 		325E029B235C39BA00B051E9 /* M7UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325E01F9235BA57000B051E9 /* M7UIKit.framework */; };
 		325E029C235C39BA00B051E9 /* M7UIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 325E01F9235BA57000B051E9 /* M7UIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		325E02AF235C3A4D00B051E9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02A1235C3A4D00B051E9 /* Alert.swift */; };
-		325E02B0235C3A4D00B051E9 /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02A2235C3A4D00B051E9 /* DSButton.swift */; };
-		325E02B1235C3A4D00B051E9 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02A3235C3A4D00B051E9 /* NavigationBar.swift */; };
-		325E02B2235C3A4D00B051E9 /* DSSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02A4235C3A4D00B051E9 /* DSSelect.swift */; };
-		325E02B3235C3A4D00B051E9 /* DSBottonGray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02A5235C3A4D00B051E9 /* DSBottonGray.swift */; };
 		325E02B4235C3A4D00B051E9 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02A6235C3A4D00B051E9 /* DesignSystem.swift */; };
-		325E02B5235C3A4D00B051E9 /* DSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02A7235C3A4D00B051E9 /* DSLabel.swift */; };
-		325E02B6235C3A4D00B051E9 /* DSDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02A8235C3A4D00B051E9 /* DSDatePicker.swift */; };
-		325E02B7235C3A4D00B051E9 /* MyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325E02AA235C3A4D00B051E9 /* MyView.xib */; };
-		325E02B8235C3A4D00B051E9 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02AB235C3A4D00B051E9 /* MyView.swift */; };
-		325E02B9235C3A4D00B051E9 /* DSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02AC235C3A4D00B051E9 /* DSTextField.swift */; };
-		325E02BA235C3A4D00B051E9 /* DSButtonWhite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02AD235C3A4D00B051E9 /* DSButtonWhite.swift */; };
-		325E02BB235C3A4D00B051E9 /* DSColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02AE235C3A4D00B051E9 /* DSColorSelector.swift */; };
 		325E02C6235C485C00B051E9 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02C5235C485C00B051E9 /* Transition.swift */; };
 		32BF477B238094EF002BAD51 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0243235C31BB00B051E9 /* Montserrat-Regular.ttf */; };
 		32BF477D2380A10C002BAD51 /* M7NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF477C2380A10C002BAD51 /* M7NavigationBar.swift */; };
@@ -124,17 +104,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3212FEAE23644ECB0057213C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3212FEB223645BD20057213C /* TableViewCellDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellDemoController.swift; sourceTree = "<group>"; };
 		321AB3AF2381CAA700608A24 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		321AB3B12381E4C700608A24 /* M7Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Base.swift; sourceTree = "<group>"; };
 		323F34EC2370579F00B96AE9 /* M7Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Label.swift; sourceTree = "<group>"; };
-		3255204A2366398D002E7485 /* M7TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7TableViewCell.swift; sourceTree = "<group>"; };
-		32552052236643C9002E7485 /* TableCellDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellDemo.swift; sourceTree = "<group>"; };
 		32552057236797AA002E7485 /* M7Switch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M7Switch.swift; sourceTree = "<group>"; };
-		3255205F236A0C07002E7485 /* M7ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7ChatCell.swift; sourceTree = "<group>"; };
-		32552061236A1301002E7485 /* MessageBubbleDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubbleDemo.swift; sourceTree = "<group>"; };
-		32552063236A227C002E7485 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		325E01F9235BA57000B051E9 /* M7UIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = M7UIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		325E01FC235BA57000B051E9 /* M7UIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M7UIKit.h; sourceTree = "<group>"; };
 		325E01FD235BA57000B051E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,7 +126,6 @@
 		325E022C235BA64000B051E9 /* M7UIKitExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = M7UIKitExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		325E0230235BA64000B051E9 /* M7UIKitExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7UIKitExamplesTests.swift; sourceTree = "<group>"; };
 		325E0232235BA64000B051E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		325E023A235C31BB00B051E9 /* DS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DS.swift; sourceTree = "<group>"; };
 		325E023C235C31BB00B051E9 /* M7Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M7Colors.swift; sourceTree = "<group>"; };
 		325E023F235C31BB00B051E9 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		325E0241235C31BB00B051E9 /* M7Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M7Fonts.swift; sourceTree = "<group>"; };
@@ -170,24 +143,11 @@
 		325E0252235C31BB00B051E9 /* DatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePicker.xib; sourceTree = "<group>"; };
 		325E0253235C31BB00B051E9 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		325E0265235C31BB00B051E9 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		325E0267235C31BB00B051E9 /* SwitchRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchRow.xib; sourceTree = "<group>"; };
-		325E0268235C31BB00B051E9 /* SwitchRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchRow.swift; sourceTree = "<group>"; };
 		325E026A235C31BB00B051E9 /* M7Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M7Button.swift; sourceTree = "<group>"; };
 		325E026B235C31BB00B051E9 /* Buttons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Buttons.xcassets; sourceTree = "<group>"; };
 		325E026C235C31BB00B051E9 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		325E02A1235C3A4D00B051E9 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		325E02A2235C3A4D00B051E9 /* DSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSButton.swift; sourceTree = "<group>"; };
-		325E02A3235C3A4D00B051E9 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
-		325E02A4235C3A4D00B051E9 /* DSSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSSelect.swift; sourceTree = "<group>"; };
-		325E02A5235C3A4D00B051E9 /* DSBottonGray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSBottonGray.swift; sourceTree = "<group>"; };
 		325E02A6235C3A4D00B051E9 /* DesignSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
-		325E02A7235C3A4D00B051E9 /* DSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSLabel.swift; sourceTree = "<group>"; };
-		325E02A8235C3A4D00B051E9 /* DSDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDatePicker.swift; sourceTree = "<group>"; };
-		325E02AA235C3A4D00B051E9 /* MyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyView.xib; sourceTree = "<group>"; };
-		325E02AB235C3A4D00B051E9 /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
-		325E02AC235C3A4D00B051E9 /* DSTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSTextField.swift; sourceTree = "<group>"; };
-		325E02AD235C3A4D00B051E9 /* DSButtonWhite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSButtonWhite.swift; sourceTree = "<group>"; };
-		325E02AE235C3A4D00B051E9 /* DSColorSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSColorSelector.swift; sourceTree = "<group>"; };
 		325E02C5235C485C00B051E9 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		32BF477C2380A10C002BAD51 /* M7NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = M7NavigationBar.swift; path = M7UIKit/Components/M7NavigationBar.swift; sourceTree = SOURCE_ROOT; };
 		32BF477E2380ADAB002BAD51 /* GenerealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerealViewController.swift; sourceTree = "<group>"; };
@@ -234,23 +194,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		320A0363236B734F00992327 /* Temp */ = {
-			isa = PBXGroup;
-			children = (
-				3255204A2366398D002E7485 /* M7TableViewCell.swift */,
-				3212FEAE23644ECB0057213C /* TableViewCell.swift */,
-				3255205F236A0C07002E7485 /* M7ChatCell.swift */,
-				32552063236A227C002E7485 /* BubbleView.swift */,
-			);
-			path = Temp;
-			sourceTree = "<group>";
-		};
 		320BE42E23644CD200C068C0 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		321AB3B32383094C00608A24 /* Lagacy */ = {
+			isa = PBXGroup;
+			children = (
+				325E021D235BA63D00B051E9 /* ViewController.swift */,
+				3212FEB223645BD20057213C /* TableViewCellDemoController.swift */,
+			);
+			path = Lagacy;
 			sourceTree = "<group>";
 		};
 		3228E0F723729BF800BDDD53 /* Fonts */ = {
@@ -333,17 +291,14 @@
 			children = (
 				325E0219235BA63D00B051E9 /* AppDelegate.swift */,
 				325E021B235BA63D00B051E9 /* SceneDelegate.swift */,
-				325E021D235BA63D00B051E9 /* ViewController.swift */,
-				3212FEB223645BD20057213C /* TableViewCellDemoController.swift */,
-				32552052236643C9002E7485 /* TableCellDemo.swift */,
 				32F2B1BE236E2B32007E0D5C /* OneTableView.swift */,
-				32552061236A1301002E7485 /* MessageBubbleDemo.swift */,
 				32BF477E2380ADAB002BAD51 /* GenerealViewController.swift */,
 				321AB3AF2381CAA700608A24 /* SettingsViewController.swift */,
 				325E021F235BA63D00B051E9 /* Main.storyboard */,
 				325E0222235BA63F00B051E9 /* Assets.xcassets */,
 				325E0224235BA63F00B051E9 /* LaunchScreen.storyboard */,
 				325E0227235BA63F00B051E9 /* Info.plist */,
+				321AB3B32383094C00608A24 /* Lagacy */,
 			);
 			path = M7UIKitExamples;
 			sourceTree = "<group>";
@@ -387,10 +342,8 @@
 				325E024C235C31BB00B051E9 /* Card */,
 				325E024F235C31BB00B051E9 /* DatePicker */,
 				325E0263235C31BB00B051E9 /* TextField */,
-				325E0266235C31BB00B051E9 /* SwitchRow */,
 				325E0269235C31BB00B051E9 /* Button */,
 				325E02A0235C3A4D00B051E9 /* Legacy */,
-				320A0363236B734F00992327 /* Temp */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -442,15 +395,6 @@
 			path = ModalInfo;
 			sourceTree = "<group>";
 		};
-		325E0266235C31BB00B051E9 /* SwitchRow */ = {
-			isa = PBXGroup;
-			children = (
-				325E0267235C31BB00B051E9 /* SwitchRow.xib */,
-				325E0268235C31BB00B051E9 /* SwitchRow.swift */,
-			);
-			path = SwitchRow;
-			sourceTree = "<group>";
-		};
 		325E0269235C31BB00B051E9 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,31 +423,11 @@
 		325E02A0235C3A4D00B051E9 /* Legacy */ = {
 			isa = PBXGroup;
 			children = (
-				325E023A235C31BB00B051E9 /* DS.swift */,
 				325E02C5235C485C00B051E9 /* Transition.swift */,
 				325E02A1235C3A4D00B051E9 /* Alert.swift */,
-				325E02A2235C3A4D00B051E9 /* DSButton.swift */,
-				325E02A3235C3A4D00B051E9 /* NavigationBar.swift */,
-				325E02A4235C3A4D00B051E9 /* DSSelect.swift */,
-				325E02A5235C3A4D00B051E9 /* DSBottonGray.swift */,
 				325E02A6235C3A4D00B051E9 /* DesignSystem.swift */,
-				325E02A7235C3A4D00B051E9 /* DSLabel.swift */,
-				325E02A8235C3A4D00B051E9 /* DSDatePicker.swift */,
-				325E02A9235C3A4D00B051E9 /* Lern */,
-				325E02AC235C3A4D00B051E9 /* DSTextField.swift */,
-				325E02AD235C3A4D00B051E9 /* DSButtonWhite.swift */,
-				325E02AE235C3A4D00B051E9 /* DSColorSelector.swift */,
 			);
 			path = Legacy;
-			sourceTree = "<group>";
-		};
-		325E02A9235C3A4D00B051E9 /* Lern */ = {
-			isa = PBXGroup;
-			children = (
-				325E02AA235C3A4D00B051E9 /* MyView.xib */,
-				325E02AB235C3A4D00B051E9 /* MyView.swift */,
-			);
-			path = Lern;
 			sourceTree = "<group>";
 		};
 		32BF47822381B216002BAD51 /* Extensions */ = {
@@ -654,14 +578,12 @@
 			files = (
 				325E0274235C31BC00B051E9 /* Montserrat-Regular.ttf in Resources */,
 				325E027B235C31BC00B051E9 /* Card.xib in Resources */,
-				325E028E235C31BC00B051E9 /* SwitchRow.xib in Resources */,
 				325E0275235C31BC00B051E9 /* OCRAEXT.TTF in Resources */,
 				325E0291235C31BC00B051E9 /* Buttons.xcassets in Resources */,
 				325E027E235C31BC00B051E9 /* DatePicker.xib in Resources */,
 				325E027D235C31BC00B051E9 /* DatePicker1.xib in Resources */,
 				325E0273235C31BC00B051E9 /* Montserrat-SemiBold.ttf in Resources */,
 				325E0270235C31BC00B051E9 /* Montserrat-Bold.ttf in Resources */,
-				325E02B7235C3A4D00B051E9 /* MyView.xib in Resources */,
 				325E0292235C31BC00B051E9 /* Icons.xcassets in Resources */,
 				325E0277235C31BC00B051E9 /* ModalInfoController.xib in Resources */,
 			);
@@ -706,15 +628,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				325E02C6235C485C00B051E9 /* Transition.swift in Sources */,
-				325E02B6235C3A4D00B051E9 /* DSDatePicker.swift in Sources */,
-				325E028F235C31BC00B051E9 /* SwitchRow.swift in Sources */,
 				325E028D235C31BC00B051E9 /* TextField.swift in Sources */,
 				323F34ED2370579F00B96AE9 /* M7Label.swift in Sources */,
-				325E026D235C31BB00B051E9 /* DS.swift in Sources */,
 				325E02AF235C3A4D00B051E9 /* Alert.swift in Sources */,
 				468E9DA32372D88800CD36A4 /* M7UIKit.swift in Sources */,
 				32BF47812381B20C002BAD51 /* UIColor+Extensions.swift in Sources */,
-				3212FEB023644ECB0057213C /* TableViewCell.swift in Sources */,
 				32552058236797AA002E7485 /* M7Switch.swift in Sources */,
 				325E027A235C31BC00B051E9 /* Card.swift in Sources */,
 				32F2B1BD236E2773007E0D5C /* OneTableViewCell.swift in Sources */,
@@ -724,26 +642,14 @@
 				325E027F235C31BC00B051E9 /* DatePickerView.swift in Sources */,
 				32BF47842381B40A002BAD51 /* ThemeManager.swift in Sources */,
 				321AB3B22381E4C700608A24 /* M7Base.swift in Sources */,
-				325E02B5235C3A4D00B051E9 /* DSLabel.swift in Sources */,
 				325E0278235C31BC00B051E9 /* ModalInfoController.swift in Sources */,
-				325E02B2235C3A4D00B051E9 /* DSSelect.swift in Sources */,
-				3255204B2366398D002E7485 /* M7TableViewCell.swift in Sources */,
 				325E0272235C31BC00B051E9 /* M7Fonts.swift in Sources */,
 				32C96AF9236F8C300035871E /* M7Space.swift in Sources */,
 				325E0290235C31BC00B051E9 /* M7Button.swift in Sources */,
 				325E026E235C31BC00B051E9 /* M7Colors.swift in Sources */,
 				325E0276235C31BC00B051E9 /* DefaultTheme.swift in Sources */,
-				325E02BA235C3A4D00B051E9 /* DSButtonWhite.swift in Sources */,
-				325E02B9235C3A4D00B051E9 /* DSTextField.swift in Sources */,
-				32552064236A227C002E7485 /* BubbleView.swift in Sources */,
 				325E027C235C31BC00B051E9 /* DatePicker.swift in Sources */,
-				325E02B3235C3A4D00B051E9 /* DSBottonGray.swift in Sources */,
-				32552060236A0C07002E7485 /* M7ChatCell.swift in Sources */,
 				325E02B4235C3A4D00B051E9 /* DesignSystem.swift in Sources */,
-				325E02BB235C3A4D00B051E9 /* DSColorSelector.swift in Sources */,
-				325E02B0235C3A4D00B051E9 /* DSButton.swift in Sources */,
-				325E02B8235C3A4D00B051E9 /* MyView.swift in Sources */,
-				325E02B1235C3A4D00B051E9 /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,8 +667,6 @@
 			files = (
 				3212FEB323645BD20057213C /* TableViewCellDemoController.swift in Sources */,
 				32BF477F2380ADAB002BAD51 /* GenerealViewController.swift in Sources */,
-				32552062236A1301002E7485 /* MessageBubbleDemo.swift in Sources */,
-				32552053236643C9002E7485 /* TableCellDemo.swift in Sources */,
 				325E021E235BA63D00B051E9 /* ViewController.swift in Sources */,
 				325E021A235BA63D00B051E9 /* AppDelegate.swift in Sources */,
 				32F2B1BF236E2B32007E0D5C /* OneTableView.swift in Sources */,

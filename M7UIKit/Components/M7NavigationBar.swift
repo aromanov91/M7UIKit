@@ -46,6 +46,11 @@ import UIKit
             
         }
         
+//        iOS 12
+//        controller.navigationController?.navigationBar.prefersLargeTitles = true
+//        controller.navigationController?.navigationBar.shadowImage = UIImage()
+//        controller.navigationController?.navigationBar.isTranslucent = false
+        
         
         
         // titlePositionAdjustment = UIOffset(horizontal: 20, vertical: 30)
