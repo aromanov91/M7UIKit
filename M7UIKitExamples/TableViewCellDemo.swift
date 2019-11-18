@@ -13,15 +13,16 @@ class TableViewCellDemo: UIViewController, UITableViewDelegate, UITableViewDataS
     
     private var data = ["On the other hand","We denounce","Indignation and dislike","Men who are so","Beguiled and demoralized"]
 
-    var sections = ["Title", "Title and Subtitle", "Icon title", "Icon Title and Subtitle","Radio and checkbox"]
-    var itemsInSections = [["1A", "1B", "1C", "1B", "1C"], ["2A", "2B","2A", "2B","2A",], ["3A", "3B", "3C", "3D", "3E"], ["3A", "3B", "3C", "3D", "3E"], ["5A", "5B", "5C", "5D"]]
+    var sections = ["Title", "Title and Subtitle", "Icon title", "Icon Title and Subtitle","Radio and checkbox","Buttons"]
+    var itemsInSections = [["1A", "1B", "1C", "1B", "1C"], ["2A", "2B","2A", "2B","2A",], ["3A", "3B", "3C", "3D", "3E"], ["3A", "3B", "3C", "3D", "3E"], ["5A", "5B", "5C", "5D"],["5A", "5B"]]
     
     var identifires = [["titleNone","titleDisclosureIndicator","titleDetailButton","titleCheckmark","titleToogle"],
                        ["titleSubitileNone","titleSubitileDisclosureIndicator","titleSubitileDetailButton","titleSubitileCheckmark","titleSubitileToogle"],
                        ["imagetitleNone","imagetitleDisclosureIndicator","imagetitleDetailButton","imagetitleCheckmark","imagetitleToogle"],
                        ["imagetitleSubitileNone","imagetitleSubitileDisclosureIndicator","imagetitleSubitileDetailButton","imagetitleSubitileCheckmark","imagetitleSubitileToogle"],
     
-    ["titleCheckmarkUnselect","titleCheckmarkSelect","titleRadioSelect","titleRadioUnselect"]]
+    ["titleCheckmarkUnselect","titleCheckmarkSelect","titleRadioSelect","titleRadioUnselect"],
+     ["button","deleteButton"]]
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -69,6 +70,9 @@ class TableViewCellDemo: UIViewController, UITableViewDelegate, UITableViewDataS
         tableView.register(M7TableViewCell.self, forCellReuseIdentifier: identifires[4][1])
         tableView.register(M7TableViewCell.self, forCellReuseIdentifier: identifires[4][2])
         tableView.register(M7TableViewCell.self, forCellReuseIdentifier: identifires[4][3])
+        
+        tableView.register(M7ButtonCell.self, forCellReuseIdentifier: identifires[5][0])
+        tableView.register(M7ButtonCell.self, forCellReuseIdentifier: identifires[5][1])
         
         view.addSubview(tableView)
         
@@ -302,6 +306,17 @@ class TableViewCellDemo: UIViewController, UITableViewDelegate, UITableViewDataS
                            detail: data[indexPath.row],
                            card: false,
                            accessoryType: .checkmarkUnselect)
+                return cell
+            }
+        case 5:
+            switch  indexPath.row {
+            case 1:
+                let cell = tableView.dequeueReusableCell(withIdentifier: identifires[5][1], for: indexPath) as! M7ButtonCell
+                cell.setup(buttonTitle: "Button", type: .delete)
+                return cell
+            default:
+                let cell = tableView.dequeueReusableCell(withIdentifier: identifires[5][0], for: indexPath) as! M7ButtonCell
+                cell.setup(buttonTitle: "Button", type: .link)
                 return cell
             }
             
