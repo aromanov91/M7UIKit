@@ -16,8 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="DR1-6s-wig">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="DR1-6s-wig">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="blW-lA-ceC" id="134-xi-qLk"/>
                                     <outlet property="delegate" destination="blW-lA-ceC" id="MIh-j5-3bx"/>
@@ -40,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W93-sN-85l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4244.927536231884" y="807.58928571428567"/>
+            <point key="canvasLocation" x="3220" y="1592"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="uHm-bG-Xzz">
@@ -77,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iay-Qh-7O3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5481" y="882"/>
+            <point key="canvasLocation" x="5343" y="1599"/>
         </scene>
         <!--Buttons-->
         <scene sceneID="4QL-B4-A9d">
@@ -243,7 +244,7 @@
                     </userDefinedRuntimeAttributes>
                 </button>
             </objects>
-            <point key="canvasLocation" x="4229" y="1622"/>
+            <point key="canvasLocation" x="3949" y="1598"/>
         </scene>
         <!--Labels-->
         <scene sceneID="BAj-Df-xOE">
@@ -366,7 +367,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </objects>
-            <point key="canvasLocation" x="5239" y="1604"/>
+            <point key="canvasLocation" x="4641" y="1600"/>
         </scene>
         <!--Settings-->
         <scene sceneID="ui0-JA-Mpr">
@@ -395,7 +396,7 @@
                         <viewLayoutGuide key="safeArea" id="gr4-t9-HG5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="b2n-5x-9k7">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="cancel" id="QSh-cS-AoL">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="cancel" id="QSh-cS-AoL">
                             <connections>
                                 <action selector="closeVC:" destination="UaA-zB-7mr" id="EOL-TT-5He"/>
                             </connections>
@@ -436,7 +437,7 @@
                         <viewLayoutGuide key="safeArea" id="BrH-ng-7RO"/>
                     </view>
                     <navigationItem key="navigationItem" title="M7 UIKit" id="yet-FT-Z5a">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="4rL-sb-JHN">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="edit" id="4rL-sb-JHN">
                             <connections>
                                 <segue destination="rmu-HR-DMg" kind="presentation" id="ej8-Hg-gXa"/>
                             </connections>

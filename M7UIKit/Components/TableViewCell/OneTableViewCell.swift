@@ -319,7 +319,7 @@ public class OneTableViewCell: UITableViewCell {
             self.selectionStyle = .none
             let cellCheckmark = UIImageView(frame: CGRect(x: 4, y: 50, width: 32, height: 32))
             cellCheckmark.contentMode = .scaleAspectFit
-            let cellCheckmarkSelectedImage = UIImage(named: "CheckmarkSelected")
+            let cellCheckmarkSelectedImage = UIImage(named: "checkmarkSelected")
             cellCheckmark.image = cellCheckmarkSelectedImage
             cellCheckmark.backgroundColor = M7Colors.primary
             cellCheckmark.layer.cornerRadius = 8
