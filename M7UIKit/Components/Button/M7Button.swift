@@ -13,6 +13,7 @@ public enum N7ButtonStyle: String {
     case secondary = "secondary"
     case gray = "gray"
     case link = "link"
+    case deleteLink = "deleteLink"
 }
 
 public enum N7ButtonRounded: String {
@@ -48,6 +49,10 @@ public class M7Button: UIButton {
     private let linkLabel: UIColor = M7Colors.link
     private let linkBackground: UIColor = UIColor.clear
     
+    /// delete link
+    private let deletelinkLabel: UIColor = M7Colors.error
+    private let deletelinkBackground: UIColor = UIColor.clear
+    
     /// Gray
     private let grayLabel: UIColor = M7Colors.link
     private let grayBackground: UIColor = M7Colors.gray
@@ -57,11 +62,11 @@ public class M7Button: UIButton {
     let imgRightInset: CGFloat = 12
     let imgTopInset: CGFloat = 12
     let imgBottomInset: CGFloat = 12
-
+    
     /// Sizes
-    public var contentEdgeInsetsL: UIEdgeInsets = UIEdgeInsets(top: 18, left: 20, bottom: 18, right: 20)
+    public var contentEdgeInsetsL: UIEdgeInsets = UIEdgeInsets(top: 18, left: 24, bottom: 18, right: 24)
     public var contentEdgeInsetsM: UIEdgeInsets = UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16)
-
+    
     public var buttonSizeL: CGSize = CGSize(width: 355, height: 56)
     public var buttonSizeM: CGSize = CGSize(width: 355, height: 36)
     
@@ -188,12 +193,12 @@ public class M7Button: UIButton {
         }
     }
     
-//        override public func draw(_ rect: CGRect) {
-//            super.draw(rect)
-//
-//           update()
-//
-//        }
+    //        override public func draw(_ rect: CGRect) {
+    //            super.draw(rect)
+    //
+    //           update()
+    //
+    //        }
     
     
     // Параметры кнопки
@@ -248,15 +253,15 @@ public class M7Button: UIButton {
         case "m": layer.cornerRadius =  DesignSystem.radius.s
         case "l": layer.cornerRadius = DesignSystem.radius.m
         case "full": layer.cornerRadius = size == "l" ? (buttonSizeL.height / 2) : (buttonSizeM.height / 2)
-//            if size == "l" {
-//                layer.cornerRadius = 30
-//            }
-//            if size == "m" {
-//                layer.cornerRadius = 0
-//            }
+            //            if size == "l" {
+            //                layer.cornerRadius = 30
+            //            }
+            //            if size == "m" {
+            //                layer.cornerRadius = 0
+            //            }
             
             
-            //layer.cornerRadius = rounded == "l" ? 30 : 0
+        //layer.cornerRadius = rounded == "l" ? 30 : 0
         default: break
         }
         
@@ -338,31 +343,46 @@ public class M7Button: UIButton {
                 }, completion: nil)
             }
             
-            case "gray":
-                self.backgroundColor = self.grayBackground
-                self.layer.backgroundColor = self.grayBackground.cgColor
-                self.tintColor = self.grayLabel
+        case "deleteLink":
+            self.backgroundColor = self.deletelinkBackground
+            self.layer.backgroundColor = self.deletelinkBackground.cgColor
+            self.tintColor = self.deletelinkLabel
+            setTitleColor(deletelinkLabel, for: .normal)
+            
+            if self.isHighlighted {
                 
-                setTitleColor(grayLabel, for: .normal)
-                setTitleColor(grayLabel, for: .highlighted)
-                
-                if self.isHighlighted {
+                UIView.animate(withDuration: 0.1, delay: 0.0, options: [.allowUserInteraction, .curveEaseIn], animations: {
                     
-                    UIView.animate(withDuration: 0.1, delay: 0.0, options: [.allowUserInteraction, .curveEaseIn], animations: {
-                        
-                        if self.scale { self.transform = CGAffineTransform(scaleX: 0.95, y: 0.95) }
-                        
-                        self.backgroundColor = self.grayBackgroundHighlighted
-                        self.layer.backgroundColor = self.grayBackgroundHighlighted.cgColor
-                        
-                    }, completion: nil)
-                }
+                    if self.scale { self.transform = CGAffineTransform(scaleX: 0.95, y: 0.95) }
+                    
+                }, completion: nil)
+            }
+            
+        case "gray":
+            self.backgroundColor = self.grayBackground
+            self.layer.backgroundColor = self.grayBackground.cgColor
+            self.tintColor = self.grayLabel
+            
+            setTitleColor(grayLabel, for: .normal)
+            setTitleColor(grayLabel, for: .highlighted)
+            
+            if self.isHighlighted {
+                
+                UIView.animate(withDuration: 0.1, delay: 0.0, options: [.allowUserInteraction, .curveEaseIn], animations: {
+                    
+                    if self.scale { self.transform = CGAffineTransform(scaleX: 0.95, y: 0.95) }
+                    
+                    self.backgroundColor = self.grayBackgroundHighlighted
+                    self.layer.backgroundColor = self.grayBackgroundHighlighted.cgColor
+                    
+                }, completion: nil)
+            }
         default: break
         }
         
         titleLabel?.font = UIFontMetrics.default.scaledFont(for: fontLabel)
         titleLabel?.adjustsFontForContentSizeCategory = true
-
+        
     }
     
     // События нажатия и отпускания кнопки

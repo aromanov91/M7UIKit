@@ -15,7 +15,7 @@ class GenerealViewController: UIViewController {
     
     private let cellIdentifier = "ComponentCell"
     
-    private let componentsNames = ["Buttons","TableView Cells","Labels","Base"]
+    private let componentsNames = ["Buttons", "TableView Cells", "Labels", "Base", "Text Field"]
 
     
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class GenerealViewController: UIViewController {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableView.automaticDimension
         
-        tableView.register(OneTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        tableView.register(M7TableViewCell.self, forCellReuseIdentifier: cellIdentifier)
 
         view.addSubview(tableView)
         
@@ -48,7 +48,7 @@ extension GenerealViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! OneTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! M7TableViewCell
         cell.setup(title: componentsNames[indexPath.row],
                   accessoryType: .disclosureIndicator)
         

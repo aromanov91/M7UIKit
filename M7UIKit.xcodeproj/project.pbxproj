@@ -51,8 +51,9 @@
 		325E02AF235C3A4D00B051E9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02A1235C3A4D00B051E9 /* Alert.swift */; };
 		325E02B4235C3A4D00B051E9 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02A6235C3A4D00B051E9 /* DesignSystem.swift */; };
 		325E02C6235C485C00B051E9 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02C5235C485C00B051E9 /* Transition.swift */; };
+		32AAD4DF23831FFC00229D95 /* M7NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD4DE23831FFB00229D95 /* M7NavigationBar.swift */; };
+		32AAD4E2238325BD00229D95 /* M7ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD4E1238325BD00229D95 /* M7ButtonCell.swift */; };
 		32BF477B238094EF002BAD51 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0243235C31BB00B051E9 /* Montserrat-Regular.ttf */; };
-		32BF477D2380A10C002BAD51 /* M7NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF477C2380A10C002BAD51 /* M7NavigationBar.swift */; };
 		32BF477F2380ADAB002BAD51 /* GenerealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF477E2380ADAB002BAD51 /* GenerealViewController.swift */; };
 		32BF47812381B20C002BAD51 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF47802381B20C002BAD51 /* UIColor+Extensions.swift */; };
 		32BF47842381B40A002BAD51 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF47832381B40A002BAD51 /* ThemeManager.swift */; };
@@ -60,8 +61,8 @@
 		32C96AF5236F81EC0035871E /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0242235C31BB00B051E9 /* Montserrat-SemiBold.ttf */; };
 		32C96AF9236F8C300035871E /* M7Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C96AF8236F8C300035871E /* M7Space.swift */; };
 		32C96AFB236F90960035871E /* M7Paddings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C96AFA236F90960035871E /* M7Paddings.swift */; };
-		32F2B1BD236E2773007E0D5C /* OneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */; };
-		32F2B1BF236E2B32007E0D5C /* OneTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BE236E2B32007E0D5C /* OneTableView.swift */; };
+		32F2B1BD236E2773007E0D5C /* M7TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BC236E2773007E0D5C /* M7TableViewCell.swift */; };
+		32F2B1BF236E2B32007E0D5C /* TableViewCellDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B1BE236E2B32007E0D5C /* TableViewCellDemo.swift */; };
 		468E9DA32372D88800CD36A4 /* M7UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E9DA22372D88800CD36A4 /* M7UIKit.swift */; };
 /* End PBXBuildFile section */
 
@@ -149,14 +150,15 @@
 		325E02A1235C3A4D00B051E9 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		325E02A6235C3A4D00B051E9 /* DesignSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		325E02C5235C485C00B051E9 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
-		32BF477C2380A10C002BAD51 /* M7NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = M7NavigationBar.swift; path = M7UIKit/Components/M7NavigationBar.swift; sourceTree = SOURCE_ROOT; };
+		32AAD4DE23831FFB00229D95 /* M7NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M7NavigationBar.swift; sourceTree = "<group>"; };
+		32AAD4E1238325BD00229D95 /* M7ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7ButtonCell.swift; sourceTree = "<group>"; };
 		32BF477E2380ADAB002BAD51 /* GenerealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerealViewController.swift; sourceTree = "<group>"; };
 		32BF47802381B20C002BAD51 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		32BF47832381B40A002BAD51 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		32C96AF8236F8C300035871E /* M7Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Space.swift; sourceTree = "<group>"; };
 		32C96AFA236F90960035871E /* M7Paddings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7Paddings.swift; sourceTree = "<group>"; };
-		32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableViewCell.swift; sourceTree = "<group>"; };
-		32F2B1BE236E2B32007E0D5C /* OneTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableView.swift; sourceTree = "<group>"; };
+		32F2B1BC236E2773007E0D5C /* M7TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7TableViewCell.swift; sourceTree = "<group>"; };
+		32F2B1BE236E2B32007E0D5C /* TableViewCellDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellDemo.swift; sourceTree = "<group>"; };
 		468E9DA22372D88800CD36A4 /* M7UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7UIKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,7 +199,8 @@
 		320BE42E23644CD200C068C0 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				32F2B1BC236E2773007E0D5C /* OneTableViewCell.swift */,
+				32F2B1BC236E2773007E0D5C /* M7TableViewCell.swift */,
+				32AAD4E1238325BD00229D95 /* M7ButtonCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -226,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				323F34EC2370579F00B96AE9 /* M7Label.swift */,
-				32BF477C2380A10C002BAD51 /* M7NavigationBar.swift */,
 			);
 			path = Label;
 			sourceTree = "<group>";
@@ -291,7 +293,7 @@
 			children = (
 				325E0219235BA63D00B051E9 /* AppDelegate.swift */,
 				325E021B235BA63D00B051E9 /* SceneDelegate.swift */,
-				32F2B1BE236E2B32007E0D5C /* OneTableView.swift */,
+				32F2B1BE236E2B32007E0D5C /* TableViewCellDemo.swift */,
 				32BF477E2380ADAB002BAD51 /* GenerealViewController.swift */,
 				321AB3AF2381CAA700608A24 /* SettingsViewController.swift */,
 				325E021F235BA63D00B051E9 /* Main.storyboard */,
@@ -335,12 +337,12 @@
 		325E0247235C31BB00B051E9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				32AAD4E02383202000229D95 /* Base */,
+				32AAD4DD23831FA800229D95 /* NavigationBae */,
 				323F34EB2370577100B96AE9 /* Label */,
 				3255205623679755002E7485 /* Switch */,
 				320BE42E23644CD200C068C0 /* TableViewCell */,
 				325E0248235C31BB00B051E9 /* ModalInfo */,
-				325E024C235C31BB00B051E9 /* Card */,
-				325E024F235C31BB00B051E9 /* DatePicker */,
 				325E0263235C31BB00B051E9 /* TextField */,
 				325E0269235C31BB00B051E9 /* Button */,
 				325E02A0235C3A4D00B051E9 /* Legacy */,
@@ -362,7 +364,6 @@
 			isa = PBXGroup;
 			children = (
 				325E024D235C31BB00B051E9 /* Card.swift */,
-				321AB3B12381E4C700608A24 /* M7Base.swift */,
 				325E024E235C31BB00B051E9 /* Card.xib */,
 			);
 			path = Card;
@@ -423,11 +424,29 @@
 		325E02A0235C3A4D00B051E9 /* Legacy */ = {
 			isa = PBXGroup;
 			children = (
+				325E024F235C31BB00B051E9 /* DatePicker */,
+				325E024C235C31BB00B051E9 /* Card */,
 				325E02C5235C485C00B051E9 /* Transition.swift */,
 				325E02A1235C3A4D00B051E9 /* Alert.swift */,
 				325E02A6235C3A4D00B051E9 /* DesignSystem.swift */,
 			);
 			path = Legacy;
+			sourceTree = "<group>";
+		};
+		32AAD4DD23831FA800229D95 /* NavigationBae */ = {
+			isa = PBXGroup;
+			children = (
+				32AAD4DE23831FFB00229D95 /* M7NavigationBar.swift */,
+			);
+			path = NavigationBae;
+			sourceTree = "<group>";
+		};
+		32AAD4E02383202000229D95 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				321AB3B12381E4C700608A24 /* M7Base.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		32BF47822381B216002BAD51 /* Extensions */ = {
@@ -627,17 +646,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32AAD4DF23831FFC00229D95 /* M7NavigationBar.swift in Sources */,
 				325E02C6235C485C00B051E9 /* Transition.swift in Sources */,
 				325E028D235C31BC00B051E9 /* TextField.swift in Sources */,
 				323F34ED2370579F00B96AE9 /* M7Label.swift in Sources */,
 				325E02AF235C3A4D00B051E9 /* Alert.swift in Sources */,
+				32AAD4E2238325BD00229D95 /* M7ButtonCell.swift in Sources */,
 				468E9DA32372D88800CD36A4 /* M7UIKit.swift in Sources */,
 				32BF47812381B20C002BAD51 /* UIColor+Extensions.swift in Sources */,
 				32552058236797AA002E7485 /* M7Switch.swift in Sources */,
 				325E027A235C31BC00B051E9 /* Card.swift in Sources */,
-				32F2B1BD236E2773007E0D5C /* OneTableViewCell.swift in Sources */,
+				32F2B1BD236E2773007E0D5C /* M7TableViewCell.swift in Sources */,
 				32C96AFB236F90960035871E /* M7Paddings.swift in Sources */,
-				32BF477D2380A10C002BAD51 /* M7NavigationBar.swift in Sources */,
 				325E0279235C31BC00B051E9 /* ModalInfoModel.swift in Sources */,
 				325E027F235C31BC00B051E9 /* DatePickerView.swift in Sources */,
 				32BF47842381B40A002BAD51 /* ThemeManager.swift in Sources */,
@@ -669,7 +689,7 @@
 				32BF477F2380ADAB002BAD51 /* GenerealViewController.swift in Sources */,
 				325E021E235BA63D00B051E9 /* ViewController.swift in Sources */,
 				325E021A235BA63D00B051E9 /* AppDelegate.swift in Sources */,
-				32F2B1BF236E2B32007E0D5C /* OneTableView.swift in Sources */,
+				32F2B1BF236E2B32007E0D5C /* TableViewCellDemo.swift in Sources */,
 				325E021C235BA63D00B051E9 /* SceneDelegate.swift in Sources */,
 				321AB3B02381CAA700608A24 /* SettingsViewController.swift in Sources */,
 			);
@@ -848,7 +868,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VF3N89U52T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -862,7 +882,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.romanovappleconnect.M7UIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -876,7 +896,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VF3N89U52T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -890,7 +910,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.romanovappleconnect.M7UIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
