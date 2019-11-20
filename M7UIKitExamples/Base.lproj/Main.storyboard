@@ -127,6 +127,37 @@
             </objects>
             <point key="canvasLocation" x="5343" y="1599"/>
         </scene>
+        <!--Text Field-->
+        <scene sceneID="EJT-SM-ev3">
+            <objects>
+                <viewController id="uBk-zt-Lb7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nxU-Ft-5gR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7rW-qE-7ks" customClass="TextField" customModule="M7UIKit">
+                                <rect key="frame" x="24" y="112" width="366" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="wLT-yu-FwK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jcp-Sc-yE0" firstAttribute="trailing" secondItem="7rW-qE-7ks" secondAttribute="trailing" constant="24" id="6h7-1A-iOh"/>
+                            <constraint firstItem="7rW-qE-7ks" firstAttribute="leading" secondItem="jcp-Sc-yE0" secondAttribute="leading" constant="24" id="gFZ-0W-RHb"/>
+                            <constraint firstItem="7rW-qE-7ks" firstAttribute="top" secondItem="jcp-Sc-yE0" secondAttribute="top" constant="24" id="qTA-wv-Mzd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jcp-Sc-yE0"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Text Field" id="zl1-Ug-AWL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WY8-Mi-lMZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6092" y="1590"/>
+        </scene>
         <!--Buttons-->
         <scene sceneID="4QL-B4-A9d">
             <objects>
@@ -496,6 +527,7 @@
                         <segue destination="Bp8-7P-83G" kind="show" identifier="Buttons" id="52V-He-llo"/>
                         <segue destination="eBo-XY-8t4" kind="show" identifier="Labels" id="fUa-eW-NVm"/>
                         <segue destination="EyB-kx-yZu" kind="show" identifier="Base" id="zXw-os-0eU"/>
+                        <segue destination="uBk-zt-Lb7" kind="show" identifier="Text Field" id="D8B-9M-oAo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaM-5B-ain" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
