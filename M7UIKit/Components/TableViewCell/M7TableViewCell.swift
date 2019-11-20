@@ -28,7 +28,7 @@ public enum CellTipe {
 }
 
 public class M7TableViewCell: UITableViewCell {
-
+    
     private var cellTypeSelect: CellTipe = .none  {
         didSet {
             if cellTypeSelect != oldValue {
@@ -38,7 +38,7 @@ public class M7TableViewCell: UITableViewCell {
             invalidateIntrinsicContentSize()
         }
     }
-
+    
     private struct Constants {
         static var paddingLeading  = M7Paddings.leading.m
         static var paddimgBetween  = M7Paddings.between.m
@@ -103,7 +103,7 @@ public class M7TableViewCell: UITableViewCell {
     
     public let cardView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.gray
+        view.backgroundColor = M7Colors.gray
         view.layer.cornerRadius = 10
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -121,7 +121,7 @@ public class M7TableViewCell: UITableViewCell {
         return imageView
     }()
     
-
+    
     public func setup(title: String, subtitle: String = "", detail: String = "", card: Bool = false, type: CellTipe = .title, accessoryType: OneCellAccessoryType = .none, icon: String = "") {
         self.title.text = title
         self.subtitle.text = subtitle
@@ -164,38 +164,76 @@ public class M7TableViewCell: UITableViewCell {
     private func updateType() {
         switch cellTypeSelect {
         case .title:
-            self.addSubview(title)
-            
-            title.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
-            title.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.paddingTop).isActive = true
-            
-            title.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom - 4).isActive = true
-            
-            title.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
-            
-            self.separatorInset = UIEdgeInsets(top: 0, left: Constants.paddingLeading, bottom: 0, right: 0)
-            self.layoutMargins = UIEdgeInsets(top: 0, left: Constants.paddingLeading, bottom: 0, right: 0)
+            if card == false {
+                self.addSubview(title)
+                
+                title.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+                title.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.paddingTop).isActive = true
+                
+                title.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom - 4).isActive = true
+                
+                title.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
+                
+                self.separatorInset = UIEdgeInsets(top: 0, left: Constants.paddingLeading, bottom: 0, right: 0)
+                self.layoutMargins = UIEdgeInsets(top: 0, left: Constants.paddingLeading, bottom: 0, right: 0)
+            } else {
+                
+                self.addSubview(title)
+                
+                self.selectionStyle = .none
+                
+                title.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+                title.topAnchor.constraint(equalTo: cardView.topAnchor, constant: Constants.paddingTop).isActive = true
+                title.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: Constants.paddingBottom - 4).isActive = true
+                title.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
+                
+            }
             
         case .titleSubtitle:
-            subtitle.isHidden = false
-            self.addSubview(title)
-            self.addSubview(subtitle)
-            
-            title.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
-            title.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.paddingTop).isActive = true
-            title.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
-            
-            subtitle.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
-            subtitle.topAnchor.constraint(equalTo: title.bottomAnchor).isActive = true
-            
-            subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom).isActive = true
-            
-            subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
-            
-            self.separatorInset = UIEdgeInsets(top: 0, left: Constants.paddingLeading, bottom: 0, right: 0)
-            self.layoutMargins = UIEdgeInsets(top: 0, left: Constants.paddingLeading, bottom: 0, right: 0)
-            
+
+            if card == false {
+                
+                self.addSubview(title)
+                self.addSubview(subtitle)
+                
+                title.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+                title.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.paddingTop).isActive = true
+                title.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
+                
+                subtitle.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+                subtitle.topAnchor.constraint(equalTo: title.bottomAnchor).isActive = true
+                
+                subtitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.paddingBottom).isActive = true
+                
+                subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
+                
+                self.separatorInset = UIEdgeInsets(top: 0, left: Constants.paddingLeading, bottom: 0, right: 0)
+                self.layoutMargins = UIEdgeInsets(top: 0, left: Constants.paddingLeading, bottom: 0, right: 0)
+                
+            } else {
+                
+                subtitle.isHidden = false
+                 //self.addSubview(cardView)
+                self.addSubview(subtitle)
+                self.addSubview(title)
+                
+                self.selectionStyle = .none
+                
+                title.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+                title.topAnchor.constraint(equalTo: cardView.topAnchor, constant: Constants.paddingTop).isActive = true
+                title.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
+                
+                subtitle.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+                subtitle.topAnchor.constraint(equalTo: title.bottomAnchor).isActive = true
+                
+                subtitle.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: Constants.paddingBottom).isActive = true
+                
+                subtitle.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
+            }
         case .titleIcon:
+            
+            if card == false {
+            
             icon.isHidden = false
             self.addSubview(title)
             self.addSubview(icon)
@@ -214,8 +252,29 @@ public class M7TableViewCell: UITableViewCell {
             
             self.separatorInset = UIEdgeInsets(top: 0, left: separatorInset, bottom: 0, right: 0)
             self.layoutMargins = UIEdgeInsets(top: 0, left: separatorInset, bottom: 0, right: 0)
+                
+            } else {
+                icon.isHidden = false
+                self.addSubview(title)
+                self.addSubview(icon)
+                
+                icon.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+                icon.topAnchor.constraint(equalTo: cardView.topAnchor, constant: Constants.paddingTop).isActive = true
+                icon.heightAnchor.constraint(equalToConstant: 32).isActive = true
+                icon.widthAnchor.constraint(equalToConstant: 32).isActive = true
+                
+                title.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 16).isActive = true
+                title.topAnchor.constraint(equalTo: cardView.topAnchor, constant: Constants.paddingTop).isActive = true
+                title.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: Constants.paddingBottom - 4).isActive = true
+                title.trailingAnchor.constraint(equalTo: cardView.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
+                
+                self.selectionStyle = .none
+            }
             
         case .titleSubtitleIcon:
+            
+            if card == false {
+            
             subtitle.isHidden = false
             icon.isHidden = false
             self.addSubview(title)
@@ -244,7 +303,35 @@ public class M7TableViewCell: UITableViewCell {
             
             self.separatorInset = UIEdgeInsets(top: 0, left: separatorInset, bottom: 0, right: 0)
             self.layoutMargins = UIEdgeInsets(top: 0, left: separatorInset, bottom: 0, right: 0)
-            
+                
+            } else {
+                
+                subtitle.isHidden = false
+                icon.isHidden = false
+                self.addSubview(title)
+                self.addSubview(subtitle)
+                self.addSubview(icon)
+                
+                icon.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+                icon.topAnchor.constraint(equalTo: cardView.topAnchor, constant: Constants.paddingTop + 4).isActive = true
+                icon.heightAnchor.constraint(equalToConstant: 48).isActive = true
+                icon.widthAnchor.constraint(equalToConstant: 48).isActive = true
+                
+                title.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: Constants.paddimgBetween).isActive = true
+                title.topAnchor.constraint(equalTo: cardView.topAnchor, constant: Constants.paddingTop).isActive = true
+                title.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
+                
+                subtitle.leadingAnchor.constraint(equalTo:  icon.trailingAnchor, constant: Constants.paddimgBetween).isActive = true
+                subtitle.topAnchor.constraint(equalTo: title.bottomAnchor).isActive = true
+                
+                subtitle.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: Constants.paddingBottom - 4).isActive = true
+                
+                subtitle.trailingAnchor.constraint(equalTo: cardView.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
+                
+                subtitle.trailingAnchor.constraint(equalTo: cardView.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
+                
+                
+            }
         case .none:
             break
         }
@@ -302,15 +389,15 @@ public class M7TableViewCell: UITableViewCell {
             
         case .toggle:
             self.selectionStyle = .none
-
+            
             let toggle = M7Switch()
             toggle.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(toggle)
             toggle.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: card == true ? -40 : -20).isActive = true
             toggle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-
+            
             title.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - toggle.frame.width - Constants.paddimgBetween).isActive = true
-
+            
             if cellTypeSelect == .titleSubtitle || cellTypeSelect == .titleSubtitleIcon {
                 subtitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing - toggle.frame.width - Constants.paddimgBetween).isActive = true
             }
@@ -341,7 +428,7 @@ public class M7TableViewCell: UITableViewCell {
             cellCheckmark.contentMode = .scaleAspectFit
             let cellCheckmarkSelectedImage = UIImage(named: "CheckmarkUnselected")
             cellCheckmark.image = cellCheckmarkSelectedImage
-          cellCheckmark.translatesAutoresizingMaskIntoConstraints = false
+            cellCheckmark.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(cellCheckmark)
             cellCheckmark.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: card == true ? -40 : -20).isActive = true
             cellCheckmark.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
@@ -377,7 +464,7 @@ public class M7TableViewCell: UITableViewCell {
             cellCheckmark.contentMode = .scaleAspectFit
             let cellCheckmarkSelectedImage = UIImage(named: "RadioUnselected")
             cellCheckmark.image = cellCheckmarkSelectedImage
-                      cellCheckmark.translatesAutoresizingMaskIntoConstraints = false
+            cellCheckmark.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(cellCheckmark)
             cellCheckmark.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: card == true ? -40 : -20).isActive = true
             cellCheckmark.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
@@ -396,13 +483,19 @@ public class M7TableViewCell: UITableViewCell {
         
         if card == true {
             addSubview(cardView)
-            NSLayoutConstraint.activate([
-                cardView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
-                cardView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
-                cardView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
-                cardView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-                cardView.heightAnchor.constraint(equalToConstant: 100)
-            ])
+            cardView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: Constants.paddingLeading).isActive = true
+            cardView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+            cardView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+            cardView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: Constants.paddingTrailing).isActive = true
+            
+//            addSubview(cardView)
+//            NSLayoutConstraint.activate([
+//                cardView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+//                cardView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
+//                cardView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
+//                cardView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+//                cardView.heightAnchor.constraint(equalToConstant: 100)
+//            ])
         }
     }
 }
