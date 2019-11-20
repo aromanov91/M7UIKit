@@ -51,6 +51,8 @@
 		325E02AF235C3A4D00B051E9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02A1235C3A4D00B051E9 /* Alert.swift */; };
 		325E02B4235C3A4D00B051E9 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02A6235C3A4D00B051E9 /* DesignSystem.swift */; };
 		325E02C6235C485C00B051E9 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E02C5235C485C00B051E9 /* Transition.swift */; };
+		3270F0EB2385C868001F5B64 /* M7TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3270F0EA2385C868001F5B64 /* M7TextField.swift */; };
+		3270F0ED2385D3A8001F5B64 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3270F0EC2385D3A8001F5B64 /* MaterialTextField.swift */; };
 		32AAD4DF23831FFC00229D95 /* M7NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD4DE23831FFB00229D95 /* M7NavigationBar.swift */; };
 		32AAD4E2238325BD00229D95 /* M7ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD4E1238325BD00229D95 /* M7ButtonCell.swift */; };
 		32BF477B238094EF002BAD51 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 325E0243235C31BB00B051E9 /* Montserrat-Regular.ttf */; };
@@ -150,6 +152,8 @@
 		325E02A1235C3A4D00B051E9 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		325E02A6235C3A4D00B051E9 /* DesignSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		325E02C5235C485C00B051E9 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		3270F0EA2385C868001F5B64 /* M7TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7TextField.swift; sourceTree = "<group>"; };
+		3270F0EC2385D3A8001F5B64 /* MaterialTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 		32AAD4DE23831FFB00229D95 /* M7NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M7NavigationBar.swift; sourceTree = "<group>"; };
 		32AAD4E1238325BD00229D95 /* M7ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M7ButtonCell.swift; sourceTree = "<group>"; };
 		32BF477E2380ADAB002BAD51 /* GenerealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerealViewController.swift; sourceTree = "<group>"; };
@@ -337,14 +341,14 @@
 		325E0247235C31BB00B051E9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				325E0269235C31BB00B051E9 /* Button */,
+				325E0263235C31BB00B051E9 /* TextField */,
 				32AAD4E02383202000229D95 /* Base */,
 				32AAD4DD23831FA800229D95 /* NavigationBae */,
 				323F34EB2370577100B96AE9 /* Label */,
 				3255205623679755002E7485 /* Switch */,
 				320BE42E23644CD200C068C0 /* TableViewCell */,
 				325E0248235C31BB00B051E9 /* ModalInfo */,
-				325E0263235C31BB00B051E9 /* TextField */,
-				325E0269235C31BB00B051E9 /* Button */,
 				325E02A0235C3A4D00B051E9 /* Legacy */,
 			);
 			path = Components;
@@ -383,17 +387,11 @@
 		325E0263235C31BB00B051E9 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
-				325E0264235C31BB00B051E9 /* ModalInfo */,
 				325E0265235C31BB00B051E9 /* TextField.swift */,
+				3270F0EA2385C868001F5B64 /* M7TextField.swift */,
+				3270F0EC2385D3A8001F5B64 /* MaterialTextField.swift */,
 			);
 			path = TextField;
-			sourceTree = "<group>";
-		};
-		325E0264235C31BB00B051E9 /* ModalInfo */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ModalInfo;
 			sourceTree = "<group>";
 		};
 		325E0269235C31BB00B051E9 /* Button */ = {
@@ -648,6 +646,7 @@
 			files = (
 				32AAD4DF23831FFC00229D95 /* M7NavigationBar.swift in Sources */,
 				325E02C6235C485C00B051E9 /* Transition.swift in Sources */,
+				3270F0EB2385C868001F5B64 /* M7TextField.swift in Sources */,
 				325E028D235C31BC00B051E9 /* TextField.swift in Sources */,
 				323F34ED2370579F00B96AE9 /* M7Label.swift in Sources */,
 				325E02AF235C3A4D00B051E9 /* Alert.swift in Sources */,
@@ -655,6 +654,7 @@
 				468E9DA32372D88800CD36A4 /* M7UIKit.swift in Sources */,
 				32BF47812381B20C002BAD51 /* UIColor+Extensions.swift in Sources */,
 				32552058236797AA002E7485 /* M7Switch.swift in Sources */,
+				3270F0ED2385D3A8001F5B64 /* MaterialTextField.swift in Sources */,
 				325E027A235C31BC00B051E9 /* Card.swift in Sources */,
 				32F2B1BD236E2773007E0D5C /* M7TableViewCell.swift in Sources */,
 				32C96AFB236F90960035871E /* M7Paddings.swift in Sources */,
