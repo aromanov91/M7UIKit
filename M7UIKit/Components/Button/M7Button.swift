@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum N7ButtonStyle: String {
+public enum N7ButtonType: String {
     case primary = "primary"
     case secondary = "secondary"
     case gray = "gray"
@@ -139,20 +139,20 @@ public class M7Button: UIButton {
         }
     }
     
-    public init(type: N7ButtonStyle) {
+    public init(type: N7ButtonType) {
         self.type = type.rawValue
         super.init(frame: .zero)
         update()
     }
     
-    public init(type: N7ButtonStyle, size: N7ButtonSize) {
+    public init(type: N7ButtonType, size: N7ButtonSize) {
         self.type = type.rawValue
         self.size = size.rawValue
         super.init(frame: .zero)
         update()
     }
     
-    public init(type: N7ButtonStyle, size: N7ButtonSize, rounded: N7ButtonRounded) {
+    public init(type: N7ButtonType, size: N7ButtonSize, rounded: N7ButtonRounded) {
         self.type = type.rawValue
         self.size = size.rawValue
         self.rounded = rounded.rawValue
@@ -160,7 +160,7 @@ public class M7Button: UIButton {
         update()
     }
     
-    public init(type: N7ButtonStyle, size: N7ButtonSize, rounded: N7ButtonRounded, shadow: Bool) {
+    public init(type: N7ButtonType, size: N7ButtonSize, rounded: N7ButtonRounded, shadow: Bool) {
         self.type = type.rawValue
         self.size = size.rawValue
         self.rounded = rounded.rawValue

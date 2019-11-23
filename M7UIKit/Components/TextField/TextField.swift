@@ -45,7 +45,9 @@ class TextField: UITextField, UITextFieldDelegate {
     
     // MARK: - Button base
     func normal() {
+
         
+
         // Color
         backgroundColor = DesignSystem.color.textField
         

@@ -373,7 +373,7 @@ public class M7TableViewCell: UITableViewCell {
         case .detailButton:
             self.selectionStyle = .none
             
-            let detailButton = M7Button(type: N7ButtonStyle.gray, size: N7ButtonSize.m, rounded: N7ButtonRounded.full)
+            let detailButton = M7Button(type: N7ButtonType.gray, size: N7ButtonSize.m, rounded: N7ButtonRounded.full)
             detailButton.translatesAutoresizingMaskIntoConstraints = false
             detailButton.setTitle("Button", for: .normal)
             self.addSubview(detailButton)

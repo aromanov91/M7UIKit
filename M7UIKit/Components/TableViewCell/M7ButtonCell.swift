@@ -27,7 +27,7 @@ public class M7ButtonCell: UITableViewCell {
 
     
     public var button: M7Button = {
-        var button = M7Button(type: N7ButtonStyle.link, size: N7ButtonSize.m, rounded: N7ButtonRounded.full)
+        var button = M7Button(type: N7ButtonType.link, size: N7ButtonSize.m, rounded: N7ButtonRounded.full)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.contentHorizontalAlignment = .left
         return button
