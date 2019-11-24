@@ -29,6 +29,11 @@ public class M7Paddings {
         static let s = CGFloat(M7Space.xs)
         static let m = CGFloat(M7Space.s)
     }
+    
+    public struct TextField {
+        public static var textFieldSize: CGSize = CGSize(width: 335, height: 76)
+        public static var helperTextFieldSize: CGSize = CGSize(width: 335, height: 76)
+    }
 }
 
 public enum M7PaddingLeading: CaseIterable {
