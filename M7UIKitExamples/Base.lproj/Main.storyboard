@@ -160,16 +160,29 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="type" value="outlined"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvt-QF-qVI" customClass="M7TextField" customModule="M7UIKit">
+                                <rect key="frame" x="20" y="380" width="374" height="48"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="none"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showLabel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="jcp-Sc-yE0" firstAttribute="trailing" secondItem="Umk-RS-bSm" secondAttribute="trailing" constant="20" id="370-63-tK6"/>
+                            <constraint firstItem="pvt-QF-qVI" firstAttribute="top" secondItem="ERH-nG-lfq" secondAttribute="bottom" constant="24" id="HaM-GC-iWb"/>
                             <constraint firstItem="Umk-RS-bSm" firstAttribute="leading" secondItem="jcp-Sc-yE0" secondAttribute="leading" constant="20" id="JTA-7A-4ah"/>
                             <constraint firstItem="ERH-nG-lfq" firstAttribute="trailing" secondItem="K86-U2-SNr" secondAttribute="trailing" id="JjL-n0-edW"/>
                             <constraint firstItem="K86-U2-SNr" firstAttribute="trailing" secondItem="Umk-RS-bSm" secondAttribute="trailing" id="OOr-ZM-BMi"/>
                             <constraint firstItem="K86-U2-SNr" firstAttribute="leading" secondItem="Umk-RS-bSm" secondAttribute="leading" id="PQ5-QN-AnZ"/>
                             <constraint firstItem="ERH-nG-lfq" firstAttribute="top" secondItem="K86-U2-SNr" secondAttribute="bottom" constant="24" id="TRy-xy-hLB"/>
+                            <constraint firstItem="pvt-QF-qVI" firstAttribute="leading" secondItem="Umk-RS-bSm" secondAttribute="leading" id="Tjr-Mg-I0y"/>
                             <constraint firstItem="Umk-RS-bSm" firstAttribute="top" secondItem="jcp-Sc-yE0" secondAttribute="top" constant="20" id="cwL-mg-Oge"/>
+                            <constraint firstItem="pvt-QF-qVI" firstAttribute="trailing" secondItem="Umk-RS-bSm" secondAttribute="trailing" id="jgZ-BF-uhO"/>
                             <constraint firstItem="ERH-nG-lfq" firstAttribute="leading" secondItem="K86-U2-SNr" secondAttribute="leading" id="rPZ-0f-BB3"/>
                             <constraint firstItem="K86-U2-SNr" firstAttribute="top" secondItem="Umk-RS-bSm" secondAttribute="bottom" constant="24" id="vEr-hv-t1p"/>
                         </constraints>

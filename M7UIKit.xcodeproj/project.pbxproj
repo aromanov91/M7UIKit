@@ -208,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				32F2B1BC236E2773007E0D5C /* M7TableViewCell.swift */,
+				32F2D3D5238A890600AEDEBE /* New Group */,
 				32AAD4E1238325BD00229D95 /* M7ButtonCell.swift */,
 			);
 			path = TableViewCell;
@@ -459,6 +460,13 @@
 				32BF47802381B20C002BAD51 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		32F2D3D5238A890600AEDEBE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
